@@ -1259,7 +1259,7 @@ section.skills,
 
 @media (max-width: 768px) {
   .skills.section {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-left: 1.25rem; 
     padding-right: 1.25rem; 
   }
@@ -2361,6 +2361,17 @@ section.skills,
   .portfolio.section {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+  .portfolio .portfolio-filters li {
+    font-size: 0.7rem;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .portfolio .portfolio-filters li {
+    font-size: 0.6rem;
+    padding: 6px 14px;
   }
 }
 
