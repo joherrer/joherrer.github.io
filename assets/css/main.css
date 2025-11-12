@@ -972,10 +972,6 @@ section,
 # About Section
 --------------------------------------------------------------*/
 /* Intro Text + CTA Links */
-.about {
-  padding-top: 90px;
-}
-
 .about .intro-content .eyebrow {
   display: inline-block;
   letter-spacing: 0.12em;
