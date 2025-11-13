@@ -950,6 +950,18 @@ section,
   .hero .hero-image {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .hero-image .image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .hero-image .image-wrapper img {
+    max-width: 80%;
+    height: auto;
   }
 }
 
