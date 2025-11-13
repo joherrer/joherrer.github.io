@@ -2267,6 +2267,19 @@ section,
     padding: 2rem 0 0 0;
   }
 
+  .portfolio-details .cta-buttons {
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .portfolio-details .cta-buttons a {
+    width: auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
   .portfolio-details .project-features h3 {
     justify-content: center; 
   }
@@ -2299,6 +2312,10 @@ section,
   .portfolio-details.section {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .portfolio-details .project-features{
+    padding-left: 16px;
   }
 }
 
