@@ -2996,6 +2996,7 @@ section.skills,
   .contact.section {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    margin-top: 10px;
   }
 
   .contact .info-box h3,
