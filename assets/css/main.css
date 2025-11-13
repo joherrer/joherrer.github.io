@@ -936,7 +936,6 @@ section,
 @media (max-width: 992px) {
   .hero .hero-content {
     text-align: center;
-    margin-bottom: 3rem;
   }
 
   .hero .hero-image .floating-elements .floating-card {
@@ -955,21 +954,6 @@ section,
 }
 
 @media (max-width: 576px) {
-  .hero .hero-image {
-    display: flex;
-    justify-content: center;
-  }
-
-  .hero .hero-image .image-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  .hero .hero-image .image-wrapper img {
-    max-width: 80%;
-    height: auto;
-  }
-
   .hero .hero-content {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -994,6 +978,21 @@ section,
 
   .hero .social-links a i {
     font-size: 1.1rem;
+  }
+
+  .hero .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .hero-image .image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .hero-image .image-wrapper img {
+    max-width: 80%;
+    height: auto;
   }
 }
 
@@ -1298,7 +1297,7 @@ section,
 --------------------------------------------------------------*/
 section.skills,
 .skills.section {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 @media (max-width: 768px) {
