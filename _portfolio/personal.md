@@ -1,6 +1,6 @@
 ---
 order: 6
-layout: portfolio-details
+layout: project-details
 title: Personal Website
 subtitle: Website
 description: Personal Website is a project built using HTML, CSS, and JavaScript to showcase the projects I have developed and my background, while providing hands-on experience to strengthen my frontend development skills

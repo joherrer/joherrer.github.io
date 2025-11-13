@@ -1,6 +1,6 @@
 ---
 order: 4
-layout: portfolio-details
+layout: project-details
 title: Stocks
 subtitle: Web Application
 description: Stocks is a web application built with Python and Flask that allows users to simulate stock trading, enabling them to buy, sell, and track stocks with real-time price updates and transaction history
