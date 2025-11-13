@@ -1017,6 +1017,7 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about.section {
+  padding-top: 80px;
   padding-bottom: 60px;
 }
 
@@ -1289,6 +1290,7 @@ section,
   .about.section {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
 }
@@ -2263,6 +2265,22 @@ section,
 @media (max-width: 991.98px) {
   .portfolio-details .portfolio-details-content {
     padding: 2rem 0 0 0;
+  }
+
+  .portfolio-details .project-features h3 {
+    justify-content: center; 
+  }
+
+  .portfolio-details .project-features .feature-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .portfolio-details .project-features .feature-list li {
+    margin-bottom: 8px;
   }
 
   .portfolio-details .cta-buttons {
