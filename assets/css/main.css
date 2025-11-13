@@ -144,16 +144,16 @@ h6 {
 }
 
 .header .logo {
-  display: flex;         /* make logo container a flex row */
-  align-items: center;   /* vertically center text next to logo */
+  display: flex;
+  align-items: center;
   line-height: 1;
 }
 
 .header .logo img {
   max-height: 31px;
-  margin-right: 10px;   /* space between logo and text */
+  margin-right: 10px;
   margin-left: 20px;
-  vertical-align: middle; /* extra safety */
+  vertical-align: middle;
 }
 
 .header .logo h1 {
@@ -747,7 +747,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 70px 0;
+  padding: 60px 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
