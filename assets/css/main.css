@@ -958,7 +958,7 @@ section,
   }
 
   .hero .hero-image .image-wrapper img {
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
   }
 }
