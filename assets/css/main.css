@@ -1016,6 +1016,10 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about.section {
+  padding-bottom: 60px;
+}
+
 /* Intro Text + CTA Links */
 .about .intro-content .eyebrow {
   display: inline-block;
@@ -1285,6 +1289,7 @@ section,
   .about.section {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    padding-bottom: 50px;
   }
 }
 
@@ -1297,7 +1302,6 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-section.skills,
 .skills.section {
   padding-top: 20px;
 }
