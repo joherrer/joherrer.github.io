@@ -1122,6 +1122,7 @@ section,
 .about .profile-figure .profile-photo {
   width: 88%;
   max-width: 440px;
+  max-height: 440px;
   border-radius: 18px;
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
   transform: translateY(0);
