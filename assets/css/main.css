@@ -158,13 +158,13 @@ h6 {
 
 .header .logo h1 {
   font-size: 26px;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Rock 3D", system-ui;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
   color: #c9c9c9;
   margin: 0;
-  line-height: 1;        /* ensures proper vertical alignment */
+  line-height: 1;
 }
 
 .header .header-social-links {
