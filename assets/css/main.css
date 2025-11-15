@@ -1042,14 +1042,14 @@ section,
 .about .intro-content .lead {
   font-size: 18px;
   line-height: 1.8;
-  color: color-mix(in srgb, var(--default-color), transparent 10%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 24px;
 }
 
 .about .intro-content p {
   line-height: 1.8;
   margin-bottom: 24px;
-  color: color-mix(in srgb, var(--default-color), transparent 5%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 .about .intro-content .cta-group {
@@ -1309,14 +1309,6 @@ section,
   padding-top: 20px;
 }
 
-@media (max-width: 768px) {
-  .skills.section {
-    padding-top: 25px;
-    padding-left: 1.25rem; 
-    padding-right: 1.25rem; 
-  }
-}
-
 /* Skills Box */
 .skills .skill-box {
   background-color: var(--surface-color);
@@ -1364,6 +1356,14 @@ section,
   transform: translateY(-3px);
   border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+}
+
+@media (max-width: 768px) {
+  .skills.section {
+    padding-top: 25px;
+    padding-left: 1.25rem; 
+    padding-right: 1.25rem; 
+  }
 }
 
 /*--------------------------------------------------------------
