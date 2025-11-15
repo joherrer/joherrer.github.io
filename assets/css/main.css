@@ -207,6 +207,12 @@ h6 {
   }
 }
 
+@media (max-width: 576px) {
+  .header .logo h1 {
+    padding-left: 24px;
+  }
+}
+
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
@@ -354,7 +360,6 @@ h6 {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 1;
-    margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
     display: flex;
@@ -474,6 +479,12 @@ h6 {
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile-nav-toggle {
+    margin-right: 10px;
   }
 }
 
@@ -701,8 +712,8 @@ section,
 @media (max-width: 768px) {
   section,
   .section {
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 48px;
+    padding-bottom: 50px;
   }
 }
 
@@ -863,7 +874,8 @@ section,
 .hero .hero-image .image-wrapper {
   position: relative;
   max-width: 450px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: 50px;
 }
 
 .hero .hero-image .image-wrapper img {
@@ -941,13 +953,15 @@ section,
     margin-bottom: 3rem;
   }
 
+  .hero .hero-image .image-wrapper {
+    margin: 0 auto;
+  }
+
   .hero .hero-image .floating-elements .floating-card {
     display: none;
   }
-}
 
-@media (max-width: 768px) {
-  .hero .hero-content h1 {
+    .hero .hero-content h1 {
     font-size: 2.5rem;
   }
 
@@ -1291,7 +1305,7 @@ section,
   .about.section {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 50px;
   }
 }
@@ -1307,6 +1321,7 @@ section,
 --------------------------------------------------------------*/
 .skills.section {
   padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 /* Skills Box */
@@ -1361,6 +1376,7 @@ section,
 @media (max-width: 768px) {
   .skills.section {
     padding-top: 25px;
+    padding-bottom: 50px;
     padding-left: 1.25rem; 
     padding-right: 1.25rem; 
   }
