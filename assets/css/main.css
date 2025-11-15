@@ -209,7 +209,7 @@ h6 {
 
 @media (max-width: 576px) {
   .header .logo h1 {
-    padding-left: 20px;
+    padding-left: 24px;
   }
 }
 
@@ -484,7 +484,7 @@ h6 {
 
 @media (max-width: 576px) {
   .mobile-nav-toggle {
-    margin-right: 10px;
+    margin-right: 11px;
   }
 }
 
