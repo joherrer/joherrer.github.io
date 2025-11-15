@@ -760,7 +760,6 @@ section,
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
-  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .hero .hero-content h1 .highlight {
@@ -1026,8 +1025,7 @@ section,
 .about .intro-content .eyebrow {
   display: inline-block;
   letter-spacing: 0.12em;
-
-  font-size: 16px;
+  font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin-bottom: 16px;
 }
@@ -1038,10 +1036,6 @@ section,
   line-height: 1.2;
   font-size: clamp(28px, 4vw, 44px);
   margin: 0 0 24px 0;
-}
-
-.about .intro-content .headline .jose {
-  color: var(--accent-color);
 }
 
 .about .intro-content .lead {
