@@ -2559,6 +2559,7 @@ section,
 
 @media (max-width: 767.98px) {
   .contact.section {
+    padding: 48px 0;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
