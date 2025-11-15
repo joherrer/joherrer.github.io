@@ -712,8 +712,7 @@ section,
 @media (max-width: 768px) {
   section,
   .section {
-    padding-top: 48px;
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
 }
 
