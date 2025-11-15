@@ -518,7 +518,8 @@ h6 {
 
 .footer .jose-herrera {
   color: var(--accent-color);
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "DM Serif Text", serif;
 }
 
 .footer .credits {
