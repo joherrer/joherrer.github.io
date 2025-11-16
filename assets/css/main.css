@@ -484,7 +484,7 @@ h6 {
 
 @media (max-width: 576px) {
   .mobile-nav-toggle {
-    margin-right: 14px;
+    margin-right: 15px;
   }
 }
 
@@ -961,7 +961,7 @@ section,
   }
 
   .hero .hero-content {
-    padding-top: 5px;
+    padding-top: 10px;
   }
   .hero .hero-content h1 {
     font-size: 2.5rem;
