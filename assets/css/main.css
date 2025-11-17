@@ -60,7 +60,7 @@ body {
 a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 a:hover {
@@ -149,13 +149,6 @@ h6 {
   line-height: 1;
 }
 
-.header .logo img {
-  max-height: 31px;
-  margin-right: 10px;
-  margin-left: 20px;
-  vertical-align: middle;
-}
-
 .header .logo h1 {
   font-size: 26px;
   font-family: "DM Serif Text", serif;
@@ -167,43 +160,11 @@ h6 {
   line-height: 1;
 }
 
-.header .header-social-links {
-  padding-right: 15px;
-}
-
-.header .header-social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding-left: 6px;
-  display: inline-block;
-  transition: 0.3s;
-  font-size: 16px;
-}
-
-.header .header-social-links a:hover {
-  color: var(--default-color);
-}
-
-.header .header-social-links a i {
-  line-height: 0px;
-}
-
 @media (max-width: 1200px) {
   .header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .header .logo {
-    order: 1;
-  }
-
-  .header .header-social-links {
-    order: 2;
-  }
-
-  .header .navmenu {
-    order: 3;
   }
 }
 
@@ -260,7 +221,7 @@ h6 {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: 0.2s;
     position: relative;
   }
 
@@ -269,7 +230,7 @@ h6 {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
-    transition: 0.3s;
+    transition: 0.2s;
   }
 
   .navmenu>ul>li>a:before {
@@ -281,7 +242,7 @@ h6 {
     background-color: var(--nav-hover-color);
     visibility: hidden;
     width: 0px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
   }
 
   .navmenu a:hover:before,
@@ -296,62 +257,6 @@ h6 {
   .navmenu .active:focus {
     color: var(--nav-hover-color);
   }
-
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: -5px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
 }
 
 /* Mobile Navigation */
@@ -361,7 +266,7 @@ h6 {
     font-size: 28px;
     line-height: 1;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -384,7 +289,7 @@ h6 {
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
     overflow-y: auto;
-    transition: 0.3s;
+    transition: 0.2s;
     z-index: 9998;
   }
 
@@ -399,7 +304,7 @@ h6 {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: 0.2s;
   }
 
   .navmenu a i,
@@ -413,7 +318,7 @@ h6 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: 0.2s;
     background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   }
 
@@ -436,25 +341,6 @@ h6 {
     transform: rotate(180deg);
   }
 
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-
   .mobile-nav-active {
     overflow: hidden;
   }
@@ -474,7 +360,7 @@ h6 {
     overflow: hidden;
     inset: 0;
     background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
+    transition: 0.2s;
   }
 
   .mobile-nav-active .navmenu>ul {
@@ -519,7 +405,7 @@ h6 {
   font-size: 16px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin: 0 5px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .footer .social-links a:hover {
@@ -813,7 +699,7 @@ section,
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   border: 2px solid;
 }
 
@@ -855,7 +741,7 @@ section,
   justify-content: center;
   color: var(--default-color);
   font-size: 1.2rem;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .hero .social-links a:hover {
@@ -1084,7 +970,7 @@ section,
   color: var(--accent-color);
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .about .intro-content .cta-group .btn-ghost:hover,
@@ -1103,7 +989,7 @@ section,
   position: relative;
   color: var(--accent-color);
   padding-bottom: 4px;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .about .intro-content .cta-group .link-underline::after {
@@ -1116,7 +1002,7 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 40%);
   transform: scaleX(0.4);
   transform-origin: left;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .about .intro-content .cta-group .link-underline:hover,
@@ -1171,7 +1057,7 @@ section,
 .about .skill-item {
   padding: 24px;
   border-radius: 6px;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   background: color-mix(in srgb, var(--surface-color), var(--accent-color) 2%);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
   height: 100%;
@@ -1266,7 +1152,7 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   background: var(--surface-color);
   color: color-mix(in srgb, var(--default-color), transparent 10%);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .about .fact-pill i {
@@ -1329,7 +1215,7 @@ section,
 /* Skills Box */
 .skills .skill-box {
   background-color: var(--surface-color);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
@@ -1436,7 +1322,7 @@ section,
   top: 0.25rem;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .resume .resume-item article:hover::before {
@@ -1509,7 +1395,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 10%);
   margin: 4px 10px 10px 0;
   white-space: nowrap;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   min-height: 46px;
 }
 
@@ -1692,7 +1578,7 @@ section,
   color: var(--accent-color);
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .services .service-link span {
@@ -1700,7 +1586,7 @@ section,
 }
 
 .services .service-link i {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .services .service-link:hover {
@@ -1790,7 +1676,7 @@ section,
   font-weight: 500;
   border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--accent-color);
 }
@@ -1811,7 +1697,7 @@ section,
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   margin-bottom: 30px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .portfolio .portfolio-card:hover {
@@ -1851,7 +1737,7 @@ section,
   justify-content: center;
   gap: 15px;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 /* Card Overlay Links */
@@ -1865,7 +1751,7 @@ section,
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .portfolio .portfolio-card .portfolio-img .portfolio-overlay a:hover {
@@ -1913,7 +1799,7 @@ section,
   padding: 12px 30px;
   font-weight: 600;
   border-radius: 5px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .portfolio .btn-primary:hover {
@@ -1994,7 +1880,7 @@ section,
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:after,
@@ -2020,7 +1906,7 @@ section,
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -2045,7 +1931,7 @@ section,
   border-radius: 20px;
   background-color: color-mix(in srgb, var(--heading-color), transparent 85%);
   color: var(--heading-color);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .portfolio-details .portfolio-details-media .tech-stack-badges span:hover {
@@ -2119,7 +2005,7 @@ section,
 
 .portfolio-details .portfolio-details-content .project-website a {
   font-weight: 500;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .portfolio-details .portfolio-details-content .project-website a:hover {
@@ -2241,7 +2127,7 @@ section,
   color: var(--contrast-color);
   border-radius: 30px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .portfolio-details .portfolio-details-content .cta-buttons .btn-view-project:hover {
@@ -2256,14 +2142,14 @@ section,
   color: var(--heading-color);
   border-radius: 30px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .portfolio-details .portfolio-details-content .cta-buttons .btn-next-project i {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .portfolio-details .portfolio-details-content .cta-buttons .btn-next-project:hover {
@@ -2391,7 +2277,7 @@ section,
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .contact .info-item .icon-box i {
@@ -2472,7 +2358,7 @@ section,
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .contact .contact-form .btn i {
