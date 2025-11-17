@@ -11,7 +11,7 @@ layout: default
     <p class="d-none d-md-block">{{ page.description }}</p>
   </div><!-- End Section Title -->
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up">
     <div class="row gy-4">
 
       <!-- Left column (slider, thumbnails, stack) -->
@@ -50,7 +50,7 @@ layout: default
             </div>
           </div>
 
-          <div class="thumbnail-grid" data-aos="fade-up" data-aos-delay="200">
+          <div class="thumbnail-grid" data-aos="fade-up" data-aos-delay="100">
             <div class="row g-2 mt-3">
               {% for img in page.images %}
               <div class="col-3">
@@ -61,7 +61,7 @@ layout: default
           </div>
 
           <!-- Tech stack -->
-          <div class="tech-stack-badges" data-aos="fade-up" data-aos-delay="300">
+          <div class="tech-stack-badges" data-aos="fade-up" data-aos-delay="200">
             {% for tech in page.tech %}
               <span>{{ tech }}</span>
             {% endfor %}
