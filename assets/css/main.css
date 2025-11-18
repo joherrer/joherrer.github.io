@@ -701,8 +701,8 @@ section,
 
 .hero .hero-content .intro-content .intro-hey {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 0.5em;
   font-size: 1.25rem;
+  margin-bottom: 0.5em;
 }
 
 .hero .hero-content h1 {
@@ -920,6 +920,10 @@ section,
   .hero .hero-content {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .hero .hero-content .intro-content .intro-hey {
+    font-size: 1rem;
   }
 
   .hero .hero-content h1 {
