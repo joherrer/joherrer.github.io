@@ -181,9 +181,6 @@ h6 {
   padding-left: 3px;
   line-height: 1.2;
   transition: all 0.2s ease;
-}
-
-.header .logo h1:hover {
   background: linear-gradient(90deg, #1387c1, #d21b64);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -703,14 +700,8 @@ section,
   position: relative;
 }
 
-.hero .hero-content .intro-content .intro-hey {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 1.25rem;
-  margin-bottom: 0.5em;
-}
-
 .hero .hero-content h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -908,14 +899,14 @@ section,
   }
 
   .hero .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 
   .hero .hero-content h2 {
     font-size: 1.25rem;
   }
 
-  .hero .hero-content p {
+   .hero .hero-content p {
     margin-right: 0;
   }
 }
@@ -926,10 +917,8 @@ section,
     padding-right: 1.5rem;
   }
 
-
-
   .hero .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero .hero-content h2 {
@@ -966,14 +955,6 @@ section,
 }
 
 @media (max-width: 400px) {
-    .hero .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero .hero-content h2 {
-    font-size: 1rem;
-  }
-
   .hero .hero-actions .btn {
     font-size: 0.70rem;
   }
