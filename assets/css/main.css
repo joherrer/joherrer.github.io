@@ -78,6 +78,27 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.gradient-text {
+    background: linear-gradient(90deg, #d21b64, #1387c1, #d21b64);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 10s ease infinite;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -157,7 +178,17 @@ h6 {
   font-weight: 400;
   color: #c9c9c9;
   margin: 0;
-  line-height: 1;
+  padding-left: 3px;
+  line-height: 1.2;
+  transition: all 0.2s ease;
+}
+
+.header .logo h1:hover {
+  background: linear-gradient(90deg, #1387c1, #d21b64);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media (max-width: 1200px) {
@@ -414,9 +445,13 @@ h6 {
 }
 
 .footer .jose-herrera {
-  color: var(--accent-color);
   font-size: 16px;
   font-family: "DM Serif Text", serif;
+  background: linear-gradient(90deg, #1387c1, #d21b64);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .footer .credits {
@@ -619,11 +654,15 @@ section,
 
 .section-title h2 {
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2;
-  color: var(--heading-color);
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
+  background: linear-gradient(90deg, #1387c1, #d21b64);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 @media (max-width: 768px) {
@@ -652,8 +691,22 @@ section,
 }
 
 /* Hero Content */
+.hero .hero-content .intro-content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero .hero-content .intro-content .intro-hey {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 0.5em;
+  font-size: 1.25rem;
+}
+
 .hero .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -683,6 +736,7 @@ section,
 .hero .hero-content p {
   font-size: 1.1rem;
   line-height: 1.6;
+  margin-right: 50px;
   margin-bottom: 2.5rem;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
@@ -759,8 +813,7 @@ section,
 .hero .hero-image .image-wrapper {
   position: relative;
   max-width: 450px;
-  margin-left: auto;
-  margin-right: 50px;
+  margin: 0 auto;
 }
 
 .hero .hero-image .image-wrapper img {
@@ -849,12 +902,17 @@ section,
   .hero .hero-content {
     padding-top: 10px;
   }
+
   .hero .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   .hero .hero-content h2 {
     font-size: 1.25rem;
+  }
+
+  .hero .hero-content p {
+    margin-right: 0;
   }
 }
 
@@ -865,7 +923,7 @@ section,
   }
 
   .hero .hero-content h1 {
-    font-size: 2.25rem;
+    font-size: 3rem;
   }
 
   .hero .hero-content h2 {
@@ -902,6 +960,14 @@ section,
 }
 
 @media (max-width: 400px) {
+    .hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .hero-content h2 {
+    font-size: 1rem;
+  }
+
   .hero .hero-actions .btn {
     font-size: 0.70rem;
   }
