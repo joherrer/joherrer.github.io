@@ -181,6 +181,13 @@ h6 {
   padding-left: 3px;
   line-height: 1.2;
   transition: all 0.2s ease;
+
+  background: linear-gradient(90deg, #1387c1, #d21b64);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 150px 100%;
+  background-position: center;
 }
 
 .header .logo h1:hover {
