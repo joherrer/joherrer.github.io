@@ -957,6 +957,12 @@ section,
   }
 }
 
+@media (max-width: 450px) {
+  .hero .hero-content h1 {
+    font-size: 2.25rem;
+  }
+}
+
 @media (max-width: 400px) {
   .hero .hero-actions .btn {
     font-size: 0.70rem;
