@@ -445,13 +445,9 @@ h6 {
 }
 
 .footer .jose-herrera {
+  color: var(--accent-color);
   font-size: 16px;
   font-family: "DM Serif Text", serif;
-  background: linear-gradient(90deg, #1387c1, #d21b64);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }
 
 .footer .credits {
