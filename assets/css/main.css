@@ -445,7 +445,7 @@ h6 {
   border-color: var(--accent-color);
 }
 
-.footer .jose-herrera {
+.footer .joherrer {
   font-size: 16px;
   font-family: "DM Serif Text", serif;
   background: linear-gradient(90deg, #1387c1, #d21b64);
@@ -1266,6 +1266,10 @@ section,
 .skills.section {
   padding-top: 20px;
   padding-bottom: 80px;
+}
+
+.skills.section .section-title h2 {
+  background-size: 300px 100%;
 }
 
 /* Skills Box */
