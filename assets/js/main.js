@@ -57,16 +57,6 @@
   });
 
   /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
-
-  /**
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
