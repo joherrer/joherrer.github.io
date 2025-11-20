@@ -6,7 +6,7 @@ A modern, elegant, and responsive portfolio website built to showcase my work as
 
 Go to website: [https://joherrer.github.io/](https://joherrer.github.io/)
 
-## 📌 Overview
+## 📋 Overview
 
 This portfolio includes:
 
