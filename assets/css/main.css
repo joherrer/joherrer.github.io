@@ -2,34 +2,33 @@
 # CSS File for Personal Portfolio Website
 --------------------------------------------------------------*/
 
-/* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Fonts */
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
-}
 
 /* Global Colors */
-:root { 
   --background-color: #101a20; /* Background color for the entire website, including individual sections */
   --default-color: #e7f2f7; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #1387c1; /* Accent color that represents my brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #141f26; /* The surface color is used as a background of boxed elements within sections */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
 
 /* Nav Menu Colors */
-:root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
   --nav-hover-color: #1387c1; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #213642; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #051117; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #e7f2f7; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #1387c1; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+
+/* Smooth scroll */
+  scroll-behavior: smooth;
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the same color scheme. */
+/* Color Presets - These classes override global colors when applied to any section or element. */
 .light-background {
   --background-color: #142027;
   --surface-color: #325264;
@@ -41,11 +40,6 @@
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-}
-
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
@@ -65,7 +59,6 @@ a {
 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
 }
 
 h1,
@@ -672,10 +665,6 @@ section,
   position: relative;
 }
 
-.hero .hero-content h1 .highlight::after {
-  display: none;
-}
-
 .hero .hero-content h2 {
   font-size: 1.5rem;
   font-weight: 400;
@@ -1038,6 +1027,7 @@ section,
 /* Profile Image */
 .about .profile-figure {
   margin: 0;
+  overflow: hidden;
 }
 
 .about .profile-figure .profile-photo {
@@ -1280,7 +1270,6 @@ section,
 
 .skills .skill-box:hover {
   transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
@@ -1351,7 +1340,7 @@ section,
 .resume .resume-item article:hover::before {
   background-color: var(--accent-color); 
   transform: scale(0.9);
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--accent-color), transparent 40%);
 }
 
 .resume .resume-item article h4 {

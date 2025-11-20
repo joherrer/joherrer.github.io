@@ -23,13 +23,13 @@
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
+  function mobileNavToggle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
   if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+    mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
   }
 
   /**
@@ -38,7 +38,7 @@
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+        mobileNavToggle();
       }
     });
 
@@ -172,8 +172,8 @@
         initIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        if (typeof aosInit === 'function') {
-          aosInit();
+        if (typeof AOS !== 'undefined') {
+          AOS.refresh();
         }
       }, false);
     });
