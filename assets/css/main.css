@@ -1443,6 +1443,11 @@ section,
   filter: brightness(0) invert(1);
 }
 
+.resume .software-pill img.resized-icon {
+  height: 24px;
+  width: auto;
+}
+
 /* Professional Skills Section */
 .resume .resume-item.skills-animation {
   margin-bottom: 0;

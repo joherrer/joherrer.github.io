@@ -54,7 +54,9 @@ layout: default
             <div class="row g-2 mt-3">
               {% for img in page.images %}
               <div class="col-3">
-                <img src="{{ img }}" alt="Gallery Image" class="img-fluid glightbox">
+                <a href="{{ img }}" class="glightbox" data-gallery="project-gallery" title="{{ page.title }}">
+                  <img src="{{ img }}" alt="Gallery Image" class="img-fluid">
+                </a>
               </div>
               {% endfor %}
             </div>
