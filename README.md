@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio Website — Jose Herrera
+# 🌐 Personal Portfolio Website
 
 A modern, elegant, and responsive portfolio website built to showcase my work as a **Software Developer**, including my background, skills, projects, and the services I offer. This website serves as my digital presence, combining clean UI, smooth animations, and structured content to reflect professionalism and creativity.
 
