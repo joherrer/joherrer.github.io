@@ -15,7 +15,7 @@ This portfolio includes:
 - **Resume** – Education, software & tools, technical and professional skills
 - **Services** – Web development, desktop apps, AI solutions, CI/CD, cloud, business tools
 - **Projects** – Filterable portfolio built with Jekyll collections
-- **Contact** – Contact details + working Formspree form
+- **Contact** – Contact details + working contact form
 
 Powered by **Jekyll**, fully compatible with **GitHub Pages**.
 
