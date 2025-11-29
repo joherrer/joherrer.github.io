@@ -1027,7 +1027,6 @@ section,
 /* Profile Image */
 .about .profile-figure {
   margin: 0;
-  overflow: hidden;
 }
 
 .about .profile-figure .profile-photo {
