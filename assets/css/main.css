@@ -102,6 +102,10 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -688,7 +692,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   padding: 55px 0;
-  min-height: calc(100svh - 80px);
+  min-height: calc(100svh - 83px);
   display: flex;
   align-items: center;
 }
