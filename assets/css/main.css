@@ -1010,18 +1010,18 @@ section,
   }
 
   .hero .hero-image .floating-elements .floating-card.cloud {
-    top: 7%;
-    right: 6%;
+    top: 8%;
+    right: 5%;
   }
 
   .hero .hero-image .floating-elements .floating-card.code {
-    bottom: 34%;
+    bottom: 22%;
     left: 3%;
   }
 
   .hero .hero-image .floating-elements .floating-card.security {
-    top: 61%;
-    right: 2%;
+    top: 67%;
+    right: 3%;
   }
 }
 
