@@ -1015,6 +1015,12 @@ section,
 }
 
 @media (max-width: 400px) {
+  .aos-desktop-only {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
   .hero .hero-content h1 {
     font-size: 2.2rem;
   }
