@@ -813,6 +813,17 @@ section,
   margin: 0 auto;
 }
 
+.hero .hero-image .image-wrapper picture {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.hero .hero-image .image-wrapper picture img {
+  margin: 0 auto;
+  display: block;
+}
+
 .hero .hero-image .image-wrapper img {
   border-radius: 250px;
   box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
@@ -1020,7 +1031,7 @@ section,
     transform: none !important;
     transition: none !important;
   }
-  
+
   .hero .hero-content h1 {
     font-size: 2.2rem;
   }
