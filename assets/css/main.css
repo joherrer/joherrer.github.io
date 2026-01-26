@@ -60,7 +60,7 @@
 }
 
 :root {
-  /* Fonts */
+  /* Font Family */
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
