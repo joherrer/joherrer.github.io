@@ -1035,6 +1035,31 @@ section,
   .hero .social-links a i {
     font-size: 1rem;
   }
+
+  .hero .hero-image .floating-elements .floating-card {
+    padding: 7px 11px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .hero .hero-image .floating-elements .floating-card i {
+    font-size: 1.00rem;
+  }
+
+  .hero .hero-image .floating-elements .floating-card.cloud {
+    top: 7%;
+    right: 6%;
+  }
+
+  .hero .hero-image .floating-elements .floating-card.code {
+    bottom: 34%;
+    left: 3%;
+  }
+
+  .hero .hero-image .floating-elements .floating-card.security {
+    top: 61%;
+    right: 2%;
+  }
 }
 
 /*--------------------------------------------------------------
