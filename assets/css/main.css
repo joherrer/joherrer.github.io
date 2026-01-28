@@ -691,7 +691,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 55px 0;
+  padding: 60px 0;
   min-height: calc(100svh - 83px);
   display: flex;
   align-items: center;
@@ -1083,7 +1083,7 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about.section {
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
