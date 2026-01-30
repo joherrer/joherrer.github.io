@@ -2,8 +2,8 @@
 # CSS File for Personal Portfolio Website
 --------------------------------------------------------------*/
 
-/* Fonts
-------------*/
+/* Fonts used in the project
+--------------------------------*/
 @font-face {
   font-family: "Roboto";
   font-style: normal;
@@ -118,7 +118,7 @@
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 
-/* Global Colors */
+  /* Global Colors */
   --background-color: #101a20;
   --default-color: #e7f2f7;
   --heading-color: #ffffff;
@@ -126,12 +126,12 @@
   --surface-color: #141f26;
   --contrast-color: #ffffff;
 
-/* Nav Menu Colors */
+  /* Nav Menu Colors */
   --nav-color: #ffffff;
   --nav-hover-color: #1387c1;
   --nav-mobile-background-color: #213642;
 
-/* Smooth scroll */
+  /* Smooth scroll */
   scroll-behavior: smooth;
 }
 
@@ -268,6 +268,13 @@ h6 {
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
+.scrolled .header {
+  --background-color: rgba(16, 26, 32, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Logo */
 .header .logo {
   line-height: 1;
 }
@@ -300,12 +307,6 @@ h6 {
   .header .logo h1 {
     padding-left: 24px;
   }
-}
-
-/* Global Header on Scroll
-------------------------------*/
-.scrolled .header {
-  --background-color: rgba(16, 26, 32, 0.9);
 }
 
 /*--------------------------------------------------------------
