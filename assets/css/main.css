@@ -4,7 +4,6 @@
 
 /* Fonts
 ------------*/
-/* Roboto */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
@@ -50,7 +49,6 @@
   font-display: swap;
 }
 
-/* Raleway */
 @font-face {
   font-family: "Raleway";
   font-style: normal;
@@ -96,7 +94,6 @@
   font-display: swap;
 }
 
-/* Poppins */
 @font-face {
   font-family: "Poppins";
   font-style: normal;
@@ -106,7 +103,6 @@
   font-display: swap;
 }
 
-/* DM Serif Text */
 @font-face {
   font-family: "DM Serif Text";
   font-style: normal;
