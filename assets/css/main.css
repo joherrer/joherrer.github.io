@@ -411,9 +411,16 @@ h6 {
 
   .navbar-nav > .nav-item {
     padding: 10px 0;
+  }
+
+  .navbar-nav .nav-link {
     font-family: var(--nav-font);
     font-size: 17px;
     font-weight: 400;
+  }
+
+  .navbar-nav .nav-link.active {
+      font-weight: 600;
   }
 }
 

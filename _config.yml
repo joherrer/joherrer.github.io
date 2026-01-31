@@ -25,6 +25,8 @@ exclude:
   - node_modules/
   - vendor/
 
+permalink: pretty
+
 collections:
   projects:
     output: true

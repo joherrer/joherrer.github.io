@@ -67,11 +67,11 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/' %}active{% endif %}" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/about.html' %}active{% endif %}" href="/about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/resume.html' %}active{% endif %}" href="/resume.html">Resume</a></li>
-            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/services.html' %}active{% endif %}" href="/services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/projects.html' %}active{% endif %}" href="/projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/contact.html' %}active{% endif %}" href="/contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/about/' %}active{% endif %}" href="/about/">About</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/resume/' %}active{% endif %}" href="/resume/">Resume</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/services/' %}active{% endif %}" href="/services/">Services</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/projects/' or page.url contains '/projects/' %}active{% endif %}" href="/projects/">Projects</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/contact/' %}active{% endif %}" href="/contact/">Contact</a></li>
           </ul>
         </div>
 
