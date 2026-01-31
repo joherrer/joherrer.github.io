@@ -156,11 +156,7 @@ html {
   scrollbar-gutter: stable;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
@@ -268,6 +264,7 @@ h6 {
   background-color: var(--background-color);
   padding: 15px 0;
   transition: all 0.5s;
+  z-index: 997;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
@@ -615,11 +612,6 @@ section,
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
-.section {
-  height: 100vh; /* full viewport height */
-  width: 100vw;  /* full viewport width */
-}
-
 .section-title {
   text-align: center;
   padding-bottom: 60px;
