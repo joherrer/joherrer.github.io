@@ -19,15 +19,15 @@ tech:
   - Flask-Session
   - Werkzeug
 images:
-  - /assets/img/portfolio/stocks/stocks-1.jpeg
-  - /assets/img/portfolio/stocks/stocks-2.jpeg
-  - /assets/img/portfolio/stocks/stocks-3.jpeg
-  - /assets/img/portfolio/stocks/stocks-4.jpeg
+  - /assets/img/projects/stocks/stocks-1.jpeg
+  - /assets/img/projects/stocks/stocks-2.jpeg
+  - /assets/img/projects/stocks/stocks-3.jpeg
+  - /assets/img/projects/stocks/stocks-4.jpeg
 resized-images:
-  - /assets/img/portfolio/stocks/resized/resized_stocks-1.jpeg
-  - /assets/img/portfolio/stocks/resized/resized_stocks-2.jpeg
-  - /assets/img/portfolio/stocks/resized/resized_stocks-3.jpeg
-  - /assets/img/portfolio/stocks/resized/resized_stocks-4.jpeg
+  - /assets/img/projects/stocks/resized/resized_stocks-1.jpeg
+  - /assets/img/projects/stocks/resized/resized_stocks-2.jpeg
+  - /assets/img/projects/stocks/resized/resized_stocks-3.jpeg
+  - /assets/img/projects/stocks/resized/resized_stocks-4.jpeg
 
 lead: >
   Stocks provides a simulated stock trading experience, allowing users to create accounts, 

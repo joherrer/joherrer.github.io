@@ -19,15 +19,15 @@ tech:
   - H2 Database
   - Spring Security
 images:
-  - /assets/img/portfolio/cashcards/cashcards-1.jpeg
-  - /assets/img/portfolio/cashcards/cashcards-2.jpeg
-  - /assets/img/portfolio/cashcards/cashcards-3.jpeg
-  - /assets/img/portfolio/cashcards/cashcards-4.jpeg
+  - /assets/img/projects/cashcards/cashcards-1.jpeg
+  - /assets/img/projects/cashcards/cashcards-2.jpeg
+  - /assets/img/projects/cashcards/cashcards-3.jpeg
+  - /assets/img/projects/cashcards/cashcards-4.jpeg
 resized-images:
-  - /assets/img/portfolio/cashcards/resized/resized_cashcards-1.jpeg
-  - /assets/img/portfolio/cashcards/resized/resized_cashcards-2.jpeg
-  - /assets/img/portfolio/cashcards/resized/resized_cashcards-3.jpeg
-  - /assets/img/portfolio/cashcards/resized/resized_cashcards-4.jpeg
+  - /assets/img/projects/cashcards/resized/resized_cashcards-1.jpeg
+  - /assets/img/projects/cashcards/resized/resized_cashcards-2.jpeg
+  - /assets/img/projects/cashcards/resized/resized_cashcards-3.jpeg
+  - /assets/img/projects/cashcards/resized/resized_cashcards-4.jpeg
 
 lead: >
   CashCards provides a secure API for managing cash cards, allowing users to create, view, update, and delete 

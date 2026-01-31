@@ -19,15 +19,15 @@ tech:
   - Flask-Session
   - Werkzeug
 images:
-  - /assets/img/portfolio/forecast/forecast-1.jpeg
-  - /assets/img/portfolio/forecast/forecast-2.jpeg
-  - /assets/img/portfolio/forecast/forecast-3.jpeg
-  - /assets/img/portfolio/forecast/forecast-4.jpeg
+  - /assets/img/projects/forecast/forecast-1.jpeg
+  - /assets/img/projects/forecast/forecast-2.jpeg
+  - /assets/img/projects/forecast/forecast-3.jpeg
+  - /assets/img/projects/forecast/forecast-4.jpeg
 resized-images:
-  - /assets/img/portfolio/forecast/resized/resized_forecast-1.jpeg
-  - /assets/img/portfolio/forecast/resized/resized_forecast-2.jpeg
-  - /assets/img/portfolio/forecast/resized/resized_forecast-3.jpeg
-  - /assets/img/portfolio/forecast/resized/resized_forecast-4.jpeg
+  - /assets/img/projects/forecast/resized/resized_forecast-1.jpeg
+  - /assets/img/projects/forecast/resized/resized_forecast-2.jpeg
+  - /assets/img/projects/forecast/resized/resized_forecast-3.jpeg
+  - /assets/img/projects/forecast/resized/resized_forecast-4.jpeg
 
 lead: >
   Gold Coast Surf Forecast provides real-time surf reports, allowing users to create accounts, 

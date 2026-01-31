@@ -14,7 +14,7 @@ tech:
   - Pytest
 
 resized-images:
-  - /assets/img/portfolio/blockchain/resized/resized_blockchain.jpeg
+  - /assets/img/projects/blockchain/resized/resized_blockchain.jpeg
 
 lead: >
     Blockchain demonstrates key concepts, including genesis block creation, 

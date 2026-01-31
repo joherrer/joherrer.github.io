@@ -31,7 +31,7 @@ title: Projects
 
       <!-- Portfolio Grid -->
       <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="150">
-        {% assign projects = site.portfolio | sort: "order" %}
+        {% assign projects = site.projects | sort: "order" %}
         {% for project in projects %}
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item
           {% for cat in project.categories %} filter-{{ cat }}{% endfor %}">

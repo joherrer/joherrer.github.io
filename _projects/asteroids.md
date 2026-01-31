@@ -16,7 +16,7 @@ tech:
   - JPackage
 
 resized-images:
-  - /assets/img/portfolio/asteroids/resized/resized_asteroids.jpeg
+  - /assets/img/projects/asteroids/resized/resized_asteroids.jpeg
   
 lead: >
   Asteroids offers classic arcade-style gameplay, where the

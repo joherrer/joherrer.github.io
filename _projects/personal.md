@@ -7,7 +7,7 @@ description: Personal Website is a project built using HTML, CSS, and JavaScript
 date: February 2023
 client: Personal Project
 website: https://github.com/joherrer/personal-website
-categories: [Portfolio, Web Development, Frontend, Backend]
+categories: [projects, Web Development, Frontend, Backend]
 tech:
   - HTML
   - CSS
@@ -18,15 +18,15 @@ tech:
   - Flask-Mail
   - Jinja
 images:
-  - /assets/img/portfolio/personal/personal-1.jpeg
-  - /assets/img/portfolio/personal/personal-2.jpeg
-  - /assets/img/portfolio/personal/personal-3.jpeg
-  - /assets/img/portfolio/personal/personal-4.jpeg
+  - /assets/img/projects/personal/personal-1.jpeg
+  - /assets/img/projects/personal/personal-2.jpeg
+  - /assets/img/projects/personal/personal-3.jpeg
+  - /assets/img/projects/personal/personal-4.jpeg
 resized-images:
-  - /assets/img/portfolio/personal/resized/resized_personal-1.jpeg
-  - /assets/img/portfolio/personal/resized/resized_personal-2.jpeg
-  - /assets/img/portfolio/personal/resized/resized_personal-3.jpeg
-  - /assets/img/portfolio/personal/resized/resized_personal-4.jpeg
+  - /assets/img/projects/personal/resized/resized_personal-1.jpeg
+  - /assets/img/projects/personal/resized/resized_personal-2.jpeg
+  - /assets/img/projects/personal/resized/resized_personal-3.jpeg
+  - /assets/img/projects/personal/resized/resized_personal-4.jpeg
 
 lead: >
   This website was built entirely from scratch, without relying
@@ -36,7 +36,7 @@ lead: >
 
 accordion:
   overview: >
-    Personal Website serves as a personal portfolio and was created to practice and
+    Personal Website serves as a personal projects and was created to practice and
     demonstrate modern web development techniques. The frontend is built with HTML,
     CSS, JavaScript, Bootstrap and Jinja, while the backend, used for 
     the contact form, runs with Python and Flask.
@@ -48,14 +48,14 @@ accordion:
     and Bootstrap. The structure was divided into modular templates using Jinja2,
     allowing for efficient updates and scalability. I implemented a contact form
     with Python and Flask using Flask-Mail for secure and reliable message delivery.
-    The result is a professional, scalable, and fully responsive personal portfolio website.
+    The result is a professional, scalable, and fully responsive personal projects website.
 features:
   left:
     - Custom design
     - User-friendly interface
     - Scalable architecture
   right:
-    - Personal Portfolio
+    - Personal projects
     - Contact form
     - Multi-device support
 ---

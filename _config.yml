@@ -26,6 +26,6 @@ exclude:
   - vendor/
 
 collections:
-  portfolio:
+  projects:
     output: true
-    permalink: /portfolio/:name/
+    permalink: /projects/:name/

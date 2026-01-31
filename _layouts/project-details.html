@@ -173,7 +173,7 @@ layout: default
           <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
             <a href="{{ page.website }}" class="btn-view-project">View Live Project</a>
 
-            {% assign sorted_projects = site.portfolio | sort: "order" %}
+            {% assign sorted_projects = site.projects | sort: "order" %}
             {% assign next_project = nil %}
 
             {% for p in sorted_projects %}
