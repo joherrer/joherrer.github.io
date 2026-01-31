@@ -615,6 +615,11 @@ section,
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
+.section {
+  height: 100vh; /* full viewport height */
+  width: 100vw;  /* full viewport width */
+}
+
 .section-title {
   text-align: center;
   padding-bottom: 60px;
