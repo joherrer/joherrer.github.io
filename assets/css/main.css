@@ -156,17 +156,14 @@ html {
   scrollbar-gutter: stable;
 }
 
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-
-  padding-top: env(safe-area-inset-top);
-  padding-right: env(safe-area-inset-right);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  margin: 0;
-  box-sizing: border-box;
 }
 
 a {
@@ -269,9 +266,8 @@ h6 {
   --background-color: rgba(255, 255, 255, 0);
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: calc(15px + env(safe-area-inset-top)) 0 15px 0; /* add safe area at the top */
+  padding: 15px 0;
   transition: all 0.5s;
-  z-index: 997;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
