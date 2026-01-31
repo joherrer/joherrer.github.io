@@ -259,17 +259,15 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  /* Top half fades, bottom half fully blurry */
   background: linear-gradient(
     to bottom,
-    #101a20 0%,                     /* solid at very top */
-    rgba(16,26,32,0.9) 50%,         /* gradually fades to semi-transparent by 50% */
-    rgba(16,26,32,0.9) 100%         /* bottom half fully semi-transparent */
+    #101a20 0%,
+    rgba(16,26,32,0.95) 25%,
+    rgba(16,26,32,0.9) 50%,
+    rgba(16,26,32,0.9) 100%
   );
-
-  backdrop-filter: blur(10px);        /* blurs the content behind the semi-transparent parts */
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   color: var(--default-color);
   padding: 15px 0;
   transition: all 0.5s;
