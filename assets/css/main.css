@@ -259,19 +259,22 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  /* Top half fades, bottom half fully blurry */
+  background: linear-gradient(
+    to bottom,
+    #101a20 0%,                     /* solid at very top */
+    rgba(16,26,32,0.9) 50%,         /* gradually fades to semi-transparent by 50% */
+    rgba(16,26,32,0.9) 100%         /* bottom half fully semi-transparent */
+  );
+
+  backdrop-filter: blur(10px);        /* blurs the content behind the semi-transparent parts */
+  -webkit-backdrop-filter: blur(10px);
+
   color: var(--default-color);
-  background-color: var(--background-color);
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
-}
-
-.scrolled .header {
-  --background-color: rgba(16, 26, 32, 0.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Logo */
