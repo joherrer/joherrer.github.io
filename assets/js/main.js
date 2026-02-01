@@ -53,42 +53,28 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Mobile-only hero image tap-to-scale
+   * Tap effects on mobile navigation
    */
-  function initMobileTapScale(selectors) {
-    if (!selectors || selectors.length === 0) return;
+  function initMobileTapSingle(selectors) {
+    const elements = selectors.flatMap(sel => Array.from(document.querySelectorAll(sel)));
 
-    function isMobile() {
-      return window.innerWidth <= 991;
-    }
+    elements.forEach(el => {
+      el.addEventListener('click', e => {
+        if (e.target.closest('a, button, input')) return;
 
-    selectors.forEach(selector => {
-      const elements = document.querySelectorAll(selector);
-      elements.forEach(el => {
-        el.addEventListener('click', (event) => {
-          if (!isMobile()) return;
-          event.stopPropagation();
+        if (window.innerWidth < 992) {
+          elements.forEach(sibling => {
+            if (sibling !== el) sibling.classList.remove('scaled');
+          });
+
           el.classList.toggle('scaled');
-        });
-
-        document.addEventListener('click', () => {
-          if (!isMobile()) return;
-          el.classList.remove('scaled');
-        });
+        }
       });
-    });
-
-    window.addEventListener('resize', () => {
-      if (!isMobile()) {
-        selectors.forEach(selector => {
-          document.querySelectorAll(selector).forEach(el => el.classList.remove('scaled'));
-        });
-      }
     });
   }
 
   window.addEventListener('load', () => {
-    initMobileTapScale([
+    initMobileTapSingle([
       '.hero .hero-image .image-wrapper img',
       '.about .profile-figure',
       '.about .skill-item',

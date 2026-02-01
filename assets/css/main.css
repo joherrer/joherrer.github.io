@@ -1812,6 +1812,13 @@ section,
 }
 
 @media (max-width: 991.98px) {
+  .services .service-item::before {
+    transform: scaleY(0);
+    width: 4px;
+    height: 100%;
+    transform-origin: bottom;
+  }
+
   .services .service-item.scaled {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transform: translateY(-5px);
@@ -1881,7 +1888,7 @@ section,
     transform-origin: left;
   }
 
-  .services .service-item:hover::before {
+  .services .service-item.scaled::before {
     transform: scaleX(1);
   }
 
