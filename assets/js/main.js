@@ -53,6 +53,34 @@
   window.addEventListener('load', aosInit);
 
   /**
+   * Hero image mobile tap toggle
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.hero .hero-image .image-wrapper img');
+
+    function enableMobileToggle() {
+      if (window.innerWidth < 992) {
+        images.forEach(img => {
+          if (!img.dataset.toggleAttached) {
+            img.addEventListener('click', () => {
+              img.classList.toggle('hovered');
+            });
+            img.dataset.toggleAttached = true;
+          }
+        });
+      } else {
+        images.forEach(img => {
+          img.classList.remove('hovered');
+          img.dataset.toggleAttached = false;
+        });
+      }
+    }
+
+    enableMobileToggle();
+    window.addEventListener('resize', enableMobileToggle);
+  });
+
+  /**
    * Init typed.js
    */
   const selectTyped = document.querySelector('.typed');

@@ -830,6 +830,10 @@ section,
   transform: scale(1.02);
 }
 
+.hero .hero-image .image-wrapper img.hovered {
+  transform: scale(1.02);
+}
+
 /* Floating Elements */
 .hero .hero-image .floating-elements {
   position: absolute;
