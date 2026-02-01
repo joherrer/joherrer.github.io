@@ -96,7 +96,8 @@
       '.skills .skill-box',
       '.resume .software-pill',
       '.services .service-item',
-      '.portfolio .portfolio-card'
+      '.portfolio .portfolio-card',
+      '.contact .info-item'
     ]);
   });
 

@@ -2581,12 +2581,6 @@ section,
   color: var(--contrast-color);
 }
 
-.contact .info-item:hover .icon-box {
-  background: color-mix(in srgb, var(--accent-color), black 15%);
-  border-color: color-mix(in srgb, var(--accent-color), black 15%);
-  transform: translateY(-2px);
-}
-
 .contact .info-item .content h4 {
   color: var(--contrast-color);
   font-size: 1.25rem;
@@ -2687,6 +2681,22 @@ section,
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+@media (min-width: 992px) {
+  .contact .info-item:hover .icon-box {
+    background: color-mix(in srgb, var(--accent-color), black 15%);
+    border-color: color-mix(in srgb, var(--accent-color), black 15%);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 991.68px) {
+.contact .info-item.scaled .icon-box {
+    background: color-mix(in srgb, var(--accent-color), black 15%);
+    border-color: color-mix(in srgb, var(--accent-color), black 15%);
+    transform: translateY(-2px);
+  }
 }
 
 @media (max-width: 380px) {
