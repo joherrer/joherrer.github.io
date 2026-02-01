@@ -1448,9 +1448,18 @@ section,
   width: 1px;
 }
 
-.skills .skill-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+@media (min-width: 993px) {
+  .skills .skill-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+  }
+}
+
+@media (max-width: 992px) {
+  .skills .skill-box.scaled {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+  }
 }
 
 @media (max-width: 768px) {

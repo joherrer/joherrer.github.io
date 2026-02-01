@@ -92,7 +92,8 @@
       '.hero .hero-image .image-wrapper img',
       '.about .profile-figure',
       '.about .skill-item',
-      '.about .fact-pill'
+      '.about .fact-pill',
+      '.skills .skill-box'
     ]);
   });
 
