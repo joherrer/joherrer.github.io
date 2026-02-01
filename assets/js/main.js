@@ -93,7 +93,8 @@
       '.about .profile-figure',
       '.about .skill-item',
       '.about .fact-pill',
-      '.skills .skill-box'
+      '.skills .skill-box',
+      '.resume .software-pill',
     ]);
   });
 

@@ -1609,12 +1609,6 @@ section,
   font-size: 14px;
 }
 
-.resume .software-pill:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
-}
-
 .resume .software-pill:focus-within {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
@@ -1623,10 +1617,6 @@ section,
   height: 20px;
   width: auto;
   transition: transform 0.2s ease-in-out;
-}
-
-.resume .software-pill:hover img {
-  transform: scale(1.1);
 }
 
 .resume .software-pill img.white-icon {
@@ -1680,9 +1670,27 @@ section,
 }
 
 /* Responsive Styles */
-@media (max-width: 991.98px) {
-  .resume .resume-item {
-    margin-bottom: 3.5rem;
+@media (min-width: 993px) {
+  .resume .software-pill:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+  }
+
+  .resume .software-pill:hover img {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 992px) {
+  .resume .software-pill.scaled {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+  }
+
+  .resume .software-pill.scaled img {
+    transform: scale(1.1);
   }
 }
 
