@@ -1729,29 +1729,6 @@ section,
   transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-.services .service-item:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transform: translateY(-5px);
-}
-
-.services .service-item:hover::before {
-  transform: scaleY(1);
-}
-
-.services .service-item:hover .service-icon {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  transform: rotateY(180deg);
-}
-
-.services .service-item:hover .service-icon i {
-  transform: rotateY(180deg);
-}
-
-.services .service-item:hover .service-link i {
-  transform: translateX(5px);
-}
-
 .services .service-icon {
   flex-shrink: 0;
   width: 70px;
