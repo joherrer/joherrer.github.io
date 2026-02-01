@@ -95,6 +95,7 @@
       '.about .fact-pill',
       '.skills .skill-box',
       '.resume .software-pill',
+      '.services .service-item'
     ]);
   });
 
