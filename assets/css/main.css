@@ -826,10 +826,6 @@ section,
   transition: transform 0.3s ease;
 }
 
-.hero .hero-image .image-wrapper img:hover {
-  transform: scale(1.02);
-}
-
 /* Floating Elements */
 .hero .hero-image .floating-elements {
   position: absolute;
@@ -895,6 +891,12 @@ section,
   }
 }
 
+@media (min-width: 993px) {
+  .hero .hero-image .image-wrapper img:hover {
+    transform: scale(1.02);
+  }
+}
+
 @media (max-width: 992px) {
   .hero {
     min-height: calc(100svh - 62px);
@@ -908,6 +910,10 @@ section,
 
   .hero .hero-image .image-wrapper {
     margin: 0 auto;
+  }
+
+  .hero .hero-image .image-wrapper img.scaled {
+    transform: scale(1.02);
   }
 
   .hero .hero-content {

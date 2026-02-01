@@ -53,6 +53,37 @@
   window.addEventListener('load', aosInit);
 
   /**
+   * Mobile-only hero image tap-to-scale (clean version)
+   */
+  function initMobileHeroImageScale() {
+    const heroImage = document.querySelector('.hero .hero-image .image-wrapper img');
+    if (!heroImage) return;
+
+    function isMobile() {
+      return window.innerWidth <= 991;
+    }
+
+    heroImage.addEventListener('click', (event) => {
+      if (!isMobile()) return;
+      event.stopPropagation();
+      heroImage.classList.toggle('scaled');
+    });
+
+    document.addEventListener('click', () => {
+      if (!isMobile()) return;
+      heroImage.classList.remove('scaled');
+    });
+
+    window.addEventListener('resize', () => {
+      if (!isMobile()) {
+        heroImage.classList.remove('scaled');
+      }
+    });
+  }
+
+  window.addEventListener('load', initMobileHeroImageScale);
+
+  /**
    * Init typed.js
    */
   const selectTyped = document.querySelector('.typed');
