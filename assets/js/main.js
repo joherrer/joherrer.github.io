@@ -53,35 +53,48 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Mobile-only hero image tap-to-scale (clean version)
+   * Mobile-only hero image tap-to-scale
    */
-  function initMobileHeroImageScale() {
-    const heroImage = document.querySelector('.hero .hero-image .image-wrapper img');
-    if (!heroImage) return;
+  function initMobileTapScale(selectors) {
+    if (!selectors || selectors.length === 0) return;
 
     function isMobile() {
       return window.innerWidth <= 991;
     }
 
-    heroImage.addEventListener('click', (event) => {
-      if (!isMobile()) return;
-      event.stopPropagation();
-      heroImage.classList.toggle('scaled');
-    });
+    selectors.forEach(selector => {
+      const elements = document.querySelectorAll(selector);
+      elements.forEach(el => {
+        el.addEventListener('click', (event) => {
+          if (!isMobile()) return;
+          event.stopPropagation();
+          el.classList.toggle('scaled');
+        });
 
-    document.addEventListener('click', () => {
-      if (!isMobile()) return;
-      heroImage.classList.remove('scaled');
+        document.addEventListener('click', () => {
+          if (!isMobile()) return;
+          el.classList.remove('scaled');
+        });
+      });
     });
 
     window.addEventListener('resize', () => {
       if (!isMobile()) {
-        heroImage.classList.remove('scaled');
+        selectors.forEach(selector => {
+          document.querySelectorAll(selector).forEach(el => el.classList.remove('scaled'));
+        });
       }
     });
   }
 
-  window.addEventListener('load', initMobileHeroImageScale);
+  window.addEventListener('load', () => {
+    initMobileTapScale([
+      '.hero .hero-image .image-wrapper img',
+      '.about .profile-figure',
+      '.about .skill-item',
+      '.about .fact-pill'
+    ]);
+  });
 
   /**
    * Init typed.js

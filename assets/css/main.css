@@ -1202,10 +1202,6 @@ section,
   transition: transform 0.3s ease-in-out;
 }
 
-.about .profile-figure:hover .profile-photo {
-  transform: translateY(-4px);
-}
-
 .about .profile-figure .profile-caption {
   margin-top: 24px;
   display: flex;
@@ -1251,12 +1247,6 @@ section,
   margin: 0;
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
-}
-
-.about .skill-item:hover {
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
 /* Timeline */
@@ -1334,17 +1324,29 @@ section,
   font-size: 14px;
 }
 
-.about .fact-pill:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
-}
-
 .about .fact-pill:focus-within {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 /* Responsive Styles */
+@media (min-width: 993px) {
+  .about .profile-figure:hover .profile-photo {
+    transform: translateY(-4px);
+  }
+
+  .about .skill-item:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+  }
+
+  .about .fact-pill:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+  }
+}
+
 @media (max-width: 992px) {
   .about .intro-content .cta-group {
     flex-wrap: wrap;
@@ -1357,6 +1359,22 @@ section,
 
   .about .profile-figure .profile-photo {
     width: 72%;
+  }
+
+  .about .profile-figure.scaled .profile-photo {
+    transform: translateY(-4px);
+  }
+
+  .about .skill-item.scaled {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
+  }
+
+  .about .fact-pill.scaled {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
   }
 }
 
