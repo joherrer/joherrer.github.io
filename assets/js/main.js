@@ -101,18 +101,15 @@
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
   navLinks.forEach(link => {
-    // Instant bold on touch
     link.addEventListener('touchstart', function() {
       navLinks.forEach(l => l.classList.remove('tapped'));
       this.classList.add('tapped');
     }, {passive: true});
 
-    // If they move their finger (scrolling), remove the bold
     link.addEventListener('touchmove', function() {
       this.classList.remove('tapped');
     }, {passive: true});
-    
-    // Safety: remove bold if they tap but then pull their finger away
+
     link.addEventListener('touchcancel', function() {
       this.classList.remove('tapped');
     }, {passive: true});
