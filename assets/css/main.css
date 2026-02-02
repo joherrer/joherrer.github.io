@@ -430,20 +430,17 @@ h6 {
   }
 
   .navbar-nav .nav-link {
-    cursor: pointer; /* helps iOS treat it as interactive */
-    padding: 6px 0;
+    cursor: pointer;
+    font-family: var(--nav-font);
+    font-size: 17px;
+    font-weight: 400;
     transition: background-color 0.1s ease, color 0.1s ease;
     border-radius: 6px;
   }
 
   .navbar-nav .nav-link:active {
-    background-color: rgba(255, 255, 255, 0.12); /* flash */
-    color: var(--nav-hover-color);              /* optional text change */
-  }
-
-  /* iOS tap highlight */
-  .navbar-nav .nav-link {
-    -webkit-tap-highlight-color: rgba(255,255,255,0.15);
+    color: var(--nav-color);
+    background-color: rgba(255, 255, 255, 0.12);
   }
 
   .navbar-nav .nav-link.active {
