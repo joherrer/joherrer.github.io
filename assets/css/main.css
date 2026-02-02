@@ -436,7 +436,10 @@ h6 {
   }
 
   .navbar-nav .nav-link:active {
-    color: var(--nav-color);
+    color: var(--nav-hover-color);
+    font-weight: 700; /* Makes it look "pressed" and bold */
+    transform: scale(0.98); /* Slight shrink effect for tactile feedback */
+    transition: 0.1s;
   }
 
   .navbar-nav .nav-link.active {
