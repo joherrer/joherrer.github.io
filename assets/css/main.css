@@ -436,13 +436,14 @@ h6 {
   }
 
   .navbar-nav .nav-link.tapped {
-    font-weight: 800 !important;
-    color: var(--nav-hover-color) !important;
-    transition: none; /* Instant feedback */
+    color: var(--nav-color) !important;
+    transition: none;
   }
 
   .navbar-nav .nav-link.active {
-    font-weight: 600;
+    font-weight: 800 !important;
+    color: var(--nav-hover-color) !important;
+    background-color: rgba(0, 0, 0, 0.03); /* Subtle hint that it's pressed */
   }
 }
 
