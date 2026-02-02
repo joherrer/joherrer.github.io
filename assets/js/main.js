@@ -69,7 +69,15 @@
 
           el.classList.toggle('scaled');
         }
+
+        e.stopPropagation();
       });
+    });
+
+    document.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        elements.forEach(el => el.classList.remove('scaled'));
+      }
     });
   }
 
