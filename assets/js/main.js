@@ -53,24 +53,33 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Tap effects on mobile navigation
+   * Mobile tap effects
    */
-  function initMobileTapSingle(selectors) {
+  function initMobileTapSingle(selectors, navbarSelector = null) {
     const elements = selectors.flatMap(sel => Array.from(document.querySelectorAll(sel)));
 
     elements.forEach(el => {
       el.addEventListener('click', e => {
-        if (e.target.closest('a, button, input')) return;
+        if (e.target.closest('a, button, input')) return; 
 
         if (window.innerWidth < 992) {
           elements.forEach(sibling => {
             if (sibling !== el) sibling.classList.remove('scaled');
           });
-
           el.classList.toggle('scaled');
         }
       });
     });
+
+    if (navbarSelector && window.innerWidth < 992) {
+      const navLinks = document.querySelectorAll(navbarSelector);
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          link.classList.add('flash');
+          setTimeout(() => link.classList.remove('flash'), 1000);
+        });
+      });
+    }
   }
 
   window.addEventListener('load', () => {
@@ -84,7 +93,8 @@
       '.services .service-item',
       '.portfolio .portfolio-card',
       '.contact .info-item'
-    ]);
+    ],
+    '.navbar-nav .nav-link');
   });
 
   /**

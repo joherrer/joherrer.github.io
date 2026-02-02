@@ -439,9 +439,9 @@ h6 {
     font-weight: 600;
   }
 
-  .navbar-nav .nav-link:active {
-    color: #fff;
-    transition: 0.2s;
+  .navbar-nav .nav-link.flash {
+    color: #fff !important;
+    transition: color 0.2s;
   }
 }
 
