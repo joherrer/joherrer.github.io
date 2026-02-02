@@ -435,7 +435,7 @@ h6 {
     font-weight: 400;
   }
 
-  .navbar-nav .nav-link:hover {
+  .navbar-nav .nav-link:active {
     color: red;
   }
 
