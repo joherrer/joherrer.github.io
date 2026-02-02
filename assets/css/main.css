@@ -440,7 +440,6 @@ h6 {
 
   .navbar-nav .nav-link:hover {
     color: var(--nav-color);
-    background-color: rgba(255, 255, 255, 0.12);
   }
 
   .navbar-nav .nav-link.active {
