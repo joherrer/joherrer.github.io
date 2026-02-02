@@ -96,26 +96,6 @@
   });
 
   /**
-   * Tab effect for mobile nav links
-   */
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-  navLinks.forEach(link => {
-    link.addEventListener('touchstart', function() {
-      navLinks.forEach(l => l.classList.remove('tapped'));
-      this.classList.add('tapped');
-    }, {passive: true});
-
-    link.addEventListener('touchmove', function() {
-      this.classList.remove('tapped');
-    }, {passive: true});
-
-    link.addEventListener('touchcancel', function() {
-      this.classList.remove('tapped');
-    }, {passive: true});
-  });
-
-  /**
    * Init typed.js
    */
   const selectTyped = document.querySelector('.typed');
