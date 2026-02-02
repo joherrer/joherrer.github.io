@@ -335,7 +335,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 993px) {
+@media (min-width: 992px) {
   .navbar-nav {
     margin: 0;
     padding: 0;
@@ -404,7 +404,7 @@ h6 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .navbar-toggler {
       border: none;
       background: transparent;
@@ -437,6 +437,11 @@ h6 {
 
   .navbar-nav .nav-link.active {
       font-weight: 600;
+  }
+
+  .navbar-nav .nav-link:active {
+    color: #fff;
+    transition: 0.2s;
   }
 }
 
@@ -2661,7 +2666,7 @@ section,
   }
 }
 
-@media (max-width: 991.68px) {
+@media (max-width: 991.98px) {
 .contact .info-item.scaled .icon-box {
     background: color-mix(in srgb, var(--accent-color), black 15%);
     border-color: color-mix(in srgb, var(--accent-color), black 15%);
