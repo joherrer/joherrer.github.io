@@ -53,7 +53,7 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Tap effects on mobile devices
+   * Tap effects on mobile navigation
    */
   function initMobileTapSingle(selectors) {
     const elements = selectors.flatMap(sel => Array.from(document.querySelectorAll(sel)));
@@ -85,26 +85,6 @@
       '.portfolio .portfolio-card',
       '.contact .info-item'
     ]);
-  });
-
-  /**
-   * Nav-lnk tap effect on mobile devices
-   */
-  function isMobile() {
-    return window.innerWidth < 992; // matches your CSS media query
-  }
-
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (isMobile()) {
-        link.classList.add('tap-feedback');
-        setTimeout(() => {
-          link.classList.remove('tap-feedback');
-        }, 1000); // 1 second
-      }
-    });
   });
 
   /**
