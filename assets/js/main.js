@@ -96,6 +96,18 @@
   });
 
   /**
+   * Tab effect for mobile nav links
+   */
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('touchstart', function() {
+      // Remove 'tapped' from any other link first
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(l => l.classList.remove('tapped'));
+      // Add it to the one we just touched
+      this.classList.add('tapped');
+    }, {passive: true});
+  });
+
+  /**
    * Init typed.js
    */
   const selectTyped = document.querySelector('.typed');

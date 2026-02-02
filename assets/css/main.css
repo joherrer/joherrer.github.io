@@ -435,11 +435,10 @@ h6 {
     font-weight: 400;
   }
 
-  .navbar-nav .nav-link:active {
-    color: var(--nav-hover-color);
-    font-weight: 700; /* Makes it look "pressed" and bold */
-    transform: scale(0.98); /* Slight shrink effect for tactile feedback */
-    transition: 0.1s;
+  .navbar-nav .nav-link.tapped {
+    font-weight: 800 !important;
+    color: var(--nav-hover-color) !important;
+    transition: none; /* Instant feedback */
   }
 
   .navbar-nav .nav-link.active {
