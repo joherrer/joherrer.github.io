@@ -53,33 +53,24 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Mobile tap effects
+   * Tap effects on mobile devices
    */
-  function initMobileTapSingle(selectors, navbarSelector = null) {
+  function initMobileTapSingle(selectors) {
     const elements = selectors.flatMap(sel => Array.from(document.querySelectorAll(sel)));
 
     elements.forEach(el => {
       el.addEventListener('click', e => {
-        if (e.target.closest('a, button, input')) return; 
+        if (e.target.closest('a, button, input')) return;
 
         if (window.innerWidth < 992) {
           elements.forEach(sibling => {
             if (sibling !== el) sibling.classList.remove('scaled');
           });
+
           el.classList.toggle('scaled');
         }
       });
     });
-
-    if (navbarSelector && window.innerWidth < 992) {
-      const navLinks = document.querySelectorAll(navbarSelector);
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          link.classList.add('flash');
-          setTimeout(() => link.classList.remove('flash'), 1000);
-        });
-      });
-    }
   }
 
   window.addEventListener('load', () => {
@@ -93,8 +84,27 @@
       '.services .service-item',
       '.portfolio .portfolio-card',
       '.contact .info-item'
-    ],
-    '.navbar-nav .nav-link');
+    ]);
+  });
+
+  /**
+   * Nav-lnk tap effect on mobile devices
+   */
+  function isMobile() {
+    return window.innerWidth < 992; // matches your CSS media query
+  }
+
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMobile()) {
+        link.classList.add('tap-feedback');
+        setTimeout(() => {
+          link.classList.remove('tap-feedback');
+        }, 1000); // 1 second
+      }
+    });
   });
 
   /**

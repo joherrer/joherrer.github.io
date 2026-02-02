@@ -439,9 +439,11 @@ h6 {
     font-weight: 600;
   }
 
-  .navbar-nav .nav-link.flash {
-    color: #f90000 !important;
-    transition: color 0.2s;
+  .navbar-nav .nav-link.tap-feedback {
+    background-color: #007bff;
+    color: white !important;
+    border-radius: 4px; 
+    transition: background-color 0.2s, color 0.2s;
   }
 }
 
