@@ -58,24 +58,24 @@
   function initMobileTapSingle(selectors) {
     const elements = selectors.flatMap(sel => Array.from(document.querySelectorAll(sel)));
 
-    elements.forEach(el => {
-      el.addEventListener('click', e => {
-        if (e.target.closest('a, button, input')) return;
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth >= 992) return;
 
-        if (window.innerWidth < 992) {
+      let clickedInsideElement = false;
+
+      elements.forEach(el => {
+        if (el.contains(e.target)) {
+          clickedInsideElement = true;
+
           elements.forEach(sibling => {
             if (sibling !== el) sibling.classList.remove('scaled');
           });
 
           el.classList.toggle('scaled');
         }
-
-        e.stopPropagation();
       });
-    });
 
-    document.addEventListener('click', () => {
-      if (window.innerWidth < 992) {
+      if (!clickedInsideElement) {
         elements.forEach(el => el.classList.remove('scaled'));
       }
     });
