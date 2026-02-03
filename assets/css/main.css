@@ -488,7 +488,7 @@ h6 {
     visibility: hidden;
     width: 0px;
     transform: translateX(-50%);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-out;
   }
 
   .navbar-nav .nav-link:hover:before {

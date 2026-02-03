@@ -22,18 +22,13 @@
     window.scrollY > 20 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
-
   /**
-   * Scroll top button
+   * Scroll top button visibility toggle
    */
-  let scrollTop = document.querySelector('.scroll-top');
-
   function toggleScrollTop() {
+    let scrollTop = document.querySelector('.scroll-top');
     if (scrollTop) {
       const isMobileNavActive = document.body.classList.contains('mobile-nav-active');
-
       if (window.scrollY > 100 && !isMobileNavActive) {
         scrollTop.classList.add('active');
       } else {
@@ -41,17 +36,6 @@
       }
     }
   }
-
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
 
   /**
    * Animation on scroll function and init
@@ -64,29 +48,9 @@
       mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
 
   /**
-   * Lock body scroll when mobile menu is open
-   */
-  const navbar = document.querySelector('#navbarNav');
-  if (navbar) {
-    navbar.addEventListener('show.bs.collapse', () => {
-      document.body.classList.add('mobile-nav-active');
-      toggleScrolled();
-      toggleScrollTop();
-    });
-
-    // Fired when the menu is fully closed
-    navbar.addEventListener('hidden.bs.collapse', () => {
-      document.body.classList.remove('mobile-nav-active');
-      toggleScrolled();
-      toggleScrollTop();
-    });
-  }
-
-  /**
-   * Tap effects on mobile navigation
+   * Tap effects on mobile for specific UI elements
    */
   function initMobileTapSingle(selectors) {
     const elements = selectors.flatMap(sel => Array.from(document.querySelectorAll(sel)));
@@ -95,15 +59,12 @@
       if (window.innerWidth >= 992) return;
 
       let clickedInsideElement = false;
-
       elements.forEach(el => {
         if (el.contains(e.target)) {
           clickedInsideElement = true;
-
           elements.forEach(sibling => {
             if (sibling !== el) sibling.classList.remove('scaled');
           });
-
           el.classList.toggle('scaled');
         }
       });
@@ -114,122 +75,111 @@
     });
   }
 
-  window.addEventListener('load', () => {
-    initMobileTapSingle([
-      '.hero .hero-image .image-wrapper img',
-      '.about .profile-figure',
-      '.about .skill-item',
-      '.about .fact-pill',
-      '.skills .skill-box',
-      '.resume .software-pill',
-      '.services .service-item',
-      '.portfolio .portfolio-card',
-      '.contact .info-item'
-    ]);
-  });
-
   /**
-   * Init typed.js
+   * Mobile Navigation Delay
    */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 40,
-      backSpeed: 30,
-      backDelay: 2000
+  function initMobileNavDelay() {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const isMobile = window.innerWidth < 992;
+        const href = this.getAttribute('href');
+
+        if (isMobile && href && !href.startsWith('#')) {
+          e.preventDefault();
+          
+          setTimeout(() => {
+            window.location.href = href;
+          }, 250);
+        }
+      });
     });
   }
 
   /**
-   * Animate the skills items on reveal
+   * Typed.js initialization
    */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
+  function initTyped() {
+    const selectTyped = document.querySelector('.typed');
+    if (selectTyped) {
+      let typed_strings = selectTyped.getAttribute('data-typed-items');
+      typed_strings = typed_strings.split(',');
+      new Typed('.typed', {
+        strings: typed_strings,
+        loop: true,
+        typeSpeed: 40,
+        backSpeed: 30,
+        backDelay: 2000
+      });
+    }
+  }
+
+  /**
+   * Skills progress bar animation
+   */
+  function initSkillsAnimation() {
+    let skillsAnimation = document.querySelectorAll('.skills-animation');
+    skillsAnimation.forEach((item) => {
+      new Waypoint({
+        element: item,
+        offset: '80%',
+        handler: function(direction) {
+          let progress = item.querySelectorAll('.progress .progress-bar');
+          progress.forEach(el => {
+            el.style.width = el.getAttribute('aria-valuenow') + '%';
+          });
+        }
+      });
     });
-  });
+  }
 
   /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Init swiper sliders
+   * Swiper sliders initialization
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
+      new Swiper(swiperElement, config);
     });
   }
 
-  window.addEventListener("load", initSwiper);
-
   /**
-   * Init isotope layout and filters
+   * Isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+  function initIsotope() {
+    document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+      let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+      let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+      let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
+      let inst;
+      imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+        inst = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+          itemSelector: '.isotope-item',
+          layoutMode: layout,
+          filter: filter,
+          sortBy: sort
+        });
+      });
+
+      isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
+        filters.addEventListener('click', function() {
+          isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+          this.classList.add('filter-active');
+          inst.arrange({ filter: this.getAttribute('data-filter') });
+          if (typeof AOS !== 'undefined') AOS.refresh();
+        }, false);
       });
     });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof AOS !== 'undefined') {
-          AOS.refresh();
-        }
-      }, false);
-    });
-
-  });
+  }
 
   /**
-   * Initiate glightbox
+   * Contact Form handling
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox',
-    loop: true,
-  });
-
-  /**
-   * Contact form submission (Formspree)
-   */
-  document.addEventListener("DOMContentLoaded", () => {
+  function initContactForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
     
@@ -251,43 +201,68 @@
           form.reset();
         } else {
           const data = await response.json();
-          const errorMessage = data.errors
-            ? data.errors.map(err => err.message).join(", ")
-            : "An unexpected error occurred.";
-          showAlert(errorMessage, "danger");
+          showAlert(data.errors ? data.errors[0].message : "Error occurred", "danger");
         }
       } catch {
-        showAlert("Network error. Please try again later.", "danger");
+        showAlert("Network error.", "danger");
       }
     });
 
-    function showAlert(message, type = "info") {
-      const iconMap = {
-        info: "bi-info-circle-fill",
-        success: "bi-check-circle-fill",
-        danger: "bi-exclamation-triangle-fill"
-      };
-      const iconClass = iconMap[type] || "bi-info-circle-fill";
-
-      status.innerHTML = `
-        <div class="alert alert-${type}" role="alert">
-          <i class="bi ${iconClass} me-2"></i>${message}
-        </div>
-      `;
-
-      const alertEl = status.querySelector(".alert");
-      alertEl.classList.add("show");
-
-      setTimeout(() => {
-        if (alertEl) {
-          alertEl.classList.remove("show");
-          alertEl.classList.add("hide");
-          alertEl.addEventListener("animationend", () => {
-            if (alertEl) status.innerHTML = "";
-          });
-        }
-      }, 3000);
+    function showAlert(message, type) {
+      status.innerHTML = `<div class="alert alert-${type} show">${message}</div>`;
+      setTimeout(() => { status.innerHTML = ""; }, 3000);
     }
+  }
+
+  /*--------------------------------------------------------------
+  # Global Event Listeners & Init Calls
+  --------------------------------------------------------------*/
+
+  window.addEventListener('load', () => {
+    aosInit();
+    initTyped();
+    initSkillsAnimation();
+    initSwiper();
+    initIsotope();
+    initContactForm();
+    initMobileNavDelay();
+    
+    initMobileTapSingle([
+      '.hero .hero-image .image-wrapper img',
+      '.about .profile-figure',
+      '.about .skill-item',
+      '.about .fact-pill',
+      '.skills .skill-box',
+      '.resume .software-pill',
+      '.services .service-item',
+      '.portfolio .portfolio-card',
+      '.contact .info-item'
+    ]);
   });
+
+  document.addEventListener('scroll', () => {
+    toggleScrolled();
+    toggleScrollTop();
+  });
+
+  // Bootstrap collapse events for body scroll locking
+  const navbar = document.querySelector('#navbarNav');
+  if (navbar) {
+    navbar.addEventListener('show.bs.collapse', () => {
+      document.body.classList.add('mobile-nav-active');
+    });
+    navbar.addEventListener('hidden.bs.collapse', () => {
+      document.body.classList.remove('mobile-nav-active');
+    });
+  }
+
+  // Scroll to top click
+  let scrollTop = document.querySelector('.scroll-top');
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
 })();
