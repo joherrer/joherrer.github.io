@@ -53,6 +53,20 @@
   window.addEventListener('load', aosInit);
 
   /**
+   * Lock body scroll when mobile menu is open
+   */
+  const navbar = document.querySelector('#navbarNav');
+  if (navbar) {
+    navbar.addEventListener('show.bs.collapse', () => {
+      document.body.classList.add('mobile-nav-active');
+    });
+
+    navbar.addEventListener('hide.bs.collapse', () => {
+      document.body.classList.remove('mobile-nav-active');
+    });
+  }
+
+  /**
    * Tap effects on mobile navigation
    */
   function initMobileTapSingle(selectors) {

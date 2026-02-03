@@ -421,13 +421,6 @@ h6 {
     font-size: 28px;
   }
 
-  .navbar-collapse.collapsing {
-      height: 100vh !important;
-      transition: none !important;
-      display: flex !important;
-      opacity: 0;
-  }
-
   .navbar-collapse {
     position: fixed;
     top: 0;
@@ -446,6 +439,13 @@ h6 {
     transition: opacity 0.2s ease-in-out, visibility 0.2s;
   }
 
+  .navbar-collapse.collapsing {
+    height: 100vh !important;
+    transition: none !important;
+    display: flex !important;
+    opacity: 0;
+  }
+
   .navbar-collapse.show {
     opacity: 1;
     visibility: visible;
@@ -455,6 +455,10 @@ h6 {
     padding: 0;
     width: 100%;
     text-align: center;
+  }
+
+  body.mobile-nav-active {
+    overflow: hidden;
   }
 
   .navbar-nav > .nav-item {
