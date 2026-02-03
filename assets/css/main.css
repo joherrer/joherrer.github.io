@@ -475,7 +475,7 @@ h6 {
     font-weight: 400;
     display: inline-block;
     position: relative;
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease-out;
   }
 
 .navbar-nav .nav-link:before {
