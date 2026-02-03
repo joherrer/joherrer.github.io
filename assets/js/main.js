@@ -79,27 +79,27 @@
    * Mobile Navigation Delay
    */
   function initMobileNavDelay() {
-      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-      
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          const isMobile = window.innerWidth < 992;
-          const href = this.getAttribute('href');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const isMobile = window.innerWidth < 992;
+        const href = this.getAttribute('href');
+
+        if (isMobile && href && !href.startsWith('#')) {
+          e.preventDefault();
+
+          navLinks.forEach(l => l.classList.remove('active'));
           
-          if (isMobile && href && !href.startsWith('#')) {
-            e.preventDefault();
-
-            navLinks.forEach(l => l.classList.remove('active'));
-
-            this.classList.add('active');
-
-            setTimeout(() => {
-              window.location.href = href;
-            }, 250);
-          }
-        });
+          this.classList.add('active');
+          
+          setTimeout(() => {
+            window.location.href = href;
+          }, 250);
+        }
       });
-    }
+    });
+  }
 
   /**
    * Typed.js initialization
