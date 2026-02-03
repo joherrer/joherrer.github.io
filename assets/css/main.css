@@ -501,7 +501,7 @@ h6 {
 
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link.active {
-    color: var(--nav-hover-color);
+    color: var(--nav-color);
   }
 }
 
