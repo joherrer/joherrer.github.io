@@ -319,7 +319,8 @@ h6 {
   transition: all 0.2s ease;
 }
 
-.header .logo h1 {
+.header .logo h1:hover, 
+.header .logo h1:active {
   background: linear-gradient(90deg, #1387c1, #d21b64);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
