@@ -432,9 +432,8 @@ h6 {
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    justify-content: start !important;
+    justify-content: center !important;
     align-items: center;
-    padding-top: 100px;
     overflow-y: auto;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
@@ -487,10 +486,6 @@ h6 {
 @media (max-width: 576px) {
   .navbar-toggler {
     margin-right: 17px;
-  }
-
-  .navbar-collapse {
-    padding-top: 200px;
   }
 }
 
