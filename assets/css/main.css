@@ -443,7 +443,7 @@ h6 {
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s;
   }
 
   .navbar-collapse.show {
