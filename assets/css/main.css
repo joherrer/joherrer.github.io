@@ -441,7 +441,7 @@ h6 {
     flex-direction: column;
     justify-content: start !important;
     align-items: center;
-    padding-top: 200px;
+    padding-top: 100px;
     overflow-y: auto;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
@@ -491,15 +491,13 @@ h6 {
   }
 }
 
-@media (max-width: 768px) {
-  .navbar-collapse {
-    padding-top: 100px;
-  }
-}
-
 @media (max-width: 576px) {
   .navbar-toggler {
     margin-right: 17px;
+  }
+
+  .navbar-collapse {
+    padding-top: 200px;
   }
 }
 
