@@ -61,7 +61,7 @@
       document.body.classList.add('mobile-nav-active');
     });
 
-    navbar.addEventListener('hide.bs.collapse', () => {
+    navbar.addEventListener('hidden.bs.collapse', () => {
       document.body.classList.remove('mobile-nav-active');
     });
   }

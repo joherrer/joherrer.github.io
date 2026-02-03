@@ -433,17 +433,18 @@ h6 {
     flex-direction: column;
     align-items: center;
     padding-top: 200px;
+    overflow-y: auto;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
   }
 
   .navbar-collapse.collapsing {
-    height: 100vh !important;
-    transition: none !important;
     display: flex !important;
+    height: 100vh !important;
     opacity: 0;
+    transition: opacity 0.2s ease-in-out !important;
   }
 
   .navbar-collapse.show {
