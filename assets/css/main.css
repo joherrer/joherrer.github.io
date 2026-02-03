@@ -473,10 +473,32 @@ h6 {
     font-family: var(--nav-font);
     font-size: 20px;
     font-weight: 400;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+  }
+
+.navbar-nav .nav-link:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0px;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar-nav .nav-link:hover:before {
+    visibility: visible;
+    width: 30px; 
   }
 
   .navbar-nav .nav-link:hover {
     color: var(--nav-color);
+    font-weight: 600;
   }
 
   .navbar-nav .nav-link.active {
