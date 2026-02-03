@@ -486,6 +486,7 @@ h6 {
     left: 50%;
     background-color: var(--nav-hover-color);
     visibility: hidden;
+    opacity: 0;
     width: 0px;
     transform: translateX(-50%);
     transition: all 0.2s ease-out;
@@ -493,6 +494,7 @@ h6 {
 
   .navbar-nav .nav-link:hover:before {
     visibility: visible;
+    opacity: 1;
     width: 30px; 
   }
 
