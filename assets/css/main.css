@@ -274,7 +274,7 @@ h6 {
 .header .logo, 
 .navbar-toggler {
   position: relative;
-  z-index: 1100 !important;
+  z-index: 1100;
   transform: translateZ(0);
 }
 
@@ -426,11 +426,12 @@ h6 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh !important;
+    height: 100vh;
     background-color: #101a20;
     z-index: 1000;
     display: flex;
     flex-direction: column;
+    justify-content: start !important;
     align-items: center;
     padding-top: 200px;
     overflow-y: auto;
@@ -441,11 +442,11 @@ h6 {
   }
 
   .navbar-collapse.collapsing {
-    display: flex !important;
-    height: 100vh !important;
+    display: flex;
+    height: 100vh;
     opacity: 0;
-    visibility: visible !important;
-    transition: opacity 0.2s ease-in-out !important;
+    visibility: visible;
+    transition: opacity 0.2s ease-in-out;
   }
 
   .navbar-collapse.show {
