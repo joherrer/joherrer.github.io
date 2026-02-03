@@ -12,6 +12,12 @@
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
+
+    if (selectBody.classList.contains('mobile-nav-active')) {
+      selectBody.classList.remove('scrolled');
+      return;
+    }
+
     window.scrollY > 20 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
@@ -25,9 +31,16 @@
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      const isMobileNavActive = document.body.classList.contains('mobile-nav-active');
+      
+      if (window.scrollY > 100 && !isMobileNavActive) {
+        scrollTop.classList.add('active');
+      } else {
+        scrollTop.classList.remove('active');
+      }
     }
   }
+
   scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -59,10 +72,14 @@
   if (navbar) {
     navbar.addEventListener('show.bs.collapse', () => {
       document.body.classList.add('mobile-nav-active');
+      toggleScrollTop();
+      toggleScrolled();
     });
 
     navbar.addEventListener('hidden.bs.collapse', () => {
       document.body.classList.remove('mobile-nav-active');
+      toggleScrolled();
+      toggleScrollTop();
     });
   }
 
