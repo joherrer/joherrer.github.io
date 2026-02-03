@@ -11,11 +11,12 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
+    
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
 
     if (selectBody.classList.contains('mobile-nav-active')) {
       selectBody.classList.remove('scrolled');
-      return;
+      return; 
     }
 
     window.scrollY > 20 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
@@ -32,7 +33,7 @@
   function toggleScrollTop() {
     if (scrollTop) {
       const isMobileNavActive = document.body.classList.contains('mobile-nav-active');
-      
+
       if (window.scrollY > 100 && !isMobileNavActive) {
         scrollTop.classList.add('active');
       } else {
@@ -72,10 +73,11 @@
   if (navbar) {
     navbar.addEventListener('show.bs.collapse', () => {
       document.body.classList.add('mobile-nav-active');
-      toggleScrollTop();
       toggleScrolled();
+      toggleScrollTop();
     });
 
+    // Fired when the menu is fully closed
     navbar.addEventListener('hidden.bs.collapse', () => {
       document.body.classList.remove('mobile-nav-active');
       toggleScrolled();
