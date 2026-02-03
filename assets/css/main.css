@@ -263,17 +263,26 @@ h6 {
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
   color: var(--default-color);
   background-color: rgba(255, 255, 255, 0);
-  z-index: 10;
+  z-index: 1050;
   backdrop-filter: blur(0);
   -webkit-backdrop-filter: blur(0);
   transition: backdrop-filter 0.3s ease-in-out;
+  transform: translateZ(0); 
+  backface-visibility: hidden;
+}
+
+.header .logo, 
+.navbar-toggler {
+  position: relative;
+  z-index: 1100 !important;
+  transform: translateZ(0);
 }
 
 .header::before {
   content: '';
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 0; 
   background: linear-gradient(
     to bottom,
     rgba(16, 26, 32, 1) 0%,
@@ -297,10 +306,6 @@ h6 {
 }
 
 /* Logo */
-.header .logo {
-  line-height: 1;
-}
-
 .header .logo h1 {
   font-size: 26px;
   font-family: "DM Serif Text", serif;
@@ -406,32 +411,60 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 991.98px) {
   .navbar-toggler {
-      border: none;
-      background: transparent;
-      padding: 0;
+    border: none;
+    background: transparent;
+    padding: 0;
   }
 
   .navbar-toggler i {
     color: var(--nav-color);
     font-size: 28px;
-    line-height: 1;
-    transition: color 0.2s;
+  }
+
+  .navbar-collapse.collapsing {
+      height: 100vh !important;
+      transition: none !important;
+      display: flex !important;
+      opacity: 0;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh !important;
+    background-color: #101a20;
+    z-index: 1000;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  }
+
+  .navbar-collapse.show {
+    opacity: 1;
+    visibility: visible;
   }
 
   .navbar-nav {
-    padding-top: 25px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .navbar-nav > .nav-item {
-    padding: 10px 0;
+    padding: 15px 0;
   }
 
   .navbar-nav .nav-link {
     font-family: var(--nav-font);
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 400;
   }
 
@@ -447,10 +480,6 @@ h6 {
 @media (max-width: 576px) {
   .navbar-toggler {
     margin-right: 17px;
-  }
-
-  .navbar-nav {
-    padding-left: 24px;
   }
 }
 
