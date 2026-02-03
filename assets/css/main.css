@@ -414,19 +414,12 @@ h6 {
     border: none;
     background: transparent;
     padding: 0;
+    margin-top: 5px;
   }
 
   .navbar-toggler i {
     color: var(--nav-color);
     font-size: 28px;
-    display: inline-block;
-    line-height: 1;
-    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
-  }
-
-  .navbar-toggler:not(.collapsed) i::before {
-    content: "\f659";
-    font-size: 22px;
   }
 
   .navbar-collapse {
