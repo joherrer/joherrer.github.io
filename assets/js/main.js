@@ -99,9 +99,16 @@
               this.classList.add('active');
             }
 
+            if (this.classList.contains('logo')) {
+              setTimeout(() => {
+                this.classList.remove('pressed');
+              }, 150);
+            }
+
             setTimeout(() => {
               window.location.href = href;
             }, 250);
+            
           } else {
             setTimeout(() => {
               this.classList.remove('pressed');
