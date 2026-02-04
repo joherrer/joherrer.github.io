@@ -312,28 +312,37 @@ h6 {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
-  color: #cbcbcb;
   margin: 0;
   padding-left: 3px;
   line-height: 1.2;
   display: inline-block;
-  transition: all 0.1s ease;
+  color: #cbcbcb;
+  transition: transform 0.1s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header .logo h1 {
+    background: linear-gradient(90deg, #1387c1, #d21b64);
+    background-repeat: no-repeat;
+    background-size: 150px 100%;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: 
+      -webkit-text-fill-color 0.4s ease, 
+      color 0.4s ease, 
+      transform 0.1s ease;
+  }
+
+  .header .logo h1:hover {
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 }
 
 .header .logo.pressed h1 {
   transform: scale(0.95);
   opacity: 0.8;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .header .logo h1:hover {
-    background: linear-gradient(90deg, #1387c1, #d21b64);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-size: 150px 100%;
-    background-position: center;
-  }
 }
 
 @media (max-width: 576px) {
@@ -376,7 +385,7 @@ h6 {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.2s;
+    transition: color 0.2s ease;
     position: relative;
   }
 
@@ -385,7 +394,7 @@ h6 {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
-    transition: 0.2s;
+    transition: color 0.2s ease;
   }
 
   .navbar-nav .nav-link:before {
@@ -397,7 +406,7 @@ h6 {
     background-color: var(--nav-hover-color);
     visibility: hidden;
     width: 0px;
-    transition: all 0.2s ease-in-out;
+    transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
   .navbar-nav .nav-link:hover:before,
@@ -486,7 +495,7 @@ h6 {
     font-weight: 400;
     display: inline-block;
     position: relative;
-    transition: all 0.2s ease-out;
+    transition: color 0.2s ease-out;
   }
 
   .navbar-nav .nav-link:before {
@@ -500,7 +509,7 @@ h6 {
     opacity: 0;
     width: 0px;
     transform: translateX(-50%);
-    transition: all 0.2s ease-out;
+    transition: width 0.2s ease-out, opacity 0.2s ease-out, visibility 0.2s;
   }
 
   .navbar-nav .nav-link:hover:before,
