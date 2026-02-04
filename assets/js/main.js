@@ -76,26 +76,38 @@
   }
 
   /**
-   * Mobile Navigation Delay
+   * Mobile tap Delay
    */
   function initMobileNavDelay() {
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const elements = document.querySelectorAll('.navbar-nav .nav-link, .header .logo, .navbar-toggler');
     
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
+    elements.forEach(el => {
+      el.addEventListener('click', function(e) {
         const isMobile = window.innerWidth < 992;
         const href = this.getAttribute('href');
 
-        if (isMobile && href && !href.startsWith('#')) {
-          e.preventDefault();
+        if (isMobile) {
+          this.classList.add('pressed');
 
-          navLinks.forEach(l => l.classList.remove('active'));
-          
-          this.classList.add('active');
-          
-          setTimeout(() => {
-            window.location.href = href;
-          }, 250);
+          document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.classList.remove('active');
+          });
+
+          if (href && href !== '#') {
+            e.preventDefault();
+            
+            if (this.classList.contains('nav-link')) {
+              this.classList.add('active');
+            }
+
+            setTimeout(() => {
+              window.location.href = href;
+            }, 250);
+          } else {
+            setTimeout(() => {
+              this.classList.remove('pressed');
+            }, 200);
+          }
         }
       });
     });
