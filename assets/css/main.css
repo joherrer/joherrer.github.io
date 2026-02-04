@@ -321,7 +321,7 @@ h6 {
 }
 
 .header .logo.pressed h1 {
-  transform: scale(0.9);
+  transform: scale(0.8);
   opacity: 0.8;
 }
 
@@ -425,7 +425,7 @@ h6 {
   }
 
   .navbar-toggler.pressed {
-    transform: scale(0.85);
+    transform: scale(0.8);
   }
 
   .navbar-toggler i {
