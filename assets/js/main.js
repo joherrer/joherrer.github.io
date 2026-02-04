@@ -23,7 +23,7 @@
   }
 
   /**
-   * Scroll top button visibility toggle
+   * Scroll top button toggle
    */
   function toggleScrollTop() {
     let scrollTop = document.querySelector('.scroll-top');
@@ -76,21 +76,20 @@
   }
 
   /**
-   * Mobile Navigation Delay
+   * Mobile Navigation Delay when tap page links
    */
   function initMobileNavDelay() {
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .logo');
     
     navLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         const isMobile = window.innerWidth < 992;
         const href = this.getAttribute('href');
 
-        if (isMobile && href && !href.startsWith('#')) {
+        if (isMobile && href && href !== '#' && !href.startsWith('#')) {
           e.preventDefault();
 
-          navLinks.forEach(l => l.classList.remove('active'));
-          
+          document.querySelectorAll('.nav-link, .logo').forEach(l => l.classList.remove('active'));
           this.classList.add('active');
           
           setTimeout(() => {

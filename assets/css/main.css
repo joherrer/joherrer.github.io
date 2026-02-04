@@ -319,14 +319,25 @@ h6 {
   transition: all 0.2s ease;
 }
 
-.header .logo h1:hover, 
-.header .logo h1:active {
-  background: linear-gradient(90deg, #1387c1, #d21b64);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+@media (hover: hover) and (pointer: fine) {
+  .header .logo h1:hover {
+    background: linear-gradient(90deg, #1387c1, #d21b64);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 150px 100%;
+    background-position: center;
+  }
+}
+
+.logo.active h1 {
+  background: linear-gradient(90deg, #1387c1, #d21b64) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
   background-size: 150px 100%;
   background-position: center;
+  transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 576px) {
