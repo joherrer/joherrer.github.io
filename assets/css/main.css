@@ -330,16 +330,6 @@ h6 {
   }
 }
 
-.logo.active h1 {
-  background: linear-gradient(90deg, #1387c1, #d21b64) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  background-size: 150px 100%;
-  background-position: center;
-  transition: all 0.2s ease-in-out;
-}
-
 @media (max-width: 576px) {
   .header .logo h1 {
     padding-left: 24px;
