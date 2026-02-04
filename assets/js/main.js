@@ -76,7 +76,7 @@
   }
 
   /**
-   * Mobile tap Delay
+   * Tap delay on mobile for navigation links and toggler
    */
   function initMobileNavDelay() {
     const elements = document.querySelectorAll('.navbar-nav .nav-link, .header .logo, .navbar-toggler');
