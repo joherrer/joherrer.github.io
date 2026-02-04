@@ -317,11 +317,11 @@ h6 {
   padding-left: 3px;
   line-height: 1.2;
   display: inline-block;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
 .header .logo.pressed h1 {
-  transform: scale(0.8);
+  transform: scale(0.95);
   opacity: 0.8;
 }
 
@@ -425,7 +425,7 @@ h6 {
   }
 
   .navbar-toggler.pressed {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 
   .navbar-toggler i {
