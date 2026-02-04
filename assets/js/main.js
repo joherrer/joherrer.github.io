@@ -89,14 +89,13 @@
         if (isMobile) {
           this.classList.add('pressed');
 
-          document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-            link.classList.remove('active');
-          });
-
           if (href && href !== '#') {
             e.preventDefault();
-            
+
             if (this.classList.contains('nav-link')) {
+              document.querySelectorAll('.navbar-nav .nav-link.active').forEach(activeLink => {
+                activeLink.classList.remove('active');
+              });
               this.classList.add('active');
             }
 
