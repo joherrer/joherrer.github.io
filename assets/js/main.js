@@ -112,7 +112,7 @@
           } else {
             setTimeout(() => {
               this.classList.remove('pressed');
-            }, 150);
+            }, 200);
           }
         }
       });
