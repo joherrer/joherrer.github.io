@@ -440,6 +440,9 @@ h6 {
     border: none;
     outline: none;
     box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     margin-top: 5px;
     transition: transform 0.1s ease;
@@ -452,6 +455,9 @@ h6 {
   .navbar-toggler i {
     color: var(--nav-color);
     font-size: 27px;
+    pointer-events: none;
+    will-change: transform;
+    transition: transform 0.1s ease;
   }
 
   .navbar-collapse {
