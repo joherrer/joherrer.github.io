@@ -336,31 +336,16 @@ h6 {
   }
 }
 
-/* 1. Target the mobile range */
 @media (max-width: 991.98px) {
-  /* Set the highlight on the actual link and the button */
-  .header .logo,
-  .navbar-toggler {
-    -webkit-tap-highlight-color: rgba(128, 128, 128, 0.4);
-    cursor: pointer;
-  }
-
-  /* Shrink the <a> tag so it only wraps the text tightly */
-  .header .logo {
-    display: inline-flex !important; 
-  }
-  
-  /* Reset the h1 so it doesn't add internal space to the highlight */
-  .header .logo h1 {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
+  .header .logo:hover, 
+  .navbar-toggler:hover {
+    scale: 0.9;
   }
 }
 
-/* 2. Target your specific small mobile offset */
 @media (max-width: 576px) {
-  .header .logo {
-    margin-left: 24px !important; 
+  .header .logo h1 {
+    padding-left: 24px;
   }
 }
 
