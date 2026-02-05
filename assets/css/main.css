@@ -339,16 +339,23 @@ h6 {
 @media (max-width: 991.98px) {
   .header .logo,
   .navbar-toggler {
-    transition: scale 0.3s ease-in-out !important;
-    outline: none !important;
+    transition: scale 0.3s ease-in-out;
+    outline: none;
     -webkit-tap-highlight-color: transparent;
+    will-change: scale; 
+    display: inline-block;
+  }
+
+  .header .logo h1 {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
   }
 
   .header .logo:hover, 
   .header .logo:active,
   .navbar-toggler:active {
-    scale: 0.95 !important;
-    transition: scale 0s !important; 
+    scale: 0.95;
+    transition: scale 0.05s; 
   }
 
   .navbar-toggler {
