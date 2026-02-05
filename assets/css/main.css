@@ -466,7 +466,7 @@ h6 {
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
   }
 
   .navbar-collapse.collapsing {
@@ -474,13 +474,13 @@ h6 {
     height: 100vh !important;
     opacity: 0;
     visibility: visible;
-    transition: opacity 0.1s ease-out;
+    transition: opacity 0.2s ease-out;
   }
 
   .navbar-collapse.show {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.1s ease-out, visibility 0.1s ease-out;
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
   }
 
   .navbar-nav {
