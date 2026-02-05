@@ -96,7 +96,6 @@
 
         if (this.classList.contains('nav-link') && href && href !== '#') {
           e.preventDefault();
-          
           document.querySelectorAll('.navbar-nav .nav-link.active').forEach(link => {
             link.classList.remove('active');
           });
@@ -108,19 +107,27 @@
         } 
         else if (this.classList.contains('logo') && href) {
           e.preventDefault();
+
           setTimeout(() => {
             this.classList.remove('pressed');
+          }, 120);
+
+          setTimeout(() => {
             window.location.href = href;
-          }, 200);
+          }, 200); 
         }
         else {
           setTimeout(() => {
             this.classList.remove('pressed');
-          }, 200);
+          }, 120);
         }
       });
 
       el.addEventListener('pointermove', function() {
+        this.classList.remove('pressed');
+      });
+      
+      el.addEventListener('pointercancel', function() {
         this.classList.remove('pressed');
       });
     });
