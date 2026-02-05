@@ -103,7 +103,7 @@
 
           setTimeout(() => {
             window.location.href = href;
-          }, 250);
+          }, 200);
         } 
         else if (this.classList.contains('logo') && href) {
           e.preventDefault();
@@ -126,7 +126,7 @@
       el.addEventListener('pointermove', function() {
         this.classList.remove('pressed');
       });
-      
+
       el.addEventListener('pointercancel', function() {
         this.classList.remove('pressed');
       });
