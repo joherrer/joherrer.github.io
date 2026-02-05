@@ -114,7 +114,7 @@
 
           setTimeout(() => {
             window.location.href = href;
-          }, 200); 
+          }, 150); 
         }
         else {
           setTimeout(() => {
