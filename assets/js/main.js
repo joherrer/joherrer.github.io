@@ -76,32 +76,32 @@
   }
 
   /**
-     * Tap delay on mobile for navigation links only
-     * (Logo and Toggler removed to allow native browser tap effects)
-     */
-    function initMobileNavDelay() {
-      const links = document.querySelectorAll('.navbar-nav .nav-link');
-      
-      links.forEach(link => {
-        link.addEventListener('click', function(e) {
-          const isMobile = window.innerWidth < 992;
-          const href = this.getAttribute('href');
+   * Tap delay on mobile for navigation links only
+   * (Logo and Toggler removed to allow native browser tap effects)
+   */
+  function initMobileNavDelay() {
+    const links = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const isMobile = window.innerWidth < 992;
+        const href = this.getAttribute('href');
 
-          if (isMobile && href && href !== '#') {
-            e.preventDefault();
+        if (isMobile && href && href !== '#') {
+          e.preventDefault();
 
-            document.querySelectorAll('.navbar-nav .nav-link.active').forEach(activeLink => {
-              activeLink.classList.remove('active');
-            });
-            this.classList.add('active');
+          document.querySelectorAll('.navbar-nav .nav-link.active').forEach(activeLink => {
+            activeLink.classList.remove('active');
+          });
+          this.classList.add('active');
 
-            setTimeout(() => {
-              window.location.href = href;
-            }, 250);
-          }
-        });
+          setTimeout(() => {
+            window.location.href = href;
+          }, 250);
+        }
       });
-    }
+    });
+  }
 
   /**
    * Typed.js initialization
