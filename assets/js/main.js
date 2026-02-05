@@ -110,11 +110,11 @@
 
           setTimeout(() => {
             this.classList.remove('pressed');
-          }, 120);
+          }, 50);
 
           setTimeout(() => {
             window.location.href = href;
-          }, 150); 
+          }, 200); 
         }
         else {
           setTimeout(() => {
