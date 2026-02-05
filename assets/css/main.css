@@ -474,7 +474,7 @@ h6 {
     height: 100vh !important;
     opacity: 0;
     visibility: visible;
-    transition: opacity 0.15s ease-out;
+    transition: opacity 0.3s ease-out;
   }
 
   .navbar-collapse.show {
