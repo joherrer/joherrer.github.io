@@ -339,8 +339,13 @@ h6 {
 @media (max-width: 991.98px) {
   .header .logo, 
   .navbar-toggler {
-    -webkit-tap-highlight-color: rgba(128, 128, 128, 0.4); 
+    -webkit-tap-highlight-color: transparent; 
     cursor: pointer;
+  }
+
+  .header .logo h1,
+  .navbar-toggler {
+    -webkit-tap-highlight-color: rgba(128, 128, 128, 0.4);
   }
 }
 
