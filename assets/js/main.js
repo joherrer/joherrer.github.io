@@ -120,7 +120,6 @@
         }
       });
 
-      // Reset the "pressed" state if the user moves their finger (scrolling)
       el.addEventListener('pointermove', function() {
         this.classList.remove('pressed');
       });
