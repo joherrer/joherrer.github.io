@@ -337,17 +337,9 @@ h6 {
 }
 
 @media (max-width: 991.98px) {
-  .header .logo, 
-  .navbar-toggler {
-    /* This transition applies when the state RETURNS to normal */
-    transition: scale 0.4s ease; 
-  }
-
   .header .logo:hover, 
   .navbar-toggler:hover {
-    scale: 0.95;
-    /* This makes the shrink instant on tap */
-    transition: scale 0s; 
+    scale: 0.95; 
   }
 }
 
