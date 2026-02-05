@@ -317,7 +317,6 @@ h6 {
   line-height: 1.2;
   display: inline-block;
   color: #cbcbcb;
-  transition: transform 0.1s ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -328,23 +327,26 @@ h6 {
     background-position: center;
     -webkit-background-clip: text;
     background-clip: text;
-    transition: 
-      -webkit-text-fill-color 0.4s ease, 
-      color 0.4s ease, 
-      transform 0.1s ease;
+    transition: -webkit-text-fill-color 0.2s ease, color 0.2s ease;
   }
 
   .header .logo h1:hover {
     -webkit-text-fill-color: transparent;
     color: transparent;
+    transition: background-color 0.15s ease-in-out;
   }
 }
 
 @media (max-width: 991.98px) {
   .header .logo, 
   .navbar-toggler {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.15) !important;
-    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  .header .logo:hover, 
+  .navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.12) !important;
   }
 }
 
