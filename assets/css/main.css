@@ -340,6 +340,14 @@ h6 {
   }
 }
 
+@media (max-width: 991.98px) {
+  .header .logo, 
+  .navbar-toggler {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2) !important; 
+    cursor: pointer;
+  }
+}
+
 @media (max-width: 576px) {
   .header .logo h1 {
     padding-left: 24px;
