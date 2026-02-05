@@ -474,13 +474,13 @@ h6 {
     height: 100vh !important;
     opacity: 0;
     visibility: visible;
-    transition: opacity 0.3s ease-out;
+    transition: opacity 0.15s ease-out;
   }
 
   .navbar-collapse.show {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.15s ease-out;
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
   }
 
   .navbar-nav {
