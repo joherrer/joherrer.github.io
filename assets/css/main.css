@@ -351,12 +351,12 @@ h6 {
   }
 
   /* When you tap the logo */
-  .header .logo h1:active {
+  .header .logo h1:hover {
     background-color: rgba(128, 128, 128, 0.4);
   }
 
   /* 3. Create the "Flash" effect for the Toggler */
-  .navbar-toggler:active {
+  .navbar-toggler:hover {
     background-color: rgba(128, 128, 128, 0.4);
     /* If your toggler is a circle, change this to 50% */
     border-radius: 4px; 
