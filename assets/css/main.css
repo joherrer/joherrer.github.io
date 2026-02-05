@@ -306,6 +306,11 @@ h6 {
   transform: translateZ(0);
 }
 
+.header .logo {
+  display: inline-block;
+  transition: transform 0.1s ease;
+}
+
 .header .logo h1 {
   font-size: 26px;
   font-family: "DM Serif Text", serif;
@@ -317,6 +322,7 @@ h6 {
   line-height: 1.2;
   display: inline-block;
   color: #cbcbcb;
+  will-change: transform;
   transition: transform 0.1s ease;
 }
 
@@ -329,8 +335,8 @@ h6 {
     -webkit-background-clip: text;
     background-clip: text;
     transition: 
-      -webkit-text-fill-color 0.4s ease, 
-      color 0.4s ease, 
+      -webkit-text-fill-color 0.2s ease, 
+      color 0.2s ease, 
       transform 0.1s ease;
   }
 
@@ -342,6 +348,7 @@ h6 {
 
 .header .logo.pressed h1 {
   transform: scale(0.95);
+  transition: transform 0.1s ease;
 }
 
 @media (max-width: 576px) {
@@ -425,15 +432,17 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 991.98px) {
   .navbar-toggler {
-    border: none;
     background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
     padding: 0;
     margin-top: 5px;
     transition: transform 0.1s ease;
   }
 
   .navbar-toggler.pressed {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 
   .navbar-toggler i {

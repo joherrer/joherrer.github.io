@@ -84,36 +84,36 @@
     elements.forEach(el => {
       el.addEventListener('click', function(e) {
         const isMobile = window.innerWidth < 992;
+        if (!isMobile) return;
+
         const href = this.getAttribute('href');
+        this.classList.add('pressed');
 
-        if (isMobile) {
-          this.classList.add('pressed');
+        if (this.classList.contains('nav-link') && href && href !== '#') {
+          e.preventDefault();
+          
+          document.querySelectorAll('.navbar-nav .nav-link.active').forEach(link => {
+            link.classList.remove('active');
+          });
+          this.classList.add('active');
 
-          if (href && href !== '#') {
-            e.preventDefault();
+          setTimeout(() => {
+            window.location.href = href;
+          }, 250);
+        } 
 
-            if (this.classList.contains('nav-link')) {
-              document.querySelectorAll('.navbar-nav .nav-link.active').forEach(activeLink => {
-                activeLink.classList.remove('active');
-              });
-              this.classList.add('active');
-            }
+        else if (this.classList.contains('logo') && href) {
+          e.preventDefault();
+          setTimeout(() => {
+            this.classList.remove('pressed');
+            window.location.href = href;
+          }, 200);
+        }
 
-            if (this.classList.contains('logo')) {
-              setTimeout(() => {
-                this.classList.remove('pressed');
-              }, 150);
-            }
-
-            setTimeout(() => {
-              window.location.href = href;
-            }, 250);
-            
-          } else {
-            setTimeout(() => {
-              this.classList.remove('pressed');
-            }, 200);
-          }
+        else {
+          setTimeout(() => {
+            this.classList.remove('pressed');
+          }, 200);
         }
       });
     });
