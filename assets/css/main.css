@@ -337,9 +337,17 @@ h6 {
 }
 
 @media (max-width: 991.98px) {
-  .header .logo:hover, 
-  .navbar-toggler:hover {
-    scale: 0.9;
+  /* Use :active for the scale so it doesn't "stick" after the tap */
+  .header .logo:active, 
+  .navbar-toggler:active {
+    scale: 0.95;
+    transition: scale 0.1s ease; /* Makes the "press" feel responsive */
+  }
+  
+  /* Ensure the logo text stays visible on mobile (overriding the hover-to-transparent) */
+  .header .logo h1:hover {
+    -webkit-text-fill-color: initial; 
+    color: #cbcbcb;
   }
 }
 
