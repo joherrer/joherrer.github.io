@@ -306,8 +306,6 @@ h6 {
   transform: translateZ(0);
   display: inline-flex;
   align-items: center;
-  padding: 10px 15px; 
-  margin: -10px -15px; 
   transition: transform 0.2s ease;
   text-decoration: none;
 }
