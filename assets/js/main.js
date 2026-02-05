@@ -82,12 +82,17 @@
     const elements = document.querySelectorAll('.navbar-nav .nav-link, .header .logo, .navbar-toggler');
     
     elements.forEach(el => {
+      el.addEventListener('pointerdown', function(e) {
+        if (window.innerWidth < 992) {
+          this.classList.add('pressed');
+        }
+      });
+
       el.addEventListener('click', function(e) {
         const isMobile = window.innerWidth < 992;
         if (!isMobile) return;
 
         const href = this.getAttribute('href');
-        this.classList.add('pressed');
 
         if (this.classList.contains('nav-link') && href && href !== '#') {
           e.preventDefault();
@@ -101,7 +106,6 @@
             window.location.href = href;
           }, 250);
         } 
-
         else if (this.classList.contains('logo') && href) {
           e.preventDefault();
           setTimeout(() => {
@@ -109,12 +113,16 @@
             window.location.href = href;
           }, 200);
         }
-
         else {
           setTimeout(() => {
             this.classList.remove('pressed');
           }, 200);
         }
+      });
+
+      // Reset the "pressed" state if the user moves their finger (scrolling)
+      el.addEventListener('pointermove', function() {
+        this.classList.remove('pressed');
       });
     });
   }
