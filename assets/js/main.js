@@ -107,12 +107,14 @@
         } 
         else if (this.classList.contains('logo') && href) {
           e.preventDefault();
-          
-          this.classList.remove('pressed');
+
+          setTimeout(() => {
+            this.classList.remove('pressed');
+          }, 120);
 
           setTimeout(() => {
             window.location.href = href;
-          }, 150);
+          }, 150); 
         }
         else {
           setTimeout(() => {
