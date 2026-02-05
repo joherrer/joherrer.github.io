@@ -337,9 +337,10 @@ h6 {
 }
 
 @media (max-width: 991.98px) {
-  .header .logo:hover, 
+.header .logo:hover, 
   .navbar-toggler:hover {
-    scale: 0.95; 
+    scale: 0.95;
+    transition: scale 0.1s ease;
   }
 }
 
@@ -428,7 +429,8 @@ h6 {
     background: transparent;
     padding: 0;
     margin-top: 5px;
-    transition: transform 0.1s ease;
+    transition: transform 0.2s ease, scale 0.2s ease; 
+    -webkit-tap-highlight-color: transparent;
   }
 
   .navbar-toggler i {
@@ -897,8 +899,8 @@ section,
 
 .hero .hero-image .image-wrapper img {
   border-radius: 250px;
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 95%);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Floating Elements */
