@@ -337,18 +337,17 @@ h6 {
 }
 
 @media (max-width: 991.98px) {
-  .header .logo,
-  .navbar-toggler {
-    transition: scale 0.3s ease-in-out;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+  /* 1. Base states */
+  .header .logo {
+    /* This forces the logo to grow back to 1.0 smoothly after the tap */
+    transition: scale 0.3s ease-in-out; 
+    display: inline-block;
+    will-change: scale;
   }
 
-  .header .logo:hover, 
-  .header .logo:active,
-  .navbar-toggler:active {
-    scale: 0.95;
-    transition: scale 0s; 
+  .header .logo h1 {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
   }
 
   .navbar-toggler {
@@ -356,6 +355,23 @@ h6 {
     background: transparent;
     padding: 0;
     margin-top: 5px;
+    /* Toggler doesn't need the 0.3s transition because :active handles it naturally */
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+
+  /* 2. The Effects */
+  /* Logo uses :hover to ensure the tap triggers it, but 0.3s transition above resets it */
+  .header .logo:hover,
+  .header .logo:active {
+    scale: 0.95;
+    transition: scale 0.05s; 
+  }
+
+  /* Toggler ONLY uses :active so it never sticks */
+  .navbar-toggler:active {
+    scale: 0.95;
+    transition: scale 0s;
   }
 
   .navbar-toggler i {
