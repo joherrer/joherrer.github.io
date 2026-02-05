@@ -336,33 +336,26 @@ h6 {
   }
 }
 
-/* Mobile Navigation */
 @media (max-width: 991.98px) {
-  /* 1. Combine the Logo and Toggler for the effect */
   .header .logo,
   .navbar-toggler {
-    /* This ensures they grow back smoothly on release */
     transition: scale 0.3s ease-in-out !important;
     outline: none !important;
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* 2. The trigger */
   .header .logo:hover, 
-  .navbar-toggler:hover,
+  .header .logo:active,
   .navbar-toggler:active {
     scale: 0.95 !important;
-    /* This makes the shrink instant when the finger touches */
     transition: scale 0s !important; 
   }
 
-  /* 3. The Layout (Cleaned up) */
   .navbar-toggler {
     border: none;
     background: transparent;
     padding: 0;
     margin-top: 5px;
-    /* REMOVED the transition from here to avoid conflicts */
   }
 
   .navbar-toggler i {
