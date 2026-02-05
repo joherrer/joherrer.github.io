@@ -350,6 +350,10 @@ h6 {
   transform: scale(0.95);
 }
 
+.header .logo.pressed h1 {
+  transform: scale(1) !important;
+}
+
 @media (max-width: 576px) {
   .header .logo h1 {
     padding-left: 24px;
