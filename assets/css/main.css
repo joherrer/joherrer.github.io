@@ -306,10 +306,6 @@ h6 {
   transform: translateZ(0);
 }
 
-.header .logo {
-  display: inline-block;
-}
-
 .header .logo h1 {
   font-size: 26px;
   font-family: "DM Serif Text", serif;
@@ -321,7 +317,6 @@ h6 {
   line-height: 1.2;
   display: inline-block;
   color: #cbcbcb;
-  will-change: transform;
   transition: transform 0.1s ease;
 }
 
@@ -406,11 +401,11 @@ h6 {
     position: absolute;
     height: 2px;
     bottom: -6px;
+    border-radius: 2px;
     left: 0;
     background-color: var(--nav-hover-color);
     visibility: hidden;
     width: 0px;
-    border-radius: 2px;
     transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
@@ -431,22 +426,20 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 991.98px) {
   .navbar-toggler {
-    background: transparent;
     border: none;
-    outline: none;
-    box-shadow: none;
+    background: transparent;
     padding: 0;
     margin-top: 5px;
     transition: transform 0.1s ease;
   }
 
   .navbar-toggler.pressed {
-    transform: scale(0.90);
+    transform: scale(0.9);
   }
 
   .navbar-toggler i {
     color: var(--nav-color);
-    font-size: 27px;
+    font-size: 28px;
   }
 
   .navbar-collapse {
@@ -466,12 +459,12 @@ h6 {
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+    transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
   }
 
   .navbar-collapse.collapsing {
-    display: flex !important;
-    height: 100vh !important;
+    display: flex;
+    height: 100vh;
     opacity: 0;
     visibility: visible;
     transition: opacity 0.15s ease-out;
@@ -480,7 +473,6 @@ h6 {
   .navbar-collapse.show {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
   }
 
   .navbar-nav {
