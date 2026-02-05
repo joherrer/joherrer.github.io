@@ -480,6 +480,7 @@ h6 {
   .navbar-collapse.show {
     opacity: 1;
     visibility: visible;
+    transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
   }
 
   .navbar-nav {
