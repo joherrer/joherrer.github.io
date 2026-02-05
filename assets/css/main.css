@@ -348,7 +348,6 @@ h6 {
 
 .header .logo.pressed h1 {
   transform: scale(0.95);
-  transition: transform 0.1s ease;
 }
 
 @media (max-width: 576px) {
