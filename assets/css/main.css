@@ -342,20 +342,13 @@ h6 {
     transition: scale 0.3s ease-in-out;
     outline: none;
     -webkit-tap-highlight-color: transparent;
-    will-change: scale; 
-    display: inline-block;
-  }
-
-  .header .logo h1 {
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
   }
 
   .header .logo:hover, 
   .header .logo:active,
   .navbar-toggler:active {
     scale: 0.95;
-    transition: scale 0.05s; 
+    transition: scale 0s; 
   }
 
   .navbar-toggler {
