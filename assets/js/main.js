@@ -82,15 +82,14 @@
     const elements = document.querySelectorAll('.navbar-nav .nav-link, .header .logo, .navbar-toggler');
     
     elements.forEach(el => {
-      el.addEventListener('pointerdown', function(e) {
+      el.addEventListener('touchstart', function() {
         if (window.innerWidth < 992) {
           this.classList.add('pressed');
         }
-      });
+      }, { passive: true });
 
       el.addEventListener('click', function(e) {
-        const isMobile = window.innerWidth < 992;
-        if (!isMobile) return;
+        if (window.innerWidth >= 992) return;
 
         const href = this.getAttribute('href');
 
@@ -105,9 +104,8 @@
             window.location.href = href;
           }, 200);
         } 
-        else if (this.classList.contains('logo') && href) {
+        else if (this.classList.contains('logo')) {
           e.preventDefault();
-
           setTimeout(() => {
             this.classList.remove('pressed');
           }, 50);
@@ -123,13 +121,9 @@
         }
       });
 
-      el.addEventListener('pointermove', function() {
+      el.addEventListener('touchmove', function() {
         this.classList.remove('pressed');
-      });
-
-      el.addEventListener('pointercancel', function() {
-        this.classList.remove('pressed');
-      });
+      }, { passive: true });
     });
   }
 
