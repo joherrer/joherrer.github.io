@@ -410,6 +410,7 @@ h6 {
     background-color: var(--nav-hover-color);
     visibility: hidden;
     width: 0px;
+    border-radius: 2px;
     transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
@@ -508,6 +509,7 @@ h6 {
     content: "";
     position: absolute;
     height: 2px;
+    border-radius: 2px;
     bottom: -2px;
     left: 50%;
     background-color: var(--nav-hover-color);
