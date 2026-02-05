@@ -76,8 +76,7 @@
   }
 
   /**
-   * Tap delay on mobile for navigation links only
-   * (Logo and Toggler removed to allow native browser tap effects)
+   * Tap delay on mobile for navigation links
    */
   function initMobileNavDelay() {
     const links = document.querySelectorAll('.navbar-nav .nav-link');
