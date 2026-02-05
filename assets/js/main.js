@@ -76,48 +76,32 @@
   }
 
   /**
-   * Tap delay on mobile for navigation links and toggler
-   */
-  function initMobileNavDelay() {
-    const elements = document.querySelectorAll('.navbar-nav .nav-link, .header .logo, .navbar-toggler');
-    
-    elements.forEach(el => {
-      el.addEventListener('click', function(e) {
-        const isMobile = window.innerWidth < 992;
-        const href = this.getAttribute('href');
+     * Tap delay on mobile for navigation links only
+     * (Logo and Toggler removed to allow native browser tap effects)
+     */
+    function initMobileNavDelay() {
+      const links = document.querySelectorAll('.navbar-nav .nav-link');
+      
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const isMobile = window.innerWidth < 992;
+          const href = this.getAttribute('href');
 
-        if (isMobile) {
-          this.classList.add('pressed');
-
-          if (href && href !== '#') {
+          if (isMobile && href && href !== '#') {
             e.preventDefault();
 
-            if (this.classList.contains('nav-link')) {
-              document.querySelectorAll('.navbar-nav .nav-link.active').forEach(activeLink => {
-                activeLink.classList.remove('active');
-              });
-              this.classList.add('active');
-            }
-
-            if (this.classList.contains('logo')) {
-              setTimeout(() => {
-                this.classList.remove('pressed');
-              }, 150);
-            }
+            document.querySelectorAll('.navbar-nav .nav-link.active').forEach(activeLink => {
+              activeLink.classList.remove('active');
+            });
+            this.classList.add('active');
 
             setTimeout(() => {
               window.location.href = href;
             }, 250);
-            
-          } else {
-            setTimeout(() => {
-              this.classList.remove('pressed');
-            }, 200);
           }
-        }
+        });
       });
-    });
-  }
+    }
 
   /**
    * Typed.js initialization

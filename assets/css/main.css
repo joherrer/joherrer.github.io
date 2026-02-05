@@ -340,11 +340,6 @@ h6 {
   }
 }
 
-.header .logo.pressed h1 {
-  transform: scale(0.95);
-  opacity: 0.8;
-}
-
 @media (max-width: 576px) {
   .header .logo h1 {
     padding-left: 24px;
@@ -431,10 +426,6 @@ h6 {
     padding: 0;
     margin-top: 5px;
     transition: transform 0.1s ease;
-  }
-
-  .navbar-toggler.pressed {
-    transform: scale(0.9);
   }
 
   .navbar-toggler i {
