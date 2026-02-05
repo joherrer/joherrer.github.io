@@ -82,7 +82,7 @@
     const elements = document.querySelectorAll('.navbar-nav .nav-link, .header .logo, .navbar-toggler');
     
     elements.forEach(el => {
-      el.addEventListener('pointerdown', function(e) {
+      el.addEventListener('touchstart', function(e) {
         if (window.innerWidth < 992) {
           this.classList.add('pressed');
         }
@@ -123,11 +123,7 @@
         }
       });
 
-      el.addEventListener('pointermove', function() {
-        this.classList.remove('pressed');
-      });
-
-      el.addEventListener('pointercancel', function() {
+      el.addEventListener('touchmove', function() {
         this.classList.remove('pressed');
       });
     });
