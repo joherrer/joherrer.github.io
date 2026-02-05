@@ -308,7 +308,6 @@ h6 {
 
 .header .logo {
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 
 .header .logo h1 {
