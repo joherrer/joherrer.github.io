@@ -354,7 +354,7 @@ h6 {
 
 @media (max-width: 576px) {
   .header .logo h1 {
-    padding-left: 20px;
+    padding-left: 24px;
   }
 }
 
@@ -586,7 +586,7 @@ h6 {
 
 @media (max-width: 576px) {
   .navbar-toggler {
-    margin-right: 12px;
+    margin-right: 17px;
   }
 }
 
