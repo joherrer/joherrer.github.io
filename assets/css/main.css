@@ -962,7 +962,7 @@ section,
 
 .hero .hero-image .image-wrapper img {
   padding: 5px;
-  background: linear-gradient(90deg, #c01b7a, #1387c1, #c01b7a);
+  background: linear-gradient(90deg, #a11da3, #1387c1, #a11da3);
   background-size: 200% 200%;
   border-radius: 50%;
   display: block;
@@ -1068,6 +1068,10 @@ section,
 
   .hero .hero-image .image-wrapper {
     margin: 0 auto;
+  }
+
+  .hero .hero-image .image-wrapper img {
+    padding: 2px;
   }
 
   .hero .hero-image .image-wrapper img.scaled {
