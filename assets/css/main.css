@@ -462,7 +462,7 @@ h6 {
     justify-content: center !important;
     padding-bottom: 10vh;
     align-items: center;
-    overflow-y: auto;
+    overflow: hidden;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
@@ -490,6 +490,7 @@ h6 {
 
   body.mobile-nav-active {
     overflow: hidden;
+    touch-action: none;
   }
 
   .navbar-nav > .nav-item {
@@ -530,6 +531,31 @@ h6 {
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link.active {
     color: var(--nav-color);
+  }
+}
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+  .navbar-collapse {
+    padding-bottom: 0;
+    justify-content: center !important; 
+    overflow: hidden; 
+    touch-action: none;
+  }
+
+  .navbar-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .navbar-nav > .nav-item {
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 18px;
   }
 }
 
