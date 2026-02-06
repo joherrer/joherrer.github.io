@@ -463,7 +463,7 @@ h6 {
     justify-content: center !important;
     padding-bottom: 10vh;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
@@ -491,7 +491,6 @@ h6 {
 
   body.mobile-nav-active {
     overflow: hidden;
-    touch-action: none;
   }
 
   .navbar-nav > .nav-item {
