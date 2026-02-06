@@ -961,11 +961,27 @@ section,
 }
 
 .hero .hero-image .image-wrapper img {
-  box-sizing: border-box;
-  border-radius: 250px;
-  border: 3px solid color-mix(in srgb, var(--default-color), transparent 95%);
+  padding: 3px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--default-color), transparent 80%) 0%,
+    color-mix(in srgb, var(--default-color), transparent 85%) 50%,
+    color-mix(in srgb, var(--default-color), transparent 95%) 100% 
+  );
+  background-size: 100% 200%;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  animation: gradient-move 10s ease infinite;
+  will-change: background-position;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
-  transition: transform 0.3s ease;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 50% 0%; }
+  50% { background-position: 50% 100%; }
+  100% { background-position: 50% 0%; }
 }
 
 /* Floating Elements */
