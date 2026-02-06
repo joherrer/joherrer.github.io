@@ -1067,6 +1067,7 @@ section,
 
   .hero .hero-image .image-wrapper img {
     padding: 4px;
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
   }
 
   .hero .hero-image .image-wrapper img.scaled {
