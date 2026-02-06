@@ -962,7 +962,7 @@ section,
 
 .hero .hero-image .image-wrapper img {
   border-radius: 250px;
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 95%);
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
   transition: transform 0.3s ease;
 }
 
