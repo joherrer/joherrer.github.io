@@ -306,7 +306,6 @@ h6 {
   transform: translateZ(0);
   display: inline-flex;
   align-items: center;
-  padding-left: 3px;
   transition: transform 0.2s ease;
   text-decoration: none;
 }
@@ -317,6 +316,7 @@ h6 {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
+  padding-left: 3px;
   margin: 0;
   line-height: 1.2;
   display: inline-block;
@@ -353,7 +353,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
-  .header .logo {
+  .header .logo h1 {
     padding-left: 24px;
   }
 }
