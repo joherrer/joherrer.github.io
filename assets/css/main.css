@@ -961,9 +961,27 @@ section,
 }
 
 .hero .hero-image .image-wrapper img {
-  border-radius: 250px;
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
-  transition: transform 0.3s ease;
+  padding: 5px;
+  background: linear-gradient(90deg, #d21b64, #1387c1, #d21b64);
+  background-size: 200% 200%;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  animation: gradient-move 10s ease infinite;
+  will-change: background-position;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px color-mix(in srgb, #1387c1, transparent 80%);
+}
+
+.hero .hero-image .image-wrapper img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px color-mix(in srgb, #d21b64, transparent 70%);
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Floating Elements */
