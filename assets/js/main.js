@@ -280,9 +280,11 @@
   if (navbar) {
     navbar.addEventListener('show.bs.collapse', () => {
       document.body.classList.add('mobile-nav-active');
+      toggleScrollTop();
     });
     navbar.addEventListener('hidden.bs.collapse', () => {
       document.body.classList.remove('mobile-nav-active');
+      toggleScrollTop();
     });
   }
 

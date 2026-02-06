@@ -493,6 +493,10 @@ h6 {
     touch-action: none;
   }
 
+  body.mobile-nav-active .scroll-top {
+    display: none;
+  }
+
   .navbar-nav > .nav-item {
     padding: 15px 0;
   }
