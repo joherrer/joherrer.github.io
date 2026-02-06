@@ -354,7 +354,7 @@ h6 {
 
 @media (max-width: 576px) {
   .header .logo h1 {
-    padding-left: 24px;
+    padding-left: 20px;
   }
 }
 
@@ -437,7 +437,16 @@ h6 {
     border: none;
     background: transparent;
     padding: 0;
+    margin: 0;
+    height: auto; 
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 4px; 
     transition: transform 0.1s ease;
+    outline: none;
+    box-shadow: none;
   }
 
   .navbar-toggler.pressed {
@@ -447,6 +456,9 @@ h6 {
   .navbar-toggler i {
     color: var(--nav-color);
     font-size: 27px;
+    line-height: 1;
+    display: block;
+    margin: 0;
   }
 
   .navbar-collapse {
@@ -541,10 +553,10 @@ h6 {
 @media (max-width: 991.98px) and (orientation: landscape) {
   .navbar-collapse {
     height: 100dvh; 
-    width: 100vw; /* Force the menu to span the full width of the screen */
+    width: 100vw;
     position: fixed;
     top: 0;
-    left: 0; /* Ensure it starts from the very edge */
+    left: 0;
     padding-bottom: 0;
     display: flex !important;
     flex-direction: column;
@@ -558,9 +570,9 @@ h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    width: 80%; /* This width now applies to the grid, not the background */
+    width: 80%;
     max-width: 600px;
-    margin: 0 auto; /* Keep the grid itself centered */
+    margin: 0 auto;
   }
 
   .navbar-nav > .nav-item {
