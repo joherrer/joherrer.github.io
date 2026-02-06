@@ -961,22 +961,9 @@ section,
 }
 
 .hero .hero-image .image-wrapper img {
-  padding: 4px;
-  background: linear-gradient(90deg, #ba1c84, #1387c1, #ba1c84);
-  background-size: 200% 200%;
-  border-radius: 50%;
-  display: block;
-  object-fit: cover;
-  animation: gradient-move 10s ease infinite;
-  will-change: background-position;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-@keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  border-radius: 250px;
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
+  transition: transform 0.3s ease;
 }
 
 /* Floating Elements */
@@ -1063,11 +1050,6 @@ section,
 
   .hero .hero-image .image-wrapper {
     margin: 0 auto;
-  }
-
-  .hero .hero-image .image-wrapper img {
-    padding: 3px;
-    box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 95%);
   }
 
   .hero .hero-image .image-wrapper img.scaled {
