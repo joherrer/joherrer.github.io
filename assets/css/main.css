@@ -540,7 +540,7 @@ h6 {
 
 @media (max-width: 991.98px) and (orientation: landscape) {
   .navbar-collapse {
-    height: 100svh; 
+    height: 100dvh; 
     width: 100vw; /* Force the menu to span the full width of the screen */
     position: fixed;
     top: 0;
