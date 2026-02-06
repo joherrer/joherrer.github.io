@@ -491,9 +491,6 @@ h6 {
 
   body.mobile-nav-active {
     overflow: hidden;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
     touch-action: none;
   }
 
