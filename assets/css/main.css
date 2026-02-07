@@ -141,39 +141,19 @@
 --------------------------------------------------------------*/
 html {
   scrollbar-gutter: stable;
-  /* Fallback so iOS Safari safe areas are never white */
-  background-color: var(--background-color);
-  background-image: var(--background-gradient);
+  background: var(--background-gradient);
   background-attachment: fixed;
   background-size: 100% 100%;
-  background-repeat: no-repeat;
   min-height: 100%;
-  /* Extend into safe areas so gradient fills notch/home-indicator zones */
-  min-height: -webkit-fill-available;
 }
 
 body {
   color: var(--default-color);
-  /* Solid fallback; gradient on pseudo-element fills viewport reliably on iOS */
-  background-color: var(--background-color);
-  min-height: 100vh;
-  min-height: 100dvh;
-  min-height: -webkit-fill-available;
-  font-family: var(--default-font);
-  position: relative;
-}
-
-/* Full-bleed gradient layer so iOS Safari safe areas and overscroll show gradient, not white */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
   background: var(--background-gradient);
   background-attachment: fixed;
   background-size: 100% 100%;
-  z-index: -1;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  min-height: 100vh;
+  font-family: var(--default-font);
 }
 
 a {
