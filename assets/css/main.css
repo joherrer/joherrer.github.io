@@ -163,7 +163,7 @@ body {
   background: var(--background-gradient);
   background-attachment: fixed;
   background-size: 100% 100%;
-  z-index: -1;
+  z-index: -2;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -174,15 +174,25 @@ body {
     background-attachment: scroll;
     transform: translateZ(0);
   }
+  .background-container::before,
   .background-container::after {
     content: '';
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: env(safe-area-inset-bottom);
     background: var(--background-color);
     pointer-events: none;
+    z-index: -1;
+  }
+  .background-container::before {
+    top: 0;
+    height: constant(safe-area-inset-top);
+    height: env(safe-area-inset-top);
+  }
+  .background-container::after {
+    bottom: 0;
+    height: constant(safe-area-inset-bottom);
+    height: env(safe-area-inset-bottom);
   }
 }
 
