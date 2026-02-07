@@ -141,6 +141,11 @@
 --------------------------------------------------------------*/
 html {
   scrollbar-gutter: stable;
+  /* Match body gradient so iOS Safari safe areas and overscroll show gradient instead of white */
+  background: var(--background-gradient);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  min-height: 100%;
 }
 
 body {
@@ -149,6 +154,7 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
   min-height: 100vh;
+  min-height: 100dvh; /* Better on mobile; fallback is 100vh above */
   font-family: var(--default-font);
 }
 
