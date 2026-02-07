@@ -121,6 +121,7 @@
   /* Global Colors */
   --background-color: #000410;
   --background-gradient: linear-gradient(0deg, #001c2c, #000410);
+  --background-mobile: #071220;
   --default-color: #e7f2f7;
   --heading-color: #ffffff;
   --accent-color: #1387c1;
@@ -149,18 +150,6 @@ body {
   font-family: var(--default-font);
   background-color: transparent;
   min-height: 100%;
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: var(--background-gradient);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2;
-  pointer-events: none;
 }
 
 .background-container {
@@ -173,6 +162,17 @@ body::before {
   background-size: cover;
   z-index: -1;
   pointer-events: none;
+}
+
+@media (max-width: 991.98px), (hover: none) and (pointer: coarse) {
+  html,
+  body {
+    background-color: var(--background-mobile);
+  }
+
+  .background-container {
+    background: var(--background-mobile);
+  }
 }
 
 a {
@@ -482,14 +482,13 @@ h6 {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--background-color);
+    background-color: #071220;
     z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: center !important;
-    padding-bottom: 10vh;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
