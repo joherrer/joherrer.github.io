@@ -171,6 +171,10 @@ body {
   html, body {
     background-attachment: scroll;
   }
+  .background-container {
+    background-attachment: scroll;
+    transform: translateZ(0);
+  }
 }
 
 a {
