@@ -149,6 +149,18 @@ body {
   font-family: var(--default-font);
   background-color: transparent;
   min-height: 100%;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--background-gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+  pointer-events: none;
 }
 
 .background-container {
