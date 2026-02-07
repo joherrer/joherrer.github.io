@@ -121,6 +121,8 @@
   /* Global Colors */
   --background-color: #000410;
   --background-gradient: linear-gradient(0deg, #001c2c, #000410);
+  --safe-area-top-color: #000410;
+  --safe-area-bottom-color: #001c2c;
   --default-color: #e7f2f7;
   --heading-color: #ffffff;
   --accent-color: #1387c1;
@@ -188,11 +190,13 @@ body {
     top: 0;
     height: constant(safe-area-inset-top);
     height: env(safe-area-inset-top);
+    background: var(--safe-area-top-color);
   }
   .background-container::after {
     bottom: 0;
     height: constant(safe-area-inset-bottom);
     height: env(safe-area-inset-bottom);
+    background: var(--safe-area-bottom-color);
   }
 }
 
