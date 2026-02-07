@@ -141,7 +141,6 @@
 --------------------------------------------------------------*/
 html {
   scrollbar-gutter: stable;
-  background: var(--background-gradient);
   background-color: var(--background-color);
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -150,7 +149,7 @@ html {
 
 body {
   color: var(--default-color);
-  background: none;
+  background-color: var(--background-color);
   min-height: 100vh;
   font-family: var(--default-font);
 }
