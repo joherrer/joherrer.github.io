@@ -149,7 +149,7 @@ html {
 
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: transparent;
   min-height: 100vh;
   font-family: var(--default-font);
 }
