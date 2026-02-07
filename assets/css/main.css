@@ -119,7 +119,8 @@
   --nav-font: "Poppins",  sans-serif;
 
   /* Global Colors */
-  --background-color: #101a20;
+  --background-color: #051B2D;
+  --background-gradient: linear-gradient(0deg, #051B2D, #03090F);
   --default-color: #e7f2f7;
   --heading-color: #ffffff;
   --accent-color: #1387c1;
@@ -135,20 +136,6 @@
   scroll-behavior: smooth;
 }
 
-/* Color Presets */
-.light-background {
-  --background-color: #142027;
-  --surface-color: #325264;
-}
-
-.dark-background {
-  --background-color: #0b1419;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
-}
-
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -158,7 +145,10 @@ html {
 
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: var(--background-gradient);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  min-height: 100vh;
   font-family: var(--default-font);
 }
 
@@ -275,14 +265,12 @@ h6 {
   content: '';
   position: absolute;
   inset: 0;
-  z-index: 0; 
+  z-index: 0;
   background: linear-gradient(
     to bottom,
-    rgba(16, 26, 32, 1) 0%,
-    rgba(16, 26, 32, 1) 10%,
-    rgba(16, 26, 32, 0.95) 25%,
-    rgba(16, 26, 32, 0.9) 50%,
-    rgba(16, 26, 32, 0.8) 100%
+    rgba(8, 33, 52, 0.18) 0%,
+    rgba(8, 33, 52, 0.1) 50%,
+    rgba(3, 9, 15, 0.06) 100%
   );
   opacity: 0;
   pointer-events: none;
@@ -595,7 +583,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: transparent;
   font-size: 14px;
   padding: 40px 0;
   position: relative;
@@ -712,7 +700,7 @@ h6 {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: transparent;
   position: relative;
 }
 
@@ -758,7 +746,7 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: transparent;
   padding: 60px 0;
   scroll-margin-top: 100px;
   overflow: clip;
