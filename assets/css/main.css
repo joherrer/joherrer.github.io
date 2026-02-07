@@ -142,6 +142,7 @@
 html {
   scrollbar-gutter: stable;
   background: var(--background-gradient);
+  background-color: var(--background-color);
   background-attachment: fixed;
   background-size: 100% 100%;
   min-height: 100%;
@@ -150,10 +151,18 @@ html {
 body {
   color: var(--default-color);
   background: var(--background-gradient);
+  background-color: var(--background-color);
   background-attachment: fixed;
   background-size: 100% 100%;
   min-height: 100vh;
   font-family: var(--default-font);
+}
+
+@supports (-webkit-touch-callout: none) {
+  html,
+  body {
+    background-attachment: scroll;
+  }
 }
 
 a {
