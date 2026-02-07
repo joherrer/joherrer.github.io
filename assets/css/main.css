@@ -121,8 +121,6 @@
   /* Global Colors */
   --background-color: #000410;
   --background-gradient: linear-gradient(0deg, #001c2c, #000410);
-  --safe-area-top-color: #000410;
-  --safe-area-bottom-color: #001c2c;
   --default-color: #e7f2f7;
   --heading-color: #ffffff;
   --accent-color: #1387c1;
@@ -143,16 +141,10 @@
 --------------------------------------------------------------*/
 html {
   scrollbar-gutter: stable;
-  background-color: var(--background-color);
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  min-height: 100%;
 }
 
 body {
   color: var(--default-color);
-  background: transparent;
-  min-height: 100vh;
   font-family: var(--default-font);
 }
 
@@ -166,52 +158,6 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
   z-index: -2;
-}
-
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    background-attachment: scroll;
-  }
-  body {
-    position: relative;
-  }
-  body::after {
-    content: '';
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 120px;
-    background: var(--safe-area-bottom-color);
-    pointer-events: none;
-    z-index: -1;
-  }
-  .background-container {
-    background-attachment: scroll;
-    transform: translateZ(0);
-  }
-  .background-container::before,
-  .background-container::after {
-    content: '';
-    position: fixed;
-    left: 0;
-    right: 0;
-    background: var(--background-color);
-    pointer-events: none;
-    z-index: -1;
-  }
-  .background-container::before {
-    top: 0;
-    height: constant(safe-area-inset-top);
-    height: env(safe-area-inset-top);
-    background: var(--safe-area-top-color);
-  }
-  .background-container::after {
-    bottom: 0;
-    height: constant(safe-area-inset-bottom);
-    height: env(safe-area-inset-bottom);
-    background: var(--safe-area-bottom-color);
-  }
 }
 
 a {
@@ -311,6 +257,8 @@ h6 {
 # Global Header 
 --------------------------------------------------------------*/
 .header {
+  position: sticky;
+  top: 0;
   padding: 15px 0;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
   color: var(--default-color);
