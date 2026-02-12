@@ -5,43 +5,51 @@
 (function() {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    
+  const selectBody = document.body;
+  const selectHeader = document.querySelector('#header');
+  const scrollTopButton = document.querySelector('.scroll-top');
+
+  function updateScrolledState() {
+    if (!selectHeader) return;
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
 
     if (selectBody.classList.contains('mobile-nav-active')) {
       selectBody.classList.remove('scrolled');
-      return; 
+      return;
     }
 
-    window.scrollY > 20 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
-
-  document.addEventListener('scroll', toggleScrolled);
-  document.addEventListener('DOMContentLoaded', toggleScrolled);
-
-  /**
-   * Scroll top button
-   */
-  function toggleScrollTop() {
-    let scrollTop = document.querySelector('.scroll-top');
-    if (scrollTop) {
-      const isMobileNavActive = document.body.classList.contains('mobile-nav-active');
-      if (window.scrollY > 100 && !isMobileNavActive) {
-        scrollTop.classList.add('active');
-      } else {
-        scrollTop.classList.remove('active');
-      }
+    const shouldBeScrolled = window.scrollY > 20;
+    const isScrolled = selectBody.classList.contains('scrolled');
+    if (shouldBeScrolled !== isScrolled) {
+      selectBody.classList.toggle('scrolled', shouldBeScrolled);
     }
   }
 
-  document.addEventListener('scroll', toggleScrollTop);
-  document.addEventListener('DOMContentLoaded', toggleScrollTop);
+  function updateScrollTopState() {
+    if (!scrollTopButton) return;
+    const shouldBeActive = window.scrollY > 100 && !selectBody.classList.contains('mobile-nav-active');
+    const isActive = scrollTopButton.classList.contains('active');
+    if (shouldBeActive !== isActive) {
+      scrollTopButton.classList.toggle('active', shouldBeActive);
+    }
+  }
+
+  let scrollTicking = false;
+  function onScroll() {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(() => {
+      updateScrolledState();
+      updateScrollTopState();
+      scrollTicking = false;
+    });
+  }
+
+  document.addEventListener('scroll', onScroll, { passive: true });
+  document.addEventListener('DOMContentLoaded', () => {
+    updateScrolledState();
+    updateScrollTopState();
+  });
 
   /**
    * Animation on scroll function and init
