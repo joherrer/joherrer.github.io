@@ -5,7 +5,6 @@
 (function() {
   "use strict";
 
-
   /**
    * Apply or remove the .scrolled class based on current scroll/nav state
    */
