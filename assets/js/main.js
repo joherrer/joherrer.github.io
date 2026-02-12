@@ -182,18 +182,6 @@
     }, delay);
   }
 
-  function resetTemporaryInteractionStates() {
-    document.querySelectorAll('.pressed').forEach(el => el.classList.remove('pressed'));
-    document.querySelectorAll('.portfolio .portfolio-card.scaled').forEach(card => card.classList.remove('scaled'));
-  }
-
-  window.addEventListener('pageshow', resetTemporaryInteractionStates);
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') {
-      resetTemporaryInteractionStates();
-    }
-  });
-
   /**
    * Tap delay on mobile for navigation links and toggler
    */
