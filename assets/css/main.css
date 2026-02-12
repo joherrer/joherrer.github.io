@@ -1619,10 +1619,12 @@ section,
   transition: all 0.2s ease;
 }
 
-.resume .resume-item article:hover::before {
-  background-color: var(--accent-color); 
-  transform: scale(0.9);
-  box-shadow: 0 0 6px color-mix(in srgb, var(--accent-color), transparent 40%);
+@media (hover: hover) and (pointer: fine) {
+  .resume .resume-item article:hover::before {
+    background-color: var(--accent-color);
+    transform: scale(0.9);
+    box-shadow: 0 0 6px color-mix(in srgb, var(--accent-color), transparent 40%);
+  }
 }
 
 .resume .resume-item article h4 {
