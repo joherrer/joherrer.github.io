@@ -139,6 +139,10 @@ body {
   min-height: 100%;
 }
 
+body.gscrollbar-fixer {
+  margin-right: 0 !important;
+}
+
 .background-container {
   position: fixed;
   inset: 0;
