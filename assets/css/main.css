@@ -2189,6 +2189,7 @@ section,
 
   .portfolio .portfolio-card:hover .portfolio-img .portfolio-overlay {
     opacity: 1;
+    pointer-events: auto;
   }
 
   .portfolio .portfolio-card:hover .portfolio-img img {
@@ -2204,6 +2205,7 @@ section,
 
   .portfolio .portfolio-card.scaled .portfolio-img .portfolio-overlay {
     opacity: 1;
+    pointer-events: auto;
   }
 
   .portfolio .portfolio-card.scaled .portfolio-img img {
