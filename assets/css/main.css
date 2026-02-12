@@ -424,7 +424,7 @@ h6 {
     flex-direction: column;
     justify-content: center !important;
     align-items: center;
-    overflow: auto;
+    overflow: hidden;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
@@ -512,8 +512,7 @@ h6 {
     flex-direction: column;
     justify-content: center !important; 
     align-items: center;
-    overflow: hidden; 
-    touch-action: none;
+    overflow: hidden;
   }
 
   .navbar-nav {
