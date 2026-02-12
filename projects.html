@@ -1,0 +1,72 @@
+---
+layout: default
+title: Projects
+---
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Projects</h2>
+    <p class="d-none d-md-block">
+      These are some of the projects I've developed that helped me improve my programming skills.
+      They cover backend and frontend development, web applications, and APIs
+    </p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+    
+
+      <!-- Portfolio Filters -->
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-Python">Python</li>
+        <li data-filter=".filter-Java">Java</li>
+        <li data-filter=".filter-Web">Web</li>
+        <li data-filter=".filter-Desktop">Desktop</li>
+      </ul><!-- End Portfolio Filters -->
+
+      <!-- Portfolio Grid -->
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="150">
+        {% assign projects = site.projects | sort: "order" %}
+        {% for project in projects %}
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item
+          {% for cat in project.categories %} filter-{{ cat }}{% endfor %}">
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <img src="{{ project.images[0] }}" alt="{{ project.title }}" class="img-fluid">
+              <div class="portfolio-overlay">
+                <!-- Lightbox for first image -->
+                <a href="{{ project.url }}" class="portfolio-details-link"><i class="bi bi-plus"></i></a>
+                <!-- Link to portfolio-details page -->
+                <a href="{{ project.website }}" class="github link"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>{{ project.title }}</h4>
+              <p>{{ project.subtitle }}</p>
+              <div class="portfolio-tags">
+                {% for tech in project.tech limit: 3 %}
+                  <span>{{ tech }}</span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+        </div>
+        {% endfor %}
+      </div><!-- End Portfolio Items Container -->
+
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+      <a href="#portfolio" class="btn btn-primary">View All Projects</a>
+    </div>
+
+  </div>
+
+</section><!-- /Portfolio Section -->

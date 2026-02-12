@@ -1,0 +1,33 @@
+# Site settings
+
+title: Jose Herrera
+
+description: >-
+  Welcome to my personal website.
+  Here you'll find about my education and projects I built.
+  Feel free to reach out to me via the contact form.
+
+baseurl: ""
+url: "https://joherrer.github.io"
+
+github_username: joherrer
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
