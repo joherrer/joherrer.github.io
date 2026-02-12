@@ -246,7 +246,6 @@
 
         e.preventDefault();
         setTimeout(() => {
-          clearPressed(this);
           window.location.href = href;
         }, 100);
       });
