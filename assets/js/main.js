@@ -217,10 +217,16 @@
    * Tap feedback on mobile for social links
    */
   function initMobileSocialLinkPress() {
-    const socialLinks = document.querySelectorAll('.hero .social-links a, .footer .social-links a');
-    if (!socialLinks.length) return;
+    const interactiveLinks = document.querySelectorAll(
+      '.hero .social-links a, ' +
+      '.footer .social-links a, ' +
+      '.portfolio .portfolio-card .portfolio-img .portfolio-overlay a.github, ' +
+      '.portfolio-details .portfolio-details-content .project-website a, ' +
+      '.portfolio-details .portfolio-details-content .cta-buttons .btn-view-project'
+    );
+    if (!interactiveLinks.length) return;
 
-    socialLinks.forEach(link => {
+    interactiveLinks.forEach(link => {
       link.addEventListener('touchstart', function() {
         if (window.innerWidth >= 992) return;
         this.classList.add('pressed');
