@@ -55,7 +55,7 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', aosInit);
+  window.addEventListener('load', aosInit);
 
   /**
    * Tap effects on mobile for specific UI elements
