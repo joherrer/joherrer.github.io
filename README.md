@@ -49,7 +49,7 @@ Powered by **Jekyll**, fully compatible with **GitHub Pages**.
 
 ```plaintext
 ├── _layouts/           # Base templates
-├── _portfolio/         # Collection for project entries
+├── _projects/          # Collection for projects
 ├── assets/
 │   ├── css/            # Stylesheets
 │   ├── js/             # Javascript
@@ -60,7 +60,7 @@ Powered by **Jekyll**, fully compatible with **GitHub Pages**.
 ├── services.html
 ├── projects.html
 ├── contact.html
-├── _config.yml.        # Site configuration
+├── _config.yml         # Site configuration
 └── README.md           # Documentation
 ```
 

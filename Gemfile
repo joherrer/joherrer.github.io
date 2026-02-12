@@ -13,6 +13,7 @@ end
 
 # Logger gem to prevent deprecation warning
 gem "logger"
+gem "faraday-retry"
 
 # Windows and JRuby support
 platforms :windows, :jruby do

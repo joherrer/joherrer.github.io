@@ -23,10 +23,10 @@ title: Projects
       <!-- Portfolio Filters -->
       <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
         <li data-filter="*" class="filter-active">All</li>
-        <li data-filter=".filter-Python">Python</li>
-        <li data-filter=".filter-Java">Java</li>
-        <li data-filter=".filter-Web">Web</li>
-        <li data-filter=".filter-Desktop">Desktop</li>
+        <li data-filter=".filter-python">Python</li>
+        <li data-filter=".filter-java">Java</li>
+        <li data-filter=".filter-web-development">Web</li>
+        <li data-filter=".filter-desktop-development">Desktop</li>
       </ul><!-- End Portfolio Filters -->
 
       <!-- Portfolio Grid -->
@@ -34,7 +34,7 @@ title: Projects
         {% assign projects = site.projects | sort: "order" %}
         {% for project in projects %}
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item
-          {% for cat in project.categories %} filter-{{ cat }}{% endfor %}">
+          {% for cat in project.categories %} filter-{{ cat | slugify }}{% endfor %}">
 
           <div class="portfolio-card">
             <div class="portfolio-img">

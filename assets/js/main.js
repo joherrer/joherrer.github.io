@@ -230,6 +230,7 @@
 
       isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
         filters.addEventListener('click', function() {
+          if (!inst) return;
           isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
           this.classList.add('filter-active');
           inst.arrange({ filter: this.getAttribute('data-filter') });
