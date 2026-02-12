@@ -852,14 +852,14 @@ section,
 }
 
 .hero .hero-actions .btn.btn-primary {
-  background: var(--accent-color);
+  background: #0f78ac;
   color: var(--contrast-color);
-  border-color: var(--accent-color);
+  border-color: #0f78ac;
 }
 
 .hero .hero-actions .btn.btn-primary:hover {
-  background: color-mix(in srgb, var(--accent-color), black 15%);
-  border-color: color-mix(in srgb, var(--accent-color), black 15%);
+  background: #0c628d;
+  border-color: #0c628d;
   transform: translateY(-2px);
 }
 

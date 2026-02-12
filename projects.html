@@ -41,9 +41,9 @@ title: Projects
               <img src="{{ project.images[0] }}" alt="{{ project.title }}" class="img-fluid" width="1024" height="683">
               <div class="portfolio-overlay">
                 <!-- Lightbox for first image -->
-                <a href="{{ project.url }}" class="portfolio-details-link"><i class="bi bi-plus"></i></a>
+                <a href="{{ project.url }}" class="portfolio-details-link" aria-label="Open details for {{ project.title }}"><i class="bi bi-plus" aria-hidden="true"></i></a>
                 <!-- Link to portfolio-details page -->
-                <a href="{{ project.website }}" class="github link"><i class="bi bi-link"></i></a>
+                <a href="{{ project.website }}" class="github link" aria-label="Visit {{ project.title }} website"><i class="bi bi-link" aria-hidden="true"></i></a>
               </div>
             </div>
             <div class="portfolio-info">
