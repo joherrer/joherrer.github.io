@@ -584,11 +584,9 @@ h6 {
   }
 }
 
-@media (hover: none) and (pointer: coarse) {
-  .footer .social-links a:active {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-  }
+.footer .social-links a.pressed {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .footer .joherrer {
@@ -900,12 +898,10 @@ section,
   }
 }
 
-@media (hover: none) and (pointer: coarse) {
-  .hero .social-links a:active {
-    color: var(--contrast-color);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 70%);
-  }
+.hero .social-links a.pressed {
+  color: var(--contrast-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
 /* Hero Image */

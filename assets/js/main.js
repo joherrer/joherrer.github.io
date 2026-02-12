@@ -213,6 +213,38 @@
   document.addEventListener('DOMContentLoaded', initMobileNavDelay);
 
   /**
+   * Tap feedback on mobile for social links
+   */
+  function initMobileSocialLinkPress() {
+    const socialLinks = document.querySelectorAll('.hero .social-links a, .footer .social-links a');
+    if (!socialLinks.length) return;
+
+    socialLinks.forEach(link => {
+      link.addEventListener('touchstart', function() {
+        if (window.innerWidth >= 992) return;
+        this.classList.add('pressed');
+      }, { passive: true });
+
+      link.addEventListener('click', function() {
+        if (window.innerWidth >= 992) return;
+        setTimeout(() => {
+          this.classList.remove('pressed');
+        }, 150);
+      });
+
+      link.addEventListener('touchcancel', function() {
+        this.classList.remove('pressed');
+      }, { passive: true });
+
+      link.addEventListener('touchmove', function() {
+        this.classList.remove('pressed');
+      }, { passive: true });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initMobileSocialLinkPress);
+
+  /**
    * Typed.js initialization
    */
   function initTyped() {
