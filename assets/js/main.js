@@ -5,6 +5,10 @@
 (function() {
   "use strict";
 
+
+  /**
+   * Apply or remove the .scrolled class based on current scroll/nav state
+   */
   const selectBody = document.body;
   const selectHeader = document.querySelector('#header');
   const scrollTopButton = document.querySelector('.scroll-top');
@@ -25,6 +29,9 @@
     }
   }
 
+  /**
+   * Show or hide the scroll-top button based on scroll/nav state
+   */
   function updateScrollTopState() {
     if (!scrollTopButton) return;
     const shouldBeActive = window.scrollY > 100 && !selectBody.classList.contains('mobile-nav-active');
@@ -34,7 +41,11 @@
     }
   }
 
+  /**
+   * Throttle scroll-driven UI updates to the next animation frame
+   */
   let scrollTicking = false;
+
   function onScroll() {
     if (scrollTicking) return;
     scrollTicking = true;
@@ -50,6 +61,39 @@
     updateScrolledState();
     updateScrollTopState();
   });
+
+  /**
+   * Keep body.mobile-nav-active in sync with the mobile menu state
+   */
+  function setMobileNavActiveState(isActive) {
+    const shouldBeActive = isActive && window.innerWidth < 992;
+    selectBody.classList.toggle('mobile-nav-active', shouldBeActive);
+    updateScrolledState();
+    updateScrollTopState();
+  }
+
+  /**
+   * Sync mobile menu open/close state from Bootstrap collapse events
+   */
+  function initMobileNavStateSync() {
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (!navbarCollapse) return;
+
+    navbarCollapse.addEventListener('show.bs.collapse', () => setMobileNavActiveState(true));
+    navbarCollapse.addEventListener('shown.bs.collapse', () => setMobileNavActiveState(true));
+    navbarCollapse.addEventListener('hide.bs.collapse', () => setMobileNavActiveState(false));
+    navbarCollapse.addEventListener('hidden.bs.collapse', () => setMobileNavActiveState(false));
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 992) {
+        setMobileNavActiveState(false);
+      } else {
+        setMobileNavActiveState(navbarCollapse.classList.contains('show'));
+      }
+    }, { passive: true });
+  }
+
+  document.addEventListener('DOMContentLoaded', initMobileNavStateSync);
 
   /**
    * Animation on scroll function and init
