@@ -40,10 +40,10 @@ title: Projects
             <div class="portfolio-img">
               <img src="{{ project.images[0] }}" alt="{{ project.title }}" class="img-fluid" width="1024" height="683">
               <div class="portfolio-overlay">
-                <!-- Lightbox for first image -->
-                <a href="{{ project.url }}" class="portfolio-details-link" aria-label="Open details for {{ project.title }}"><i class="bi bi-plus" aria-hidden="true"></i></a>
                 <!-- Link to portfolio-details page -->
-                <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer" class="github link" aria-label="Visit {{ project.title }} website"><i class="bi bi-link" aria-hidden="true"></i></a>
+                <a href="{{ project.url }}" class="portfolio-details-link" aria-label="Open details for {{ project.title }}"><i class="bi bi-plus" aria-hidden="true"></i></a>
+                <!-- Link to github repository -->
+                <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer" class="github link" aria-label="Visit {{ project.title }} repository"><i class="bi bi-link" aria-hidden="true"></i></a>
               </div>
             </div>
             <div class="portfolio-info">

@@ -126,6 +126,7 @@
 
     document.addEventListener('click', (e) => {
       if (window.innerWidth >= 992) return;
+      if (e.target.closest('.portfolio .portfolio-card .portfolio-img .portfolio-overlay a')) return;
 
       let clickedInsideElement = false;
       elements.forEach(el => {
