@@ -577,9 +577,18 @@ h6 {
   transition: 0.2s;
 }
 
-.footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+@media (hover: hover) and (pointer: fine) {
+  .footer .social-links a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .footer .social-links a:active {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
 }
 
 .footer .joherrer {
@@ -883,10 +892,20 @@ section,
   transition: all 0.2s ease;
 }
 
-.hero .social-links a:hover {
-  color: var(--contrast-color);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 70%);
+@media (hover: hover) and (pointer: fine) {
+  .hero .social-links a:hover {
+    color: var(--contrast-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 70%);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .hero .social-links a:active {
+    color: var(--contrast-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 70%);
+  }
 }
 
 /* Hero Image */
