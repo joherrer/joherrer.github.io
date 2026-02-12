@@ -8,8 +8,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/Roboto-Light.woff2") format("woff2"),
-       url("../fonts/Roboto-Light.woff") format("woff");
+  src: url("../fonts/Roboto-Light.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -17,8 +16,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
-       url("../fonts/Roboto-Regular.woff") format("woff");
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -26,8 +24,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
-       url("../fonts/Roboto-Medium.woff") format("woff");
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -35,8 +32,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/Roboto-SemiBold.woff2") format("woff2"),
-       url("../fonts/Roboto-SemiBold.woff") format("woff");
+  src: url("../fonts/Roboto-SemiBold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -44,8 +40,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
-       url("../fonts/Roboto-Bold.woff") format("woff");
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -53,8 +48,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/Raleway-Light.woff2") format("woff2"),
-       url("../fonts/Raleway-Light.woff") format("woff");
+  src: url("../fonts/Raleway-Light.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -62,8 +56,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"),
-       url("../fonts/Raleway-Regular.woff") format("woff");
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -71,8 +64,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Raleway-Medium.woff2") format("woff2"),
-       url("../fonts/Raleway-Medium.woff") format("woff");
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -80,8 +72,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"),
-       url("../fonts/Raleway-SemiBold.woff") format("woff");
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -89,8 +80,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Raleway-Bold.woff2") format("woff2"),
-       url("../fonts/Raleway-Bold.woff") format("woff");
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -98,8 +88,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
-       url("../fonts/Poppins-Regular.woff") format("woff");
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -107,8 +96,7 @@
   font-family: "DM Serif Text";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/DMSerifText-Regular.woff2") format("woff2"),
-       url("../fonts/DMSerifText-Regular.woff") format("woff");
+  src: url("../fonts/DMSerifText-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
