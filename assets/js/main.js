@@ -106,7 +106,17 @@
     });
   }
 
-  window.addEventListener('load', aosInit);
+  const homePaths = new Set(['/', '/index.html']);
+  const isHomePage = homePaths.has(window.location.pathname);
+  if (isHomePage) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit, { once: true });
+    } else {
+      aosInit();
+    }
+  } else {
+    window.addEventListener('load', aosInit, { once: true });
+  }
 
   /**
    * Tap effects on mobile for specific UI elements
