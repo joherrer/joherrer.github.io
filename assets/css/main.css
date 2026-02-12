@@ -861,6 +861,12 @@ section,
   transform: translateY(-2px);
 }
 
+.hero .hero-actions .btn.btn-primary.pressed {
+  background: #0c628d;
+  border-color: #0c628d;
+  transform: translateY(-2px);
+}
+
 .hero .hero-actions .btn.btn-outline {
   background: transparent;
   color: var(--accent-color);
@@ -868,6 +874,10 @@ section,
 }
 
 .hero .hero-actions .btn.btn-outline:hover {
+  transform: translateY(-2px);
+}
+
+.hero .hero-actions .btn.btn-outline.pressed {
   transform: translateY(-2px);
 }
 
@@ -1293,8 +1303,17 @@ section,
   outline: none;
 }
 
+.about .intro-content .cta-group .link-underline.pressed {
+  color: color-mix(in srgb, var(--accent-color), transparent 10%);
+  outline: none;
+}
+
 .about .intro-content .cta-group .link-underline:hover::after,
 .about .intro-content .cta-group .link-underline:focus::after {
+  transform: scaleX(1);
+}
+
+.about .intro-content .cta-group .link-underline.pressed::after {
   transform: scaleX(1);
 }
 
@@ -2100,6 +2119,11 @@ section,
   }
 }
 
+.portfolio .portfolio-card .portfolio-img .portfolio-overlay a.portfolio-details-link.pressed {
+  background-color: color-mix(in srgb, var(--accent-color), #fff 20%);
+  transform: translateY(-5px);
+}
+
 .portfolio .portfolio-card .portfolio-img .portfolio-overlay a.github.pressed {
   background-color: color-mix(in srgb, var(--accent-color), #fff 20%);
   transform: translateY(-5px);
@@ -2547,6 +2571,14 @@ section,
 }
 
 .portfolio-details .portfolio-details-content .cta-buttons .btn-next-project:hover i {
+  transform: translateX(3px);
+}
+
+.portfolio-details .portfolio-details-content .cta-buttons .btn-next-project.pressed {
+  background-color: color-mix(in srgb, var(--heading-color), transparent 80%);
+}
+
+.portfolio-details .portfolio-details-content .cta-buttons .btn-next-project.pressed i {
   transform: translateX(3px);
 }
 

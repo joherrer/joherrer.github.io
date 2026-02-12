@@ -159,19 +159,37 @@
     ]);
   });
 
+  function bindMobilePressState(elements) {
+    elements.forEach(el => {
+      el.addEventListener('touchstart', function() {
+        if (window.innerWidth >= 992) return;
+        this.classList.add('pressed');
+      }, { passive: true });
+
+      el.addEventListener('touchmove', function() {
+        this.classList.remove('pressed');
+      }, { passive: true });
+
+      el.addEventListener('touchcancel', function() {
+        this.classList.remove('pressed');
+      }, { passive: true });
+    });
+  }
+
+  function clearPressed(el, delay = 0) {
+    setTimeout(() => {
+      el.classList.remove('pressed');
+    }, delay);
+  }
+
   /**
    * Tap delay on mobile for navigation links and toggler
    */
   function initMobileNavDelay() {
     const elements = document.querySelectorAll('.navbar-nav .nav-link, .header .logo, .navbar-toggler');
-    
-    elements.forEach(el => {
-      el.addEventListener('touchstart', function() {
-        if (window.innerWidth < 992) {
-          this.classList.add('pressed');
-        }
-      }, { passive: true });
+    bindMobilePressState(elements);
 
+    elements.forEach(el => {
       el.addEventListener('click', function(e) {
         if (window.innerWidth >= 992) return;
 
@@ -190,28 +208,51 @@
         } 
         else if (this.classList.contains('logo')) {
           e.preventDefault();
-          setTimeout(() => {
-            this.classList.remove('pressed');
-          }, 50);
+          clearPressed(this, 50);
 
           setTimeout(() => {
             window.location.href = href;
           }, 150); 
         }
         else {
-          setTimeout(() => {
-            this.classList.remove('pressed');
-          }, 120);
+          clearPressed(this, 120);
         }
       });
-
-      el.addEventListener('touchmove', function() {
-        this.classList.remove('pressed');
-      }, { passive: true });
     });
   }
 
   document.addEventListener('DOMContentLoaded', initMobileNavDelay);
+
+  /**
+   * Tap delay on mobile for internal navigation links
+   */
+  function initMobileInternalCtaDelay() {
+    const ctaLinks = document.querySelectorAll(
+      '.hero .hero-actions .btn, ' +
+      '.about .intro-content .cta-group .link-underline, ' +
+      '.portfolio .portfolio-card .portfolio-img .portfolio-overlay a.portfolio-details-link, ' +
+      '.portfolio-details .portfolio-details-content .cta-buttons .btn-next-project'
+    );
+    if (!ctaLinks.length) return;
+    bindMobilePressState(ctaLinks);
+
+    ctaLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth >= 992) return;
+
+        const href = this.getAttribute('href');
+        if (!href || href === '#' || href.startsWith('http') || this.getAttribute('target') === '_blank') return;
+
+        e.preventDefault();
+        setTimeout(() => {
+          clearPressed(this);
+          window.location.href = href;
+        }, 160);
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initMobileInternalCtaDelay);
 
   /**
    * Tap feedback on mobile for social links
@@ -225,27 +266,13 @@
       '.portfolio-details .portfolio-details-content .cta-buttons .btn-view-project'
     );
     if (!interactiveLinks.length) return;
+    bindMobilePressState(interactiveLinks);
 
     interactiveLinks.forEach(link => {
-      link.addEventListener('touchstart', function() {
-        if (window.innerWidth >= 992) return;
-        this.classList.add('pressed');
-      }, { passive: true });
-
       link.addEventListener('click', function() {
         if (window.innerWidth >= 992) return;
-        setTimeout(() => {
-          this.classList.remove('pressed');
-        }, 150);
+        clearPressed(this, 150);
       });
-
-      link.addEventListener('touchcancel', function() {
-        this.classList.remove('pressed');
-      }, { passive: true });
-
-      link.addEventListener('touchmove', function() {
-        this.classList.remove('pressed');
-      }, { passive: true });
     });
   }
 
