@@ -1776,6 +1776,12 @@ section,
 }
 
 @media (max-width: 991.98px) {
+  .resume .resume-item article.scaled::before {
+    background-color: var(--accent-color);
+    transform: scale(0.9);
+    box-shadow: 0 0 6px color-mix(in srgb, var(--accent-color), transparent 40%);
+  }
+
   .resume .software-pill.scaled {
     transform: translateY(-3px);
     border-color: color-mix(in srgb, var(--accent-color), transparent 60%);

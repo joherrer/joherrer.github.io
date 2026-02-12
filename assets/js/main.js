@@ -151,6 +151,7 @@
       '.about .skill-item',
       '.about .fact-pill',
       '.skills .skill-box',
+      '.resume .resume-item article',
       '.resume .software-pill',
       '.services .service-item',
       '.portfolio .portfolio-card',
