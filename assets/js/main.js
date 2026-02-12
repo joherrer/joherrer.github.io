@@ -247,7 +247,7 @@
         setTimeout(() => {
           clearPressed(this);
           window.location.href = href;
-        }, 160);
+        }, 100);
       });
     });
   }
