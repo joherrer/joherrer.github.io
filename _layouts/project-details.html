@@ -52,7 +52,7 @@ layout: default
                 {% for img in page.images %}
                 <div class="swiper-slide">
                   <a href="{{ img }}" class="glightbox" data-gallery="project-gallery" title="{{ page.title }}">
-                    <img src="{{ img }}" alt="{{ page.title }} Image" class="img-fluid">
+                    <img src="{{ img }}" alt="{{ page.title }} Image" class="img-fluid" width="1024" height="683">
                   </a>
                 </div>
                 {% endfor %}
@@ -71,7 +71,7 @@ layout: default
               {% for img in page.images %}
               <div class="col-3">
                 <a href="{{ img }}" class="glightbox" data-gallery="project-gallery" title="{{ page.title }}">
-                  <img src="{{ img }}" alt="Gallery Image" class="img-fluid">
+                  <img src="{{ img }}" alt="Gallery Image" class="img-fluid" width="1024" height="683">
                 </a>
               </div>
               {% endfor %}

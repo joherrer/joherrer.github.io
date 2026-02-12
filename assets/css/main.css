@@ -895,7 +895,7 @@ section,
 .hero .social-links a:hover {
   color: var(--contrast-color);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
 /* Hero Image */

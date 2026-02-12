@@ -156,7 +156,7 @@
    */
   function initTyped() {
     const selectTyped = document.querySelector('.typed');
-    if (selectTyped) {
+    if (selectTyped && typeof Typed !== 'undefined') {
       let typed_strings = selectTyped.getAttribute('data-typed-items');
       typed_strings = typed_strings.split(',');
       new Typed('.typed', {
@@ -175,6 +175,7 @@
    * Skills progress bar animation
    */
   function initSkillsAnimation() {
+    if (typeof Waypoint === 'undefined') return;
     let skillsAnimation = document.querySelectorAll('.skills-animation');
     skillsAnimation.forEach((item) => {
       new Waypoint({
@@ -196,6 +197,7 @@
    * Swiper sliders initialization
    */
   function initSwiper() {
+    if (typeof Swiper === 'undefined') return;
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
@@ -210,6 +212,7 @@
    * Isotope layout and filters
    */
   function initIsotope() {
+    if (typeof imagesLoaded === 'undefined' || typeof Isotope === 'undefined') return;
     document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
       let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
       let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
@@ -281,10 +284,12 @@
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox',
-    loop: true,
-    touchNavigation: true
-  });
+  if (typeof GLightbox !== 'undefined' && document.querySelector('.glightbox')) {
+    GLightbox({
+      selector: '.glightbox',
+      loop: true,
+      touchNavigation: true
+    });
+  }
 
 })();
