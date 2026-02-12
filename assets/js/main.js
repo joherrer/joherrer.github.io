@@ -23,7 +23,7 @@
   }
 
   document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+  document.addEventListener('DOMContentLoaded', toggleScrolled);
 
   /**
    * Scroll top button
@@ -41,7 +41,7 @@
   }
 
   document.addEventListener('scroll', toggleScrollTop);
-  window.addEventListener('load', toggleScrollTop);
+  document.addEventListener('DOMContentLoaded', toggleScrollTop);
 
   /**
    * Animation on scroll function and init
@@ -83,7 +83,7 @@
     });
   }
 
-  window.addEventListener('load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     initMobileTapSingle([
       '.hero .hero-image .image-wrapper img',
       '.about .profile-figure',
@@ -149,7 +149,7 @@
     });
   }
 
-  window.addEventListener('load', initMobileNavDelay);
+  document.addEventListener('DOMContentLoaded', initMobileNavDelay);
 
   /**
    * Typed.js initialization
@@ -169,7 +169,7 @@
     }
   }
 
-  window.addEventListener('load', initTyped);
+  document.addEventListener('DOMContentLoaded', initTyped);
 
   /**
    * Skills progress bar animation
@@ -191,7 +191,7 @@
     });
   }
 
-  window.addEventListener('load', initSkillsAnimation);
+  document.addEventListener('DOMContentLoaded', initSkillsAnimation);
 
   /**
    * Swiper sliders initialization
@@ -280,7 +280,7 @@
     }
   }
 
-  window.addEventListener('load', initContactForm);
+  document.addEventListener('DOMContentLoaded', initContactForm);
 
   /**
    * Initiate glightbox
