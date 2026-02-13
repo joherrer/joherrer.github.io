@@ -435,6 +435,10 @@ h6 {
     transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
   }
 
+  .navbar-collapse:not(.show):not(.collapsing) {
+    display: none;
+  }
+
   .navbar-collapse.collapsing {
     display: flex;
     height: 100vh;
