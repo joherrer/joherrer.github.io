@@ -2407,7 +2407,17 @@ section,
 
 .portfolio-details .portfolio-details-content .project-website a {
   font-weight: 500;
+  color: var(--accent-color);
   transition: all 0.2s;
+}
+
+.portfolio-details .portfolio-details-content .project-website a:visited {
+  color: var(--accent-color);
+}
+
+.portfolio-details .portfolio-details-content .project-website a:focus,
+.portfolio-details .portfolio-details-content .project-website a:active {
+  color: var(--accent-color);
 }
 
 @media (hover: hover) and (pointer: fine) {
