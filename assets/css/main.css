@@ -456,6 +456,7 @@ h6 {
 
   body.mobile-nav-active {
     overflow: hidden;
+    touch-action: none;
   }
 
   body.mobile-nav-active .scroll-top {
