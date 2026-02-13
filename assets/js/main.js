@@ -183,6 +183,12 @@
     }, delay);
   }
 
+  function clearAllPressedStates() {
+    document.querySelectorAll('.pressed').forEach(el => el.classList.remove('pressed'));
+  }
+
+  window.addEventListener('pagehide', clearAllPressedStates);
+
   /**
    * Tap delay on mobile for navigation links and toggler
    */
