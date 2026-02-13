@@ -187,7 +187,15 @@
     document.querySelectorAll('.pressed').forEach(el => el.classList.remove('pressed'));
   }
 
+  function clearScaledProjectCards() {
+    document.querySelectorAll('.portfolio .portfolio-card.scaled').forEach(card => {
+      card.classList.remove('scaled');
+    });
+  }
+
   window.addEventListener('pagehide', clearAllPressedStates);
+  window.addEventListener('pagehide', clearScaledProjectCards);
+  window.addEventListener('pageshow', clearScaledProjectCards);
 
   /**
    * Tap delay on mobile for navigation links and toggler
