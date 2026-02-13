@@ -438,9 +438,9 @@ h6 {
   .navbar-collapse.collapsing {
     display: flex;
     height: 100vh;
-    opacity: 0;
+    opacity: 1;
     visibility: visible;
-    transition: opacity 0.15s ease-out;
+    transition: none;
   }
 
   .navbar-collapse.show {
@@ -465,6 +465,8 @@ h6 {
 
   .navbar-nav > .nav-item {
     padding: 15px 0;
+    opacity: 0;
+    transform: translateY(10px);
   }
 
   .navbar-nav .nav-link {
@@ -501,6 +503,35 @@ h6 {
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link.active {
     color: var(--nav-color);
+  }
+
+  .navbar-collapse.collapsing .navbar-nav > .nav-item,
+  .navbar-collapse.show .navbar-nav > .nav-item {
+    animation: mobileNavItemIn 0.28s ease forwards;
+  }
+
+  .navbar-collapse.collapsing .navbar-nav > .nav-item:nth-child(1),
+  .navbar-collapse.show .navbar-nav > .nav-item:nth-child(1) { animation-delay: 0.02s; }
+  .navbar-collapse.collapsing .navbar-nav > .nav-item:nth-child(2),
+  .navbar-collapse.show .navbar-nav > .nav-item:nth-child(2) { animation-delay: 0.05s; }
+  .navbar-collapse.collapsing .navbar-nav > .nav-item:nth-child(3),
+  .navbar-collapse.show .navbar-nav > .nav-item:nth-child(3) { animation-delay: 0.08s; }
+  .navbar-collapse.collapsing .navbar-nav > .nav-item:nth-child(4),
+  .navbar-collapse.show .navbar-nav > .nav-item:nth-child(4) { animation-delay: 0.11s; }
+  .navbar-collapse.collapsing .navbar-nav > .nav-item:nth-child(5),
+  .navbar-collapse.show .navbar-nav > .nav-item:nth-child(5) { animation-delay: 0.14s; }
+  .navbar-collapse.collapsing .navbar-nav > .nav-item:nth-child(6),
+  .navbar-collapse.show .navbar-nav > .nav-item:nth-child(6) { animation-delay: 0.17s; }
+}
+
+@keyframes mobileNavItemIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
