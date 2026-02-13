@@ -143,11 +143,6 @@ body.gscrollbar-fixer {
   margin-right: 0 !important;
 }
 
-body.ios-safe-area-refresh {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
 .background-container {
   position: fixed;
   inset: 0;
@@ -438,10 +433,6 @@ h6 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
-  }
-
-  .navbar-collapse:not(.show):not(.collapsing) {
-    display: none;
   }
 
   .navbar-collapse.collapsing {

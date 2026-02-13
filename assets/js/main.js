@@ -12,23 +12,6 @@
   const selectHeader = document.querySelector('#header');
   const scrollTopButton = document.querySelector('.scroll-top');
 
-  function isIosSafari() {
-    const ua = window.navigator.userAgent;
-    const isIOS = /iP(ad|hone|od)/.test(ua) || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1);
-    const isWebKit = /WebKit/.test(ua);
-    const isNonSafariIOS = /CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
-    return isIOS && isWebKit && !isNonSafariIOS;
-  }
-
-  function refreshIosSafeAreaPaint() {
-    if (!isIosSafari()) return;
-    selectBody.classList.add('ios-safe-area-refresh');
-    void selectBody.offsetHeight;
-    window.requestAnimationFrame(() => {
-      selectBody.classList.remove('ios-safe-area-refresh');
-    });
-  }
-
   function updateScrolledState() {
     if (!selectHeader) return;
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
@@ -94,10 +77,7 @@
     navbarCollapse.addEventListener('show.bs.collapse', () => setMobileNavActiveState(true));
     navbarCollapse.addEventListener('shown.bs.collapse', () => setMobileNavActiveState(true));
     navbarCollapse.addEventListener('hide.bs.collapse', () => setMobileNavActiveState(false));
-    navbarCollapse.addEventListener('hidden.bs.collapse', () => {
-      setMobileNavActiveState(false);
-      refreshIosSafeAreaPaint();
-    });
+    navbarCollapse.addEventListener('hidden.bs.collapse', () => setMobileNavActiveState(false));
 
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 992) {
