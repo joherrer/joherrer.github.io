@@ -432,28 +432,20 @@ h6 {
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.15s ease-out, visibility 0s linear 0.15s;
+    transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
   }
 
   .navbar-collapse.collapsing {
     display: flex;
     height: 100vh;
-    visibility: visible;
-    transition: opacity 0.15s ease-out, visibility 0s linear 0s;
-  }
-
-  body.mobile-nav-active .navbar-collapse.collapsing {
-    opacity: 1;
-  }
-
-  body:not(.mobile-nav-active) .navbar-collapse.collapsing {
     opacity: 0;
+    visibility: visible;
+    transition: opacity 0.15s ease-out;
   }
 
   .navbar-collapse.show {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.15s ease-out, visibility 0s linear 0s;
   }
 
   .navbar-nav {
