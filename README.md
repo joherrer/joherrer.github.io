@@ -1,6 +1,8 @@
 # 🌐 Personal Portfolio Website
 
-A modern, responsive **portfolio website** designed to showcase my work as a **software developer**. It highlights my background, skills, projects, and services, with a clean UI and smooth animations for a great user experience. The site is optimized to be used on desktop, tablet, and mobile devices.
+A modern, responsive **portfolio website** designed to showcase my work as a **software developer**.
+It highlights my background, skills, projects, and services, with a clean UI and smooth animations
+for a great user experience. The site is optimized to be used on desktop, tablet, and mobile devices.
 
 ## 🚀 Live Website
 

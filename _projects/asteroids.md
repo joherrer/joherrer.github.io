@@ -3,7 +3,9 @@ order: 2
 layout: project-details
 title: Asteroids
 subtitle: Desktop Game
-description: Asteroids is a desktop game built with Java and JavaFX where players control a spaceship dodging and destroying incoming asteroids to earn points and reach the highest score
+description: >
+  Asteroids is a desktop game built with Java and JavaFX where players control a spaceship dodging
+  and destroying incoming asteroids to earn points and reach the highest score
 date: April 2025
 client: Personal Project
 website: https://github.com/joherrer/asteroids
