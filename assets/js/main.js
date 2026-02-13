@@ -15,7 +15,6 @@
   function updateScrolledState() {
     if (!selectHeader) return;
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-
     if (selectBody.classList.contains('mobile-nav-active')) return;
 
     const shouldBeScrolled = window.scrollY > 20;
