@@ -143,6 +143,11 @@ body.gscrollbar-fixer {
   margin-right: 0 !important;
 }
 
+body.ios-safe-area-refresh {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 .background-container {
   position: fixed;
   inset: 0;
