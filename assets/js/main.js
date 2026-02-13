@@ -9,11 +9,8 @@
    * Apply or remove the .scrolled class based on current scroll/nav state
    */
   const selectBody = document.body;
-  const selectHtml = document.documentElement;
   const selectHeader = document.querySelector('#header');
   const scrollTopButton = document.querySelector('.scroll-top');
-  let mobileNavScrollY = 0;
-  let isMobileScrollLocked = false;
 
   function updateScrolledState() {
     if (!selectHeader) return;
@@ -63,40 +60,9 @@
   /**
    * Keep body.mobile-nav-active in sync with the mobile menu state
    */
-  function lockMobileBodyScroll() {
-    if (isMobileScrollLocked) return;
-    mobileNavScrollY = window.scrollY || window.pageYOffset || 0;
-    selectBody.style.position = 'fixed';
-    selectBody.style.top = `-${mobileNavScrollY}px`;
-    selectBody.style.left = '0';
-    selectBody.style.right = '0';
-    selectBody.style.width = '100%';
-    selectHtml.style.overflow = 'hidden';
-    selectHtml.style.height = '100%';
-    isMobileScrollLocked = true;
-  }
-
-  function unlockMobileBodyScroll() {
-    if (!isMobileScrollLocked) return;
-    selectBody.style.position = '';
-    selectBody.style.top = '';
-    selectBody.style.left = '';
-    selectBody.style.right = '';
-    selectBody.style.width = '';
-    selectHtml.style.overflow = '';
-    selectHtml.style.height = '';
-    window.scrollTo(0, mobileNavScrollY);
-    isMobileScrollLocked = false;
-  }
-
   function setMobileNavActiveState(isActive) {
     const shouldBeActive = isActive && window.innerWidth < 992;
     selectBody.classList.toggle('mobile-nav-active', shouldBeActive);
-    if (shouldBeActive) {
-      lockMobileBodyScroll();
-    } else {
-      unlockMobileBodyScroll();
-    }
     updateScrolledState();
     updateScrollTopState();
   }
