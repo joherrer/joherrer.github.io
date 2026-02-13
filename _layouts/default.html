@@ -53,7 +53,8 @@
     rel="preload"
     as="image"
     href="/assets/img/profile/headshot-600.webp"
-    imagesrcset="/assets/img/profile/headshot-450.webp 450w, /assets/img/profile/headshot-600.webp 600w, /assets/img/profile/headshot-900.webp 900w, /assets/img/profile/headshot-1024.webp 1024w"
+    imagesrcset="/assets/img/profile/headshot-450.webp 450w, /assets/img/profile/headshot-600.webp 600w,
+    /assets/img/profile/headshot-900.webp 900w, /assets/img/profile/headshot-1024.webp 1024w"
     imagesizes="(max-width: 576px) 80vw, (max-width: 991px) 70vw, (max-width: 1200px) 45vw, 450px"
     fetchpriority="high">
   {% endif %}
@@ -85,8 +86,11 @@
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/' %}active{% endif %}" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/about/' %}active{% endif %}" href="/about/">About</a></li>
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/resume/' %}active{% endif %}" href="/resume/">Resume</a></li>
-            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/services/' %}active{% endif %}" href="/services/">Services</a></li>
-            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/projects/' or page.url contains '/projects/' %}active{% endif %}" href="/projects/">Projects</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/services/' %}active{% endif %}"
+                href="/services/">Services</a></li>
+            <li class="nav-item"><a
+                class="nav-link p-0 {% if page.url == '/projects/' or page.url contains '/projects/' %}active{% endif %}"
+                href="/projects/">Projects</a></li>
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/contact/' %}active{% endif %}" href="/contact/">Contact</a></li>
           </ul>
         </div>
@@ -105,10 +109,14 @@
         <p>© <span>Copyright</span> <strong class="px-1 joherrer">joherrer.</strong> <span>All Rights Reserved<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit X profile"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook profile"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit X profile"><i
+            class="bi bi-twitter-x" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook profile"><i
+            class="bi bi-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile"><i
+            class="bi bi-linkedin" aria-hidden="true"></i></a>
       </div>
       <div class="credits">
         Designed by Jose Herrera
@@ -117,7 +125,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
