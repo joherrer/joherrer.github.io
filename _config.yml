@@ -18,6 +18,7 @@ plugins:
   - jekyll-feed
 
 exclude:
+  - .DS_Store
   - .sass-cache/
   - .jekyll-cache/
   - Gemfile
