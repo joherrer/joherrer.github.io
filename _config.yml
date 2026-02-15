@@ -10,7 +10,6 @@ description: >-
   professional services.
 
 default_og_image: /assets/img/profile/developer-og.jpg
-locale: en_US
 
 baseurl: ""
 url: "https://joherrer.github.io"
