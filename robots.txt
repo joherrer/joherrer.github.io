@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joherrer.github.io/sitemap.xml

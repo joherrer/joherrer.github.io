@@ -266,7 +266,7 @@ h6 {
   text-decoration: none;
 }
 
-.header .logo h1 {
+.header .logo .sitename {
   font-size: 26px;
   font-family: "DM Serif Text", serif;
   font-style: normal;
@@ -280,7 +280,7 @@ h6 {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .header .logo h1 {
+  .header .logo .sitename {
     background: linear-gradient(90deg, #1387c1, #d21b64);
     background-repeat: no-repeat;
     background-size: 150px 100%;
@@ -293,7 +293,7 @@ h6 {
       transform 0.1s ease;
   }
 
-  .header .logo h1:hover {
+  .header .logo .sitename:hover {
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
@@ -303,12 +303,12 @@ h6 {
   transform: scale(0.95);
 }
 
-.header .logo.pressed h1 {
+.header .logo.pressed .sitename {
   transform: scale(1) !important;
 }
 
 @media (max-width: 576px) {
-  .header .logo h1 {
+  .header .logo .sitename {
     padding-left: 24px;
   }
 }
@@ -752,6 +752,7 @@ section,
   }
 }
 
+.section-title h1,
 .section-title h2 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -768,6 +769,7 @@ section,
 }
 
 @media (max-width: 768px) {
+  .section-title h1,
   .section-title h2 {
     font-size: 2.5rem;
   }
@@ -2250,7 +2252,7 @@ section,
   --section-spacing: 2.5rem;
 }
 
-.portfolio-details.section .section-title h2 {
+.portfolio-details.section .section-title h1 {
   background-size: 700px 100%;
 }
 

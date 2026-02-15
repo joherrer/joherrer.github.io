@@ -7,9 +7,28 @@ layout: default
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Project Details</h2>
+    <h1>Project Details</h1>
     <p class="d-none d-md-block">{{ page.description }}</p>
   </div><!-- End Section Title -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "{{ page.title | escape }}",
+    "description": "{{ page.description | strip_html | strip_newlines | normalize_whitespace | escape }}",
+    "url": "{{ page.url | absolute_url }}",
+    "image": "{{ page.images[0] | absolute_url }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.person_name | default: site.site_name | default: site.title | escape }}"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "{{ site.person_name | default: site.site_name | default: site.title | escape }}"
+    }
+  }
+  </script>
 
   <div class="container" data-aos="fade-up">
     <div class="row gy-4">
@@ -52,7 +71,7 @@ layout: default
                 {% for img in page.images %}
                 <div class="swiper-slide">
                   <a href="{{ img }}" class="glightbox" data-gallery="project-gallery" title="{{ page.title }}">
-                    <img src="{{ img }}" alt="{{ page.title }} Image" class="img-fluid" width="1024" height="683"
+                    <img src="{{ img }}" alt="{{ page.title }} project screenshot {{ forloop.index }}" class="img-fluid" width="1024" height="683"
                       {% if forloop.first %}fetchpriority="high" loading="eager"{% else %}loading="lazy"{% endif %}>
                   </a>
                 </div>
@@ -72,7 +91,7 @@ layout: default
               {% for img in page.images %}
               <div class="col-3">
                 <a href="{{ img }}" class="glightbox" data-gallery="project-gallery" title="{{ page.title }}">
-                  <img src="{{ img }}" alt="Gallery Image" class="img-fluid" width="1024" height="683">
+                  <img src="{{ img }}" alt="{{ page.title }} gallery image {{ forloop.index }}" class="img-fluid" width="1024" height="683">
                 </a>
               </div>
               {% endfor %}
@@ -125,13 +144,13 @@ layout: default
 
             <div class="accordion project-accordion" id="portfolio-details-projectAccordion">
               <div class="accordion-item" data-aos="fade-up">
-                <h2 class="accordion-header">
+                <h3 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse"
                     data-bs-target="#portfolio-details-collapse-1" aria-expanded="true"
                     aria-controls="portfolio-details-collapse-1">
                     <i class="bi bi-clipboard-data me-2"></i> Project Overview
                   </button>
-                </h2>
+                </h3>
                 <div id="portfolio-details-collapse-1" class="accordion-collapse collapse show"
                   data-bs-parent="#portfolio-details-projectAccordion">
                   <div class="accordion-body">
@@ -141,13 +160,13 @@ layout: default
               </div>
 
               <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="accordion-header">
+                <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#portfolio-details-collapse-2" aria-expanded="false"
                     aria-controls="portfolio-details-collapse-2">
                     <i class="bi bi-exclamation-diamond me-2"></i> The Challenge
                   </button>
-                </h2>
+                </h3>
                 <div id="portfolio-details-collapse-2" class="accordion-collapse collapse"
                   data-bs-parent="#portfolio-details-projectAccordion">
                   <div class="accordion-body">
@@ -157,13 +176,13 @@ layout: default
               </div>
 
               <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="accordion-header">
+                <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#portfolio-details-collapse-3" aria-expanded="false"
                     aria-controls="portfolio-details-collapse-3">
                     <i class="bi bi-award me-2"></i> The Solution
                   </button>
-                </h2>
+                </h3>
                 <div id="portfolio-details-collapse-3" class="accordion-collapse collapse"
                   data-bs-parent="#portfolio-details-projectAccordion">
                   <div class="accordion-body">

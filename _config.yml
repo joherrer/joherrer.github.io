@@ -1,11 +1,16 @@
 # Site settings
 
-title: Jose Herrera
+title: Jose Herrera | Software Developer
+person_name: Jose Herrera
+site_name: joherrer
 
 description: >-
-  Welcome to my personal website.
-  Here you'll find about my education and projects I built.
-  Feel free to reach out to me via the contact form.
+  Website of Jose Herrera, Software Developer specializing in backend development,
+  cloud computing, and cybersecurity. Explore projects, technical skills, and
+  professional services.
+
+default_og_image: /assets/img/profile/developer-og.jpg
+locale: en_US
 
 baseurl: ""
 url: "https://joherrer.github.io"
@@ -15,7 +20,7 @@ github_username: joherrer
 markdown: kramdown
 
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
 
 exclude:
   - .DS_Store

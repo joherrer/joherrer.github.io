@@ -8,7 +8,7 @@ gem "github-pages", group: :jekyll_plugins
 
 # Jekyll plugins
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-sitemap"
 end
 
 # Logger gem to prevent deprecation warning
