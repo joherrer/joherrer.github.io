@@ -272,6 +272,7 @@
       '.hero .social-links a, ' +
       '.footer .social-links a, ' +
       '.portfolio .portfolio-card .portfolio-img .portfolio-overlay a.github, ' +
+      '.portfolio-details .portfolio-details-media .thumbnail-grid a, ' +
       '.portfolio-details .portfolio-details-content .project-website a, ' +
       '.portfolio-details .portfolio-details-content .cta-buttons .btn-view-project'
     );
@@ -423,10 +424,17 @@
    * Initiate glightbox
    */
   if (typeof GLightbox !== 'undefined' && document.querySelector('.glightbox')) {
-    GLightbox({
+    const lightbox = GLightbox({
       selector: '.glightbox',
       loop: true,
       touchNavigation: true
+    });
+
+    lightbox.on('close', () => {
+      if (document.activeElement && typeof document.activeElement.blur === 'function') {
+        document.activeElement.blur();
+      }
+      clearAllPressedStates();
     });
   }
 

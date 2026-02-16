@@ -2314,7 +2314,14 @@ section,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.portfolio-details .portfolio-details-media .thumbnail-grid img:hover {
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-details .portfolio-details-media .thumbnail-grid img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.portfolio-details .portfolio-details-media .thumbnail-grid a.pressed img {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
