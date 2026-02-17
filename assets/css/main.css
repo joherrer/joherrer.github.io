@@ -100,6 +100,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
 :root {
   /* Font Family */
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
@@ -186,27 +194,6 @@ h6 {
   font-family: var(--heading-font);
 }
 
-.gradient-text {
-    background: linear-gradient(90deg, #d21b64, #1387c1, #d21b64);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient-move 10s ease infinite;
-}
-
-@keyframes gradient-move {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 /*-------------------------------------------------------------- 
 # Global Header 
 --------------------------------------------------------------*/
@@ -231,6 +218,10 @@ h6 {
 }
 
 @media (max-width: 991.98px) {
+  .header {
+    padding: 16px 0;
+  }
+
   .header::before {
     content: '';
     position: absolute;
@@ -254,8 +245,6 @@ h6 {
   }
 }
 
-/* Logo */
-.header .logo, 
 .navbar-toggler {
   position: relative;
   z-index: 1100;
@@ -266,51 +255,17 @@ h6 {
   text-decoration: none;
 }
 
-.header .logo .sitename {
-  font-size: 26px;
-  font-family: "DM Serif Text", serif;
-  font-style: normal;
+.header .header-clock {
+  position: relative;
+  z-index: 1100;
+  margin-left: auto;
+  color: #ffffff;
+  font-family: "JetBrains Mono";
+  font-size: 0.96rem;
   font-weight: 400;
-  padding-left: 3px;
-  margin: 0;
-  line-height: 1.2;
-  display: inline-block;
-  color: #cbcbcb;
-  transition: transform 0.2s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .header .logo .sitename {
-    background: linear-gradient(90deg, #1387c1, #d21b64);
-    background-repeat: no-repeat;
-    background-size: 150px 100%;
-    background-position: center;
-    -webkit-background-clip: text;
-    background-clip: text;
-    transition: 
-      -webkit-text-fill-color 0.2s ease, 
-      color 0.2s ease, 
-      transform 0.1s ease;
-  }
-
-  .header .logo .sitename:hover {
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
-}
-
-.header .logo.pressed {
-  transform: scale(0.95);
-}
-
-.header .logo.pressed .sitename {
-  transform: scale(1) !important;
-}
-
-@media (max-width: 576px) {
-  .header .logo .sitename {
-    padding-left: 24px;
-  }
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 /*--------------------------------------------------------------
@@ -318,6 +273,17 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 992px) {
+  .header .navbar-collapse {
+    position: static;
+    transform: none;
+    flex-grow: 0;
+    justify-content: flex-start;
+  }
+
+  .header .header-clock {
+    margin-left: auto;
+  }
+
   .navbar-nav {
     margin: 0;
     padding: 0;
@@ -388,7 +354,22 @@ h6 {
 
 /* Mobile Navigation */
 @media (max-width: 991.98px) {
+  .header .navbar > .container {
+    justify-content: flex-start !important;
+  }
+
+  .header .header-clock {
+    display: block;
+    margin-left: auto;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
   .navbar-toggler {
+    order: 0;
     border: none;
     background: transparent;
     padding: 0;
@@ -398,7 +379,7 @@ h6 {
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 4px; 
+    top: 0;
     transition: transform 0.1s ease;
     outline: none;
     box-shadow: none;
@@ -539,7 +520,11 @@ h6 {
 
 @media (max-width: 576px) {
   .navbar-toggler {
-    margin-right: 16px;
+    margin-left: 17px;
+  }
+
+  .header .header-clock {
+    margin-right: 17px;
   }
 }
 
@@ -759,7 +744,7 @@ section,
   line-height: 1.2;
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
-  background: linear-gradient(90deg, #1387c1, #d21b64);
+  background: linear-gradient(90deg, #1387c1f9, #d4006de6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1246,6 +1231,27 @@ section,
   line-height: 1.8;
   margin-bottom: 24px;
   color: color-mix(in srgb, var(--default-color), transparent 5%);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #d4006de6, #1387c1, #d4006de6);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 10s ease infinite;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .about .intro-content .cta-group {
@@ -2253,7 +2259,7 @@ section,
 }
 
 .portfolio-details.section .section-title h1 {
-  background-size: 700px 100%;
+  background-size: 600px 100%;
 }
 
 /* Portfolio Media */

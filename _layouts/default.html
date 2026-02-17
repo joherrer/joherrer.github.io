@@ -111,6 +111,7 @@
   <link rel="preload" href="/assets/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/DMSerifText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a"
   as="font" type="font/woff2" crossorigin>
 
@@ -146,11 +147,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark p-0">
       <div class="container d-flex align-items-center justify-content-between">
 
-        <!-- Logo -->
-        <a class="logo d-flex align-items-center" href="/">
-          <span class="sitename">joherrer.</span>
-        </a>
-
         <!-- Toggler button for mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -159,7 +155,7 @@
         </button>
 
         <!-- Nav items -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/' %}active{% endif %}" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/about/' %}active{% endif %}" href="/about/">About</a></li>
@@ -172,6 +168,28 @@
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/contact/' %}active{% endif %}" href="/contact/">Contact</a></li>
           </ul>
         </div>
+
+        <div class="header-clock" id="brisbane-clock" aria-live="polite" aria-label="Current time in Brisbane, Australia">
+          🇦🇺 --:--:-- --
+        </div>
+        <script>
+          (function() {
+            var clockEl = document.getElementById('brisbane-clock');
+            if (!clockEl) return;
+            var formatter = new Intl.DateTimeFormat('en-AU', {
+              timeZone: 'Australia/Brisbane',
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+              hour12: true
+            });
+            var parts = formatter.formatToParts(new Date());
+            var hour = (parts.find(function(part) { return part.type === 'hour'; }) || {}).value || '--';
+            var minute = (parts.find(function(part) { return part.type === 'minute'; }) || {}).value || '--';
+            var second = (parts.find(function(part) { return part.type === 'second'; }) || {}).value || '--';
+            clockEl.textContent = '🇦🇺 ' + hour + ':' + minute + ':' + second;
+          })();
+        </script>
 
       </div>
     </nav>

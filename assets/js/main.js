@@ -91,6 +91,34 @@
   document.addEventListener('DOMContentLoaded', initMobileNavStateSync);
 
   /**
+   * Render a live digital clock for Brisbane, Australia
+   */
+  function initBrisbaneClock() {
+    const clockEl = document.getElementById('brisbane-clock');
+    if (!clockEl) return;
+
+    const brisbaneFormatter = new Intl.DateTimeFormat('en-AU', {
+      timeZone: 'Australia/Brisbane',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+
+    function updateBrisbaneClock() {
+      const parts = brisbaneFormatter.formatToParts(new Date());
+      const hour = parts.find(part => part.type === 'hour')?.value ?? '--';
+      const minute = parts.find(part => part.type === 'minute')?.value ?? '--';
+      const second = parts.find(part => part.type === 'second')?.value ?? '--';
+      clockEl.textContent = `🇦🇺 ${hour}:${minute}:${second}`;
+    }
+
+    window.setInterval(updateBrisbaneClock, 1000);
+  }
+
+  document.addEventListener('DOMContentLoaded', initBrisbaneClock);
+
+  /**
    * Animation on scroll function and init
    */
   function aosInit() {
@@ -197,7 +225,7 @@
    * Tap delay on mobile for navigation links and toggler
    */
   function initMobileNavDelay() {
-    const elements = document.querySelectorAll('.navbar-nav .nav-link, .header .logo, .navbar-toggler');
+    const elements = document.querySelectorAll('.navbar-nav .nav-link, .navbar-toggler');
     bindMobilePressState(elements);
 
     elements.forEach(el => {
@@ -216,16 +244,7 @@
           setTimeout(() => {
             window.location.href = href;
           }, 200);
-        } 
-        else if (this.classList.contains('logo')) {
-          e.preventDefault();
-          clearPressed(this, 50);
-
-          setTimeout(() => {
-            window.location.href = href;
-          }, 150); 
-        }
-        else {
+        } else {
           clearPressed(this, 120);
         }
       });
