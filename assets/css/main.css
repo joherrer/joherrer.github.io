@@ -353,10 +353,6 @@ h6 {
 
 /* Mobile Navigation */
 @media (max-width: 991.98px) {
-  .header {
-    padding: 10px 0;
-  }
-
   .header .navbar > .container {
     justify-content: flex-start !important;
     align-items: center !important;
