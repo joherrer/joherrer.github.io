@@ -360,6 +360,7 @@ h6 {
   }
 
   .header .header-clock {
+    font-size: 0.9rem;
     margin-left: auto;
     letter-spacing: 0.06em;
     min-height: 27px;
