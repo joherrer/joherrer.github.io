@@ -761,7 +761,7 @@ section,
   .section-title h1,
   .section-title h2 {
     font-size: 2.5rem;
-    background-size: 350px 100%;
+    background-size: 375px 100%;
   }
 }
 
@@ -1594,6 +1594,10 @@ section,
     padding-left: 1.25rem; 
     padding-right: 1.25rem; 
   }
+
+  .skills.section .section-title h2 {
+    background-size: 250px 100%;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2264,7 +2268,7 @@ section,
 }
 
 .portfolio-details.section .section-title h1 {
-  background-size: 600px 100%;
+  background-size: 650px 100%;
 }
 
 /* Portfolio Media */
