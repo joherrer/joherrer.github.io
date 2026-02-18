@@ -5,7 +5,7 @@ title: Gold Coast Surf Forecast
 subtitle: Web Application
 description: >
   Gold Coast Surf Forecast is a web application built using Python and Flask that provides users
-  with real-time surf conditions across all major surf locations along Australia's Gold Coast
+  with real-time surf conditions across all major surf locations along Australia's Gold Coast.
 date: May 2024
 client: Personal Project
 website: https://github.com/joherrer/forecast

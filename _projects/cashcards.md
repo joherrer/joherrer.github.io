@@ -5,7 +5,7 @@ title: Cash Cards
 subtitle: REST API
 description: >
   CashCards is a RESTful API built with Java and Spring Boot that enables secure management of cash
-  cards, providing full CRUD functionality and role-based access control
+  cards, providing full CRUD functionality and role-based access control.
 date: June 2025
 client: Personal Project
 website: https://github.com/joherrer/cashcards

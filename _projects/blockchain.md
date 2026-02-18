@@ -5,7 +5,7 @@ title: Blockchain
 subtitle: Blockchain Technology
 description: >
   Blockchain is a basic implementation of a blockchain using Python that demonstrates the
-  fundamentals of blockchain technology for secure and decentralized systems
+  fundamentals of blockchain technology for secure and decentralized systems.
 date: October 2024
 client: Personal Project
 website: https://github.com/joherrer/blockchain

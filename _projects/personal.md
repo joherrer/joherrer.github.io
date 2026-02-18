@@ -5,7 +5,7 @@ title: Personal Website
 subtitle: Website
 description: >
   Personal Website is a project built using HTML, CSS, and JavaScript to showcase the projects I
-  have developed and my background, while providing hands-on experience to strengthen my frontend
+  have developed and my background, while providing hands-on experience to strengthen my frontend.
   development skills
 date: February 2023
 client: Personal Project
