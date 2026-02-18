@@ -266,9 +266,6 @@ h6 {
   font-variant-numeric: tabular-nums;
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 992px) {
   .header .navbar-collapse {
@@ -359,7 +356,6 @@ h6 {
   .header .header-clock {
     display: block;
     margin-left: auto;
-    font-size: 0.9rem;
     letter-spacing: 0.06em;
     line-height: 1;
     display: flex;
