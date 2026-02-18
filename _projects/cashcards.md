@@ -9,7 +9,7 @@ description: >
 date: June 2025
 client: Personal Project
 website: https://github.com/joherrer/cashcards
-categories: [Java, REST API, Backend]
+categories: [Java, REST API, Backend, Web Development]
 tech:
   - Java
   - Spring Boot
