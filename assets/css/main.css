@@ -354,7 +354,7 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 991.98px) {
   .header {
-    padding: 14px 0;
+    padding: 10px 0;
   }
 
   .header .navbar > .container {
