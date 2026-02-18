@@ -755,6 +755,7 @@ section,
   .section-title h1,
   .section-title h2 {
     font-size: 2.5rem;
+    background-size: 350px 100%;
   }
 }
 
