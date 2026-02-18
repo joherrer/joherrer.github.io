@@ -2667,6 +2667,10 @@ section,
     padding-right: 1.25rem;
   }
 
+  .portfolio-details.section .section-title h1 {
+    background-size: 600px 100%;
+  }
+
   .portfolio-details .project-features{
     padding-left: 16px;
   }
