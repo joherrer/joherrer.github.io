@@ -123,6 +123,8 @@
   --accent-color: #1387c1;
   --surface-color: #091d2b;
   --contrast-color: #ffffff;
+  --buttons-color: #0f78ac;
+  --buttons-hover-color: #0c628d;
 
   /* Nav Menu Colors */
   --nav-color: #ffffff;
@@ -257,7 +259,7 @@ h6 {
   margin-left: auto;
   color: #ffffff;
   font-family: "JetBrains Mono";
-  font-size: 0.96rem;
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.08em;
   white-space: nowrap;
@@ -629,7 +631,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: var(--buttons-color);
 }
 
 .scroll-top.active {
@@ -834,9 +836,9 @@ section,
 }
 
 .hero .hero-actions .btn.btn-primary {
-  background: #0f78ac;
+  background: var(--buttons-color);
   color: var(--contrast-color);
-  border-color: #0f78ac;
+  border-color: var(--buttons-color);
 }
 
 .hero .hero-actions .btn.btn-primary:hover {
@@ -1273,8 +1275,8 @@ section,
 .about .intro-content .cta-group .btn-ghost:hover,
 .about .intro-content .cta-group .btn-ghost:focus {
   color: var(--contrast-color);
-  background: var(--accent-color);
-  border-color: var(--accent-color);
+  background: var(--buttons-color);
+  border-color: var(--buttons-color);
   outline: none;
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
@@ -2179,8 +2181,8 @@ section,
 }
 
 .portfolio .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), #000 10%);
-  border-color: color-mix(in srgb, var(--accent-color), #000 10%);
+  background-color: var(--buttons-color);
+  border-color: var(--buttons-color);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -2563,14 +2565,14 @@ section,
 
 @media (hover: hover) and (pointer: fine) {
   .portfolio-details .portfolio-details-content .cta-buttons .btn-view-project:hover {
-    background-color: color-mix(in srgb, var(--accent-color), black 15%);
+    background-color: var(--buttons-color);
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   }
 }
 
 .portfolio-details .portfolio-details-content .cta-buttons .btn-view-project.pressed {
-  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  background-color: var(--buttons-color);
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -2803,8 +2805,8 @@ section,
 }
 
 .contact .contact-form .btn:hover {
-  background: color-mix(in srgb, var(--accent-color), black 15%);
-  border-color: color-mix(in srgb, var(--accent-color), black 15%);
+  background: var(--buttons-color);
+  border-color: var(--buttons-color);
   transform: translateY(-2px);
 }
 
