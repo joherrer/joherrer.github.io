@@ -250,6 +250,7 @@ h6 {
   transform: translateZ(0);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   transition: transform 0.2s ease;
   text-decoration: none;
 }
@@ -627,6 +628,9 @@ h6 {
   width: 44px;
   height: 44px;
   border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.4s;
 }
 
@@ -837,6 +841,10 @@ section,
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   transition: all 0.2s ease;
   border: 2px solid;
 }
@@ -1269,6 +1277,8 @@ section,
 .about .intro-content .cta-group .btn-ghost {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 8px;
   padding: 12px 18px;
   border-radius: 6px;
@@ -2130,6 +2140,11 @@ section,
   transition: all 0.3s ease;
 }
 
+.portfolio .portfolio-card .portfolio-img .portfolio-overlay a i {
+  display: block;
+  line-height: 1;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .portfolio .portfolio-card .portfolio-img .portfolio-overlay a:hover {
     background-color: color-mix(in srgb, var(--accent-color), #fff 20%);
@@ -2184,6 +2199,10 @@ section,
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 12px 31px;
   font-weight: 600;
   border-radius: 5px;
@@ -2571,6 +2590,10 @@ section,
   border-radius: 30px;
   font-weight: 500;
   transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -2596,6 +2619,8 @@ section,
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 8px;
 }
 
@@ -2810,6 +2835,8 @@ section,
   border-radius: 2rem;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 0.5rem;
   transition: 0.2s;
 }
