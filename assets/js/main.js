@@ -201,6 +201,48 @@
     });
   }
 
+  function bindMobilePressStateWithThreshold(elements) {
+    elements.forEach(el => {
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let isTouchTracking = false;
+
+      el.addEventListener('touchstart', function(event) {
+        if (window.innerWidth >= 992) return;
+        const touch = event.changedTouches?.[0];
+        if (touch) {
+          touchStartX = touch.clientX;
+          touchStartY = touch.clientY;
+          isTouchTracking = true;
+        }
+        this.classList.add('pressed');
+      }, { passive: true });
+
+      el.addEventListener('touchmove', function(event) {
+        if (!isTouchTracking) return;
+        const touch = event.changedTouches?.[0];
+        if (!touch) return;
+
+        const movedX = Math.abs(touch.clientX - touchStartX);
+        const movedY = Math.abs(touch.clientY - touchStartY);
+
+        if (movedX > 12 || movedY > 12) {
+          isTouchTracking = false;
+          this.classList.remove('pressed');
+        }
+      }, { passive: true });
+
+      el.addEventListener('touchend', function() {
+        isTouchTracking = false;
+      }, { passive: true });
+
+      el.addEventListener('touchcancel', function() {
+        isTouchTracking = false;
+        this.classList.remove('pressed');
+      }, { passive: true });
+    });
+  }
+
   function clearPressed(el, delay = 0) {
     setTimeout(() => {
       el.classList.remove('pressed');
@@ -226,7 +268,10 @@
    */
   function initMobileNavDelay() {
     const elements = document.querySelectorAll('.header .header-logo, .navbar-nav .nav-link, .navbar-toggler');
-    bindMobilePressState(elements);
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const stableTapElements = document.querySelectorAll('.header .header-logo, .navbar-toggler');
+    bindMobilePressState(navLinks);
+    bindMobilePressStateWithThreshold(stableTapElements);
 
     elements.forEach(el => {
       el.addEventListener('click', function(e) {
