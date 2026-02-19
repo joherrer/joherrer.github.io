@@ -272,6 +272,13 @@ h6 {
   transition: color 0.2s ease;
 }
 
+.header .header-logo::after {
+  content: "_";
+  margin-left: 2px;
+  color: var(--accent-color);
+  animation: logo-cursor-blink 1.20s steps(1, end) infinite;
+}
+
 .header .header-logo .logo-user {
   color: var(--heading-color);
 }
@@ -291,6 +298,24 @@ h6 {
 @media (hover: hover) and (pointer: fine) {
   .header .header-logo:hover {
     color: var(--heading-color);
+  }
+}
+
+@keyframes logo-cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header .header-logo::after {
+    animation: none;
+    opacity: 1;
   }
 }
 
@@ -386,7 +411,7 @@ h6 {
   .header .header-logo {
     order: 1;
     margin-left: 0;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .navbar-toggler {
@@ -546,7 +571,7 @@ h6 {
 
   .header .header-logo {
     margin-left: 17px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
