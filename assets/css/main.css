@@ -303,20 +303,24 @@ h6 {
     0 0 14px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
-.header .header-logo:active {
-  text-shadow:
-    0 0 8px color-mix(in srgb, var(--accent-color), transparent 45%),
-    0 0 14px color-mix(in srgb, var(--accent-color), transparent 70%);
-}
-
 .header .header-logo.pressed::after {
   animation-duration: 0.35s;
   color: color-mix(in srgb, var(--accent-color), white 20%);
 }
 
-.header .header-logo:active::after {
-  animation-duration: 0.35s;
-  color: color-mix(in srgb, var(--accent-color), white 20%);
+@media (hover: hover) and (pointer: fine) {
+  .header .header-logo:hover,
+  .header .header-logo:focus-visible {
+    text-shadow:
+      0 0 8px color-mix(in srgb, var(--accent-color), transparent 45%),
+      0 0 14px color-mix(in srgb, var(--accent-color), transparent 70%);
+  }
+
+  .header .header-logo:hover::after,
+  .header .header-logo:focus-visible::after {
+    animation-duration: 0.35s;
+    color: color-mix(in srgb, var(--accent-color), white 20%);
+  }
 }
 
 @keyframes logo-cursor-blink {
@@ -450,10 +454,6 @@ h6 {
   }
 
   .navbar-toggler.pressed {
-    transform: scale(0.9);
-  }
-
-  .navbar-toggler:active {
     transform: scale(0.9);
   }
 
