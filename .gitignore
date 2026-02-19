@@ -16,7 +16,6 @@ Thumbs.db
 
 # Bundler / Ruby
 .bundle/
-Gemfile.lock
 
 # IDE / Editor files
 *.swp
