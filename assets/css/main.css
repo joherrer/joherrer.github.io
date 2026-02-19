@@ -270,7 +270,6 @@ h6 {
 
 .header .header-logo {
   position: relative;
-  top: -1px;
   z-index: 1100;
   display: inline-flex;
   align-items: center;
@@ -441,7 +440,6 @@ h6 {
   .header .navbar > .container {
     justify-content: flex-start !important;
     align-items: center !important;
-    min-height: 32px;
   }
 
   .header .header-logo {
