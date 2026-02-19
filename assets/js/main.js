@@ -222,7 +222,7 @@
 
           setTimeout(() => {
             window.location.href = href;
-          }, 150);
+          }, 180);
         } else {
           clearPressed(this, 120);
         }
