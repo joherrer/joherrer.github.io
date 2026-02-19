@@ -270,7 +270,8 @@ h6 {
   letter-spacing: 0.01em;
   white-space: nowrap;
   transform: translateZ(0);
-  transition: transform 0.2s ease;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: text-shadow 0.18s ease;
 }
 
 .header .header-logo::after {
@@ -297,7 +298,14 @@ h6 {
 }
 
 .header .header-logo.pressed {
-  transform: translateY(1px);
+  text-shadow:
+    0 0 8px color-mix(in srgb, var(--accent-color), transparent 45%),
+    0 0 14px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.header .header-logo.pressed::after {
+  animation-duration: 0.35s;
+  color: color-mix(in srgb, var(--accent-color), white 20%);
 }
 
 @keyframes logo-cursor-blink {

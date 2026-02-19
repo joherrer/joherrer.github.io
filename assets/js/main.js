@@ -246,7 +246,7 @@
           }, 200);
         } else if (this.classList.contains('header-logo') && href && href !== '#') {
           e.preventDefault();
-          clearPressed(this, 50);
+          clearPressed(this, 120);
 
           setTimeout(() => {
             window.location.href = href;
