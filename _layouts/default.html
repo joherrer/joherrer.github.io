@@ -147,6 +147,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark p-0">
       <div class="container d-flex align-items-center justify-content-between">
 
+        <a href="/" class="header-logo" aria-label="Go to homepage">
+          <span class="logo-user">joherrer</span><span class="logo-at">@</span><span class="logo-host">dev</span><span class="logo-path">:~$</span>
+        </a>
+
         <!-- Toggler button for mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -168,28 +172,6 @@
             <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/contact/' %}active{% endif %}" href="/contact/">Contact</a></li>
           </ul>
         </div>
-
-        <div class="header-clock" id="brisbane-clock" aria-live="polite" aria-label="Current time in Brisbane, Australia">
-          🇦🇺 --:--:-- --
-        </div>
-        <script>
-          (function() {
-            var clockEl = document.getElementById('brisbane-clock');
-            if (!clockEl) return;
-            var formatter = new Intl.DateTimeFormat('en-AU', {
-              timeZone: 'Australia/Brisbane',
-              hour: '2-digit',
-              minute: '2-digit',
-              second: '2-digit',
-              hour12: true
-            });
-            var parts = formatter.formatToParts(new Date());
-            var hour = (parts.find(function(part) { return part.type === 'hour'; }) || {}).value || '--';
-            var minute = (parts.find(function(part) { return part.type === 'minute'; }) || {}).value || '--';
-            var second = (parts.find(function(part) { return part.type === 'second'; }) || {}).value || '--';
-            clockEl.textContent = '🇦🇺 ' + hour + ':' + minute + ':' + second;
-          })();
-        </script>
 
       </div>
     </nav>
