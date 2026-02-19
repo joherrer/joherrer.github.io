@@ -588,12 +588,12 @@ h6 {
 
 @media (max-width: 576px) {
   .navbar-toggler {
-    margin-right: 17px;
+    margin-right: 15px;
   }
 
   .header .header-logo {
-    margin-left: 17px;
-    font-size: 0.84rem;
+    margin-left: 21px;
+    font-size: 0.85rem;
   }
 }
 
