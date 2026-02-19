@@ -297,7 +297,7 @@ h6 {
 }
 
 .header .header-logo.pressed {
-  transform: translateZ(0) scale(0.95);
+  transform: translateY(1px);
 }
 
 @keyframes logo-cursor-blink {
