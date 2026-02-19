@@ -225,7 +225,7 @@
    * Tap delay on mobile for navigation links and toggler
    */
   function initMobileNavDelay() {
-    const elements = document.querySelectorAll('.navbar-nav .nav-link, .navbar-toggler');
+    const elements = document.querySelectorAll('.header .header-logo, .navbar-nav .nav-link, .navbar-toggler');
     bindMobilePressState(elements);
 
     elements.forEach(el => {
@@ -244,6 +244,13 @@
           setTimeout(() => {
             window.location.href = href;
           }, 200);
+        } else if (this.classList.contains('header-logo') && href && href !== '#') {
+          e.preventDefault();
+          clearPressed(this, 50);
+
+          setTimeout(() => {
+            window.location.href = href;
+          }, 150);
         } else {
           clearPressed(this, 120);
         }
