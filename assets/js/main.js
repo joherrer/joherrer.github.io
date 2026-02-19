@@ -411,8 +411,14 @@
     });
 
     function showAlert(message, type) {
-      status.innerHTML = `<div class="alert alert-${type} show">${message}</div>`;
-      setTimeout(() => { status.innerHTML = ""; }, 3000);
+      status.textContent = "";
+      const alert = document.createElement('div');
+      alert.className = `alert alert-${type} show`;
+      alert.textContent = message;
+      status.appendChild(alert);
+      setTimeout(() => {
+        status.textContent = "";
+      }, 3000);
     }
   }
 

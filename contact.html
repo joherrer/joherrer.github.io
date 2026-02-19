@@ -63,19 +63,23 @@ description: Contact Jose Herrera for software development projects, technical c
             <div class="row gy-4">
 
               <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                <label for="contact-name" class="visually-hidden">Your Name</label>
+                <input id="contact-name" type="text" name="name" class="form-control" placeholder="Your Name" required>
               </div>
 
               <div class="col-md-6">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                <label for="contact-email" class="visually-hidden">Your Email</label>
+                <input id="contact-email" type="email" name="email" class="form-control" placeholder="Your Email" required>
               </div>
 
               <div class="col-12">
-                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                <label for="contact-subject" class="visually-hidden">Subject</label>
+                <input id="contact-subject" type="text" name="subject" class="form-control" placeholder="Subject" required>
               </div>
 
               <div class="col-12">
-                <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                <label for="contact-message" class="visually-hidden">Message</label>
+                <textarea id="contact-message" name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
               </div>
 
               <!-- Honeypot field to block spam -->
