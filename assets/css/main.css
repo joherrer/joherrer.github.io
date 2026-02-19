@@ -309,11 +309,15 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-.header .header-logo.pressed {
-  text-shadow:
-    0 0 14px color-mix(in srgb, var(--accent-color), transparent 30%),
-    0 0 28px color-mix(in srgb, var(--accent-color), transparent 48%);
-}
+  .header .header-logo.pressed {
+    text-shadow:
+      0 0 14px color-mix(in srgb, var(--accent-color), transparent 30%),
+      0 0 28px color-mix(in srgb, var(--accent-color), transparent 48%);
+  }
+
+  .header .header-logo.pressed::after {
+    opacity: 1;
+  }
 
 .header .header-logo.pressed::after {
   animation-duration: 0.35s;
