@@ -210,8 +210,8 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/*-------------------------------------------------------------- 
-# Global Header 
+/*--------------------------------------------------------------
+# Global Header
 --------------------------------------------------------------*/
 .header {
   position: sticky;
@@ -224,7 +224,7 @@ h6 {
   backdrop-filter: blur(0);
   -webkit-backdrop-filter: blur(0);
   transition: backdrop-filter 0.3s ease-in-out;
-  transform: translateZ(0); 
+  transform: translateZ(0);
   backface-visibility: hidden;
 }
 
@@ -277,7 +277,7 @@ h6 {
   padding: 0;
   color: var(--default-color);
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.94rem;
+  font-size: 0.95rem;
   line-height: 1;
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -311,8 +311,8 @@ h6 {
 
 .header .header-logo.pressed {
   text-shadow:
-    0 0 8px color-mix(in srgb, var(--accent-color), transparent 45%),
-    0 0 14px color-mix(in srgb, var(--accent-color), transparent 70%);
+    0 0 14px color-mix(in srgb, var(--accent-color), transparent 30%),
+    0 0 28px color-mix(in srgb, var(--accent-color), transparent 48%);
 }
 
 .header .header-logo.pressed::after {
@@ -324,8 +324,8 @@ h6 {
   .header .header-logo:hover,
   .header .header-logo:focus-visible {
     text-shadow:
-      0 0 8px color-mix(in srgb, var(--accent-color), transparent 45%),
-      0 0 14px color-mix(in srgb, var(--accent-color), transparent 70%);
+      0 0 14px color-mix(in srgb, var(--accent-color), transparent 30%),
+      0 0 28px color-mix(in srgb, var(--accent-color), transparent 48%);
   }
 
   .header .header-logo:hover::after,
@@ -454,12 +454,7 @@ h6 {
     background: transparent;
     padding: 0;
     margin-left: auto;
-    height: auto; 
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 0;
+    height: auto;
     transition: transform 0.1s ease;
     outline: none;
     box-shadow: none;
@@ -556,7 +551,7 @@ h6 {
   .navbar-nav .nav-link.active:before {
     visibility: visible;
     opacity: 1;
-    width: 30px; 
+    width: 30px;
   }
 
   .navbar-nav .nav-link:hover,
@@ -567,17 +562,9 @@ h6 {
 
 @media (max-width: 991.98px) and (orientation: landscape) {
   .navbar-collapse {
-    height: 100dvh; 
     width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-bottom: 0;
     display: flex !important;
-    flex-direction: column;
-    justify-content: center !important; 
-    align-items: center;
-    overflow: hidden;
+    justify-content: center !important;
   }
 
   .navbar-nav {
@@ -600,11 +587,11 @@ h6 {
 
 @media (max-width: 576px) {
   .navbar-toggler {
-    margin-right: 12px;
+    margin-right: 16px;
   }
 
   .header .header-logo {
-    margin-left: 18px;
+    margin-left: 20px;
     font-size: 0.85rem;
   }
 }
@@ -1251,7 +1238,7 @@ section,
   }
 
   .hero .hero-actions .btn {
-    font-size: 0.70rem;
+    font-size: 0.7rem;
   }
 
   .hero .social-links a {
@@ -1270,21 +1257,10 @@ section,
   }
 
   .hero .hero-image .floating-elements .floating-card i {
-    font-size: 1.00rem;
-  }
-
-  .hero .hero-image .floating-elements .floating-card.cloud {
-    top: 7%;
-    right: 6%;
-  }
-
-  .hero .hero-image .floating-elements .floating-card.code {
-    bottom: 34%;
-    left: 3%;
+    font-size: 1rem;
   }
 
   .hero .hero-image .floating-elements .floating-card.security {
-    top: 61%;
     right: 3%;
   }
 }
@@ -1672,7 +1648,7 @@ section,
   }
 }
 
-@media (max-width:991.98px) {
+@media (max-width: 991.98px) {
   .skills .skill-box.scaled {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
@@ -1683,8 +1659,8 @@ section,
   .skills.section {
     padding-top: 25px;
     padding-bottom: 50px;
-    padding-left: 1.25rem; 
-    padding-right: 1.25rem; 
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .skills.section .section-title h2 {
@@ -1811,7 +1787,7 @@ section,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  vertical-align: middle; 
+  vertical-align: middle;
   gap: 10px;
   padding: 10px 14px;
   border-radius: 999px;
@@ -1925,8 +1901,8 @@ section,
 
 @media (max-width: 768px) {
   .resume.section {
-    padding-left: 1.5rem; 
-    padding-right: 1.5rem; 
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -2044,13 +2020,6 @@ section,
 }
 
 @media (max-width: 991.98px) {
-  .services .service-item::before {
-    transform: scaleY(0);
-    width: 4px;
-    height: 100%;
-    transform-origin: bottom;
-  }
-
   .services .service-item.scaled {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transform: translateY(-5px);
@@ -2752,7 +2721,7 @@ section,
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .portfolio-details .project-features h3 {
-    justify-content: center; 
+    justify-content: center;
   }
 
   .portfolio-details .project-features .feature-list {
@@ -2983,7 +2952,7 @@ section,
 @media (max-width: 380px) {
   #form-status .alert {
     font-size: 0.9rem;
-    padding: 0.7rem 0.9rem; 
+    padding: 0.7rem 0.9rem;
   }
 }
 
