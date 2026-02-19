@@ -218,11 +218,13 @@
           }, 200);
         } else if (this.classList.contains('header-logo') && href && href !== '#') {
           e.preventDefault();
-          clearPressed(this, 120);
+          this.classList.add('pressed');
 
-          setTimeout(() => {
-            window.location.href = href;
-          }, 180);
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              window.location.href = href;
+            }, 180);
+          });
         } else {
           clearPressed(this, 120);
         }
