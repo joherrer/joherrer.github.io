@@ -557,10 +557,6 @@ h6 {
     touch-action: none;
   }
 
-  body.mobile-nav-active .header {
-    border-bottom: none;
-  }
-
   body.mobile-nav-active .scroll-top {
     display: none;
   }
