@@ -527,7 +527,7 @@ h6 {
     justify-content: center !important;
     align-items: center;
     overflow: hidden;
-    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+    border-bottom: none;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
@@ -555,6 +555,10 @@ h6 {
   body.mobile-nav-active {
     overflow: hidden;
     touch-action: none;
+  }
+
+  body.mobile-nav-active .header {
+    border-bottom: none;
   }
 
   body.mobile-nav-active .scroll-top {
