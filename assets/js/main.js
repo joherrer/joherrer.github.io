@@ -72,20 +72,43 @@
    */
   function initMobileNavStateSync() {
     const navbarCollapse = document.getElementById('navbarNav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
     if (!navbarCollapse) return;
 
-    navbarCollapse.addEventListener('show.bs.collapse', () => setMobileNavActiveState(true));
-    navbarCollapse.addEventListener('shown.bs.collapse', () => setMobileNavActiveState(true));
-    navbarCollapse.addEventListener('hide.bs.collapse', () => setMobileNavActiveState(false));
-    navbarCollapse.addEventListener('hidden.bs.collapse', () => setMobileNavActiveState(false));
+    const syncTogglerState = (isOpen) => {
+      if (!navbarToggler) return;
+      navbarToggler.classList.toggle('is-open', isOpen && window.innerWidth < 992);
+    };
+
+    navbarCollapse.addEventListener('show.bs.collapse', () => {
+      setMobileNavActiveState(true);
+      syncTogglerState(true);
+    });
+    navbarCollapse.addEventListener('shown.bs.collapse', () => {
+      setMobileNavActiveState(true);
+      syncTogglerState(true);
+    });
+    navbarCollapse.addEventListener('hide.bs.collapse', () => {
+      setMobileNavActiveState(false);
+      syncTogglerState(false);
+    });
+    navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+      setMobileNavActiveState(false);
+      syncTogglerState(false);
+    });
 
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 992) {
         setMobileNavActiveState(false);
+        syncTogglerState(false);
       } else {
-        setMobileNavActiveState(navbarCollapse.classList.contains('show'));
+        const isOpen = navbarCollapse.classList.contains('show');
+        setMobileNavActiveState(isOpen);
+        syncTogglerState(isOpen);
       }
     }, { passive: true });
+
+    syncTogglerState(navbarCollapse.classList.contains('show'));
   }
 
   document.addEventListener('DOMContentLoaded', initMobileNavStateSync);

@@ -455,6 +455,8 @@ h6 {
 
   .navbar-toggler {
     order: 2;
+    position: relative;
+    top: 1px;
     border: none;
     background: transparent;
     padding: 0;
@@ -486,7 +488,7 @@ h6 {
     position: absolute;
     left: 4px;
     width: 19px;
-    height: 1.5px;
+    height: 1.4px;
     border-radius: 4px;
     background: var(--nav-color);
     transform-origin: center;
@@ -507,7 +509,7 @@ h6 {
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
     top: 12px;
-    transform: rotate(45deg);
+    transform: rotate(45deg) scale(1.15);
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom > span {
@@ -517,7 +519,7 @@ h6 {
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::after {
     top: 12px;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scale(1.15);
   }
 
   .navbar-collapse {
