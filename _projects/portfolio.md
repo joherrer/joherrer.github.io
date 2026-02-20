@@ -8,7 +8,7 @@ description: >
   have developed and my background, while providing hands-on experience to strengthen my front-end
   development skills.
 date: February 2023
-client: Portfolio Project
+client: Personal Project
 website: https://github.com/joherrer/joherrer.github.io
 categories: [projects, Web Development, Frontend]
 tech:
