@@ -453,7 +453,7 @@ h6 {
   .navbar-toggler {
     order: 2;
     position: relative;
-    top: 1px;
+    top: 2px;
     border: none;
     background: transparent;
     padding: 0;
