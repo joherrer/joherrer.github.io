@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# JavaScript File for Personal Portfolio Website
+# JavaScript File for Portfolio Website
 --------------------------------------------------------------*/
 
 (function() {

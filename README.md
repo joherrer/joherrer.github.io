@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio Website
+# 🌐 Portfolio Website
 
 A modern, responsive **portfolio website** designed to showcase my work as a **software developer**.
 It highlights my background, skills, projects, and services, with a clean UI and smooth animations
