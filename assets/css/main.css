@@ -311,8 +311,8 @@ h6 {
 
 .header .header-logo.pressed {
   text-shadow:
-    0 0 16px color-mix(in srgb, var(--accent-color), transparent 26%),
-    0 0 32px color-mix(in srgb, var(--accent-color), transparent 44%);
+    0 0 20px color-mix(in srgb, var(--accent-color), transparent 18%),
+    0 0 40px color-mix(in srgb, var(--accent-color), transparent 34%);
 }
 
 .header .header-logo.pressed::after {
@@ -325,8 +325,8 @@ h6 {
   .header .header-logo:hover,
   .header .header-logo:focus-visible {
     text-shadow:
-      0 0 16px color-mix(in srgb, var(--accent-color), transparent 26%),
-      0 0 32px color-mix(in srgb, var(--accent-color), transparent 44%);
+      0 0 20px color-mix(in srgb, var(--accent-color), transparent 18%),
+      0 0 40px color-mix(in srgb, var(--accent-color), transparent 34%);
   }
 
   .header .header-logo:hover::after,
@@ -446,7 +446,6 @@ h6 {
 
   .header .header-logo {
     order: 1;
-    margin-left: 0;
     font-size: 0.84rem;
   }
 
