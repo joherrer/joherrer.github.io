@@ -72,43 +72,29 @@
    */
   function initMobileNavStateSync() {
     const navbarCollapse = document.getElementById('navbarNav');
-    const navbarToggler = document.querySelector('.navbar-toggler');
     if (!navbarCollapse) return;
-
-    const syncTogglerState = (isOpen) => {
-      if (!navbarToggler) return;
-      navbarToggler.classList.toggle('is-open', isOpen && window.innerWidth < 992);
-    };
 
     navbarCollapse.addEventListener('show.bs.collapse', () => {
       setMobileNavActiveState(true);
-      syncTogglerState(true);
     });
     navbarCollapse.addEventListener('shown.bs.collapse', () => {
       setMobileNavActiveState(true);
-      syncTogglerState(true);
     });
     navbarCollapse.addEventListener('hide.bs.collapse', () => {
       setMobileNavActiveState(false);
-      syncTogglerState(false);
     });
     navbarCollapse.addEventListener('hidden.bs.collapse', () => {
       setMobileNavActiveState(false);
-      syncTogglerState(false);
     });
 
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 992) {
         setMobileNavActiveState(false);
-        syncTogglerState(false);
       } else {
         const isOpen = navbarCollapse.classList.contains('show');
         setMobileNavActiveState(isOpen);
-        syncTogglerState(isOpen);
       }
     }, { passive: true });
-
-    syncTogglerState(navbarCollapse.classList.contains('show'));
   }
 
   document.addEventListener('DOMContentLoaded', initMobileNavStateSync);
@@ -217,10 +203,10 @@
   window.addEventListener('pageshow', clearScaledProjectCards);
 
   /**
-   * Tap delay on mobile for header logo, navigation links, and toggler
+   * Tap delay on mobile for header logo and navigation links
    */
   function initMobileNavDelay() {
-    const elements = document.querySelectorAll('.header .header-logo, .navbar-nav .nav-link, .navbar-toggler');
+    const elements = document.querySelectorAll('.header .header-logo, .navbar-nav .nav-link');
     bindMobilePressState(elements);
 
     elements.forEach(el => {
@@ -248,8 +234,6 @@
               window.location.href = href;
             }, 180);
           });
-        } else {
-          clearPressed(this, 120);
         }
       });
     });

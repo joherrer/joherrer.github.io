@@ -309,17 +309,14 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-  .header .header-logo.pressed {
-    text-shadow:
-      0 0 16px color-mix(in srgb, var(--accent-color), transparent 26%),
-      0 0 32px color-mix(in srgb, var(--accent-color), transparent 44%);
-  }
-
-  .header .header-logo.pressed::after {
-    opacity: 1;
-  }
+.header .header-logo.pressed {
+  text-shadow:
+    0 0 16px color-mix(in srgb, var(--accent-color), transparent 26%),
+    0 0 32px color-mix(in srgb, var(--accent-color), transparent 44%);
+}
 
 .header .header-logo.pressed::after {
+  opacity: 1;
   animation-duration: 0.35s;
   color: color-mix(in srgb, var(--accent-color), white 20%);
 }
@@ -463,13 +460,8 @@ h6 {
     margin-left: auto;
     height: auto;
     line-height: 1;
-    transition: transform 0.1s ease;
     outline: none;
     box-shadow: none;
-  }
-
-  .navbar-toggler.pressed {
-    transform: none;
   }
 
   .navbar-toggler .navbar-toggler-icon-custom {
