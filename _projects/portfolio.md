@@ -9,7 +9,7 @@ description: >
   development skills.
 date: February 2023
 client: Portfolio Project
-website: https://github.com/joherrer/portfolio
+website: https://github.com/joherrer/joherrer.github.io
 categories: [projects, Web Development, Frontend]
 tech:
   - HTML
