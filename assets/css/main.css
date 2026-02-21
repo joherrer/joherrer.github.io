@@ -485,30 +485,30 @@ h6 {
   }
 
   .navbar-toggler .navbar-toggler-icon-custom::before {
-    top: 11px;
+    top: 10px;
     left: 4px;
     width: 19px;
   }
 
   .navbar-toggler .navbar-toggler-icon-custom > span {
-    top: 18px;
+    top: 17px;
     left: 11px;
     width: 12px;
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
     top: 14px;
-    left: 4px;
+    left: 5px;
     width: 18px;
-    transform: rotate(45deg) scale(1.15);
+    transform: rotate(45deg) scale(1.1);
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom > span {
     top: 14px;
-    left: 4px;
+    left: 5px;
     width: 18px;
     opacity: 1;
-    transform: rotate(-45deg) scale(1.15);
+    transform: rotate(-45deg) scale(1.1);
   }
 
   .navbar-collapse {
