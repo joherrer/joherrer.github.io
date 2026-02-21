@@ -498,14 +498,14 @@ h6 {
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
     top: 14px;
-    left: 5px;
+    left: 4px;
     width: 18px;
     transform: rotate(45deg) scale(1.1);
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom > span {
     top: 14px;
-    left: 5px;
+    left: 4px;
     width: 18px;
     opacity: 1;
     transform: rotate(-45deg) scale(1.1);
