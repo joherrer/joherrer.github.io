@@ -462,10 +462,10 @@ h6 {
     box-shadow: none;
   }
 
-  .navbar-toggler .navbar-toggler-icon-custom {
+   .navbar-toggler .navbar-toggler-icon-custom {
     position: relative;
-    width: 24px;
-    height: 24px;
+    width: 27px;
+    height: 27px;
     display: block;
     margin: 0;
     line-height: 1;
@@ -475,8 +475,8 @@ h6 {
   .navbar-toggler .navbar-toggler-icon-custom > span {
     content: "";
     position: absolute;
-    left: 3px;
-    width: 17px;
+    left: 4px;
+    width: 19px;
     height: 1.4px;
     border-radius: 4px;
     background: var(--nav-color);
@@ -485,30 +485,30 @@ h6 {
   }
 
   .navbar-toggler .navbar-toggler-icon-custom::before {
-    top: 10px;
-    left: 3px;
-    width: 17px;
+    top: 11px;
+    left: 4px;
+    width: 19px;
   }
 
   .navbar-toggler .navbar-toggler-icon-custom > span {
-    top: 16px;
-    left: 8px;
+    top: 18px;
+    left: 11px;
     width: 12px;
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
-    top: 13px;
-    left: 3.5px;
-    width: 16px;
-    transform: rotate(45deg) scale(1.1);
+    top: 14px;
+    left: 4px;
+    width: 18px;
+    transform: rotate(45deg) scale(1.15);
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom > span {
-    top: 13px;
-    left: 3.5px;
-    width: 16px;
+    top: 14px;
+    left: 4px;
+    width: 18px;
     opacity: 1;
-    transform: rotate(-45deg) scale(1.1);
+    transform: rotate(-45deg) scale(1.15);
   }
 
   .navbar-collapse {
