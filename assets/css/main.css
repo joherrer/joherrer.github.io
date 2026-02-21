@@ -488,12 +488,13 @@ h6 {
 
   .navbar-toggler .navbar-toggler-icon-custom::before {
     top: 5px;
+    width: 9px;
   }
 
   .navbar-toggler .navbar-toggler-icon-custom > span {
     top: 12px;
-    left: 9px;
-    width: 14px;
+    left: 4px;
+    width: 19px;
   }
 
   .navbar-toggler .navbar-toggler-icon-custom::after {
@@ -504,6 +505,7 @@ h6 {
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
     top: 12px;
+    width: 19px;
     transform: rotate(45deg) scale(1.15);
   }
 
