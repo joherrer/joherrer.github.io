@@ -464,8 +464,8 @@ h6 {
 
   .navbar-toggler .navbar-toggler-icon-custom {
     position: relative;
-    width: 27px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
     display: block;
     margin: 0;
     line-height: 1;
@@ -475,8 +475,8 @@ h6 {
   .navbar-toggler .navbar-toggler-icon-custom > span {
     content: "";
     position: absolute;
-    left: 4px;
-    width: 19px;
+    left: 3px;
+    width: 17px;
     height: 1.4px;
     border-radius: 4px;
     background: var(--nav-color);
@@ -485,30 +485,30 @@ h6 {
   }
 
   .navbar-toggler .navbar-toggler-icon-custom::before {
-    top: 11px;
-    left: 4px;
-    width: 19px;
+    top: 10px;
+    left: 3px;
+    width: 17px;
   }
 
   .navbar-toggler .navbar-toggler-icon-custom > span {
-    top: 18px;
-    left: 11px;
+    top: 16px;
+    left: 8px;
     width: 12px;
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
-    top: 12px;
-    left: 4px;
-    width: 19px;
-    transform: rotate(45deg) scale(1.15);
+    top: 13px;
+    left: 3.5px;
+    width: 16px;
+    transform: rotate(45deg) scale(1.1);
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom > span {
-    top: 12px;
-    left: 4px;
-    width: 19px;
+    top: 13px;
+    left: 3.5px;
+    width: 16px;
     opacity: 1;
-    transform: rotate(-45deg) scale(1.15);
+    transform: rotate(-45deg) scale(1.1);
   }
 
   .navbar-collapse {
