@@ -2530,6 +2530,8 @@ section,
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
+  min-width: 0;
+  padding-right: 30px;
 }
 
 .portfolio-details .portfolio-details-content .project-website i {
@@ -2542,6 +2544,9 @@ section,
   font-weight: 500;
   color: var(--accent-color);
   transition: all 0.2s;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .portfolio-details .portfolio-details-content .project-website a:visited {
