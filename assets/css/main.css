@@ -487,13 +487,13 @@ h6 {
   .navbar-toggler .navbar-toggler-icon-custom::before {
     top: 10px;
     left: 4px;
-    width: 20px;
+    width: 19px;
   }
 
   .navbar-toggler .navbar-toggler-icon-custom > span {
     top: 17px;
     left: 11px;
-    width: 13px;
+    width: 12px;
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
