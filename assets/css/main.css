@@ -478,7 +478,6 @@ h6 {
     left: 4px;
     width: 19px;
     height: 2.1px;
-    border-radius: 1px;
     background: var(--nav-color);
     transform-origin: center;
     transition: top 0.25s ease, left 0.25s ease, width 0.25s ease, transform 0.25s ease, opacity 0.2s ease;
