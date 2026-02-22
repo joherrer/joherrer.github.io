@@ -499,16 +499,16 @@ h6 {
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
     top: 14px;
     left: 4.5px;
-    width: 18px;
-    transform: rotate(45deg) scale(1.1);
+    width: 19px;
+    transform: rotate(45deg);
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom > span {
     top: 14px;
     left: 4.5px;
-    width: 18px;
+    width: 19px;
     opacity: 1;
-    transform: rotate(-45deg) scale(1.1);
+    transform: rotate(-45deg);
   }
 
   .navbar-collapse {
