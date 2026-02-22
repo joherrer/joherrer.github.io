@@ -244,11 +244,11 @@ h6 {
     transition: opacity 0.3s ease-in-out;
     background: linear-gradient(
       to bottom,
-      rgba(1, 22, 35, 1) 0%,
-      rgba(1, 22, 35, 1) 10%,
-      rgba(1, 22, 35, 0.85) 25%,
-      rgba(1, 22, 35, 0.35) 60%,
-      rgba(1, 22, 35, 0.08) 100%
+      rgba(1, 23, 35, 1) 0%,
+      rgba(1, 23, 35, 1) 10%,
+      rgba(1, 23, 35, 0.85) 25%,
+      rgba(1, 23, 35, 0.35) 60%,
+      rgba(1, 23, 35, 0.08) 100%
     );
   }
 
