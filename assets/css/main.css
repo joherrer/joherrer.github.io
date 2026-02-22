@@ -477,7 +477,7 @@ h6 {
     position: absolute;
     left: 4px;
     width: 19px;
-    height: 2px;
+    height: 2.2px;
     border-radius: 4px;
     background: var(--nav-color);
     transform-origin: center;
@@ -497,14 +497,14 @@ h6 {
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
-    top: 14px;
+    top: 15px;
     left: 4.5px;
     width: 18px;
     transform: rotate(45deg) scale(1.1);
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom > span {
-    top: 14px;
+    top: 15px;
     left: 4.5px;
     width: 18px;
     opacity: 1;
