@@ -5,7 +5,7 @@ title: Portfolio Website
 subtitle: Website
 description: >
   Portfolio Website is a project built using HTML, CSS, and JavaScript to showcase the projects I
-  have developed and my background, while providing hands-on experience to strengthen my front-end
+  have developed and my background, while providing hands-on experience to strengthen my frontend
   development skills.
 date: February 2023
 client: Personal Project
