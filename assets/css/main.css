@@ -117,7 +117,7 @@
   /* Global Colors */
   --background-color: #000410;
   --background-gradient: linear-gradient(0deg, #001c2c, #000410);
-  --background-mobile: #101920;
+  --background-mobile: #101820;
   --default-color: #e7f2f7;
   --heading-color: #ffffff;
   --accent-color: #1387c1;
@@ -478,6 +478,7 @@ h6 {
     left: 4px;
     width: 19px;
     height: 2.1px;
+    border-radius: 1px;
     background: var(--nav-color);
     transform-origin: center;
     transition: top 0.25s ease, left 0.25s ease, width 0.25s ease, transform 0.25s ease, opacity 0.2s ease;
@@ -498,16 +499,16 @@ h6 {
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom::before {
     top: 15px;
     left: 4.5px;
-    width: 18px;
-    transform: rotate(45deg) scale(1.15);
+    width: 20px;
+    transform: rotate(45deg);
   }
 
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon-custom > span {
     top: 15px;
     left: 4.5px;
-    width: 18px;
+    width: 20px;
     opacity: 1;
-    transform: rotate(-45deg) scale(1.15);
+    transform: rotate(-45deg);
   }
 
   .navbar-collapse {
