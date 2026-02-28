@@ -1,0 +1,39 @@
+# Site settings
+
+title: Jose Herrera | Software Developer
+person_name: Jose Herrera
+site_name: joherrer
+
+description: >-
+  Software developer based in Australia. Focused on back-end development, using
+  AI-driven tools, cloud computing, and cybersecurity to design robust, secure,
+  and scalable solutions.
+
+default_og_image: /assets/img/profile/developer-og.jpg
+
+baseurl: ""
+url: "https://joherrer.com"
+
+github_username: joherrer
+
+markdown: kramdown
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - .DS_Store
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - template/
+  - vendor/
+
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/

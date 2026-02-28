@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000410">
+  <title>{% if page.url == "/" %}{{ site.title | escape }}{% else %}{{ site.title | append: " - " | append: page.title | escape }}{% endif %}</title>
+
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | normalize_whitespace | escape }}">
+  {% if page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {% else %}
+  <meta name="robots" content="index, follow">
+  {% endif %}
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="{% if page.url == "/" %}{{ site.title | escape }}{% else %}{{ site.title | append: ' - ' | append: page.title | escape }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_html | strip_newlines | normalize_whitespace | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{% if page.layout == 'project-details' %}article{% else %}website{% endif %}">
+  <meta property="og:image" content="{{ site.default_og_image | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.site_name | default: site.person_name | default: site.title | escape }}">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.url == "/" %}{{ site.title | escape }}{% else %}{{ site.title | append: ' - ' | append: page.title | escape }}{% endif %}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description | strip_html | strip_newlines | normalize_whitespace | escape }}">
+  <meta name="twitter:image" content="{{ site.default_og_image | absolute_url }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.person_name | default: site.site_name | default: site.title | escape }}",
+    "url": "{{ '/' | absolute_url }}",
+    "jobTitle": "Software Developer",
+    "sameAs": [
+      "https://github.com/joherrer"
+    ],
+    "description": "{{ site.description | strip_html | strip_newlines | normalize_whitespace | escape }}",
+    "image": "{{ site.default_og_image | absolute_url }}"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.site_name | default: site.person_name | default: site.title | escape }}",
+    "url": "{{ '/' | absolute_url }}",
+    "description": "{{ site.description | strip_html | strip_newlines | normalize_whitespace | escape }}"
+  }
+  </script>
+
+  {% if page.url != '/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ '/' | absolute_url }}"
+      }
+      {% if page.layout == 'project-details' %},
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "{{ '/projects/' | absolute_url }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ page.title | escape }}",
+        "item": "{{ page.url | absolute_url }}"
+      }
+      {% else %},
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ page.title | default: site.title | escape }}",
+        "item": "{{ page.url | absolute_url }}"
+      }
+      {% endif %}
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+
+  <!-- Preload Fonts -->
+  <link rel="preload" href="/assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Roboto-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Raleway-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/DMSerifText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a"
+  as="font" type="font/woff2" crossorigin>
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  {% if page.layout == 'project-details' %}
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  {% endif %}
+
+  <!-- Main CSS File -->
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  {% if page.url == '/' %}
+  <link
+    rel="preload"
+    as="image"
+    href="/assets/img/profile/headshot-600.webp"
+    imagesrcset="/assets/img/profile/headshot-450.webp 450w, /assets/img/profile/headshot-600.webp 600w,
+    /assets/img/profile/headshot-900.webp 900w, /assets/img/profile/headshot-1024.webp 1024w"
+    imagesizes="(max-width: 576px) 80vw, (max-width: 991px) 70vw, (max-width: 1200px) 45vw, 540px"
+    fetchpriority="high">
+  {% endif %}
+</head>
+
+<body>
+
+  <div class="background-container"></div>
+
+  <!-- Header -->
+  <header id="header" class="header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark p-0">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <a href="/" class="header-logo" aria-label="Go to homepage">
+          <span class="logo-user">joherrer</span><span class="logo-at">@</span><span class="logo-host">dev</span><span class="logo-path">:~$</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon-custom" aria-hidden="true">
+            <span></span>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/' %}active{% endif %}" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/about/' %}active{% endif %}" href="/about/">About</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/resume/' %}active{% endif %}" href="/resume/">Resume</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/services/' %}active{% endif %}"
+                href="/services/">Services</a></li>
+            <li class="nav-item"><a
+                class="nav-link p-0 {% if page.url == '/projects/' or page.url contains '/projects/' %}active{% endif %}"
+                href="/projects/">Projects</a></li>
+            <li class="nav-item"><a class="nav-link p-0 {% if page.url == '/contact/' %}active{% endif %}" href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="main">
+    {{ content }}
+  </main>
+
+  <!-- Footer-->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 joherrer">joherrer.</strong> <span>All Rights Reserved<br></span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://x.com/joherrer_" target="_blank" rel="noopener noreferrer" aria-label="Visit X profile"><i
+            class="bi bi-twitter-x" aria-hidden="true"></i></a>
+        <a href="https://github.com/joherrer" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile"><i
+            class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/joherrer_" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/joherrer" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile"><i
+            class="bi bi-linkedin" aria-hidden="true"></i></a>
+      </div>
+      <div class="credits">
+        Designed by Jose Herrera
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  {% if page.url == '/' %}
+  <script src="/assets/vendor/typed.js/typed.umd.js"></script>
+  {% endif %}
+  {% if page.url == '/about/' or page.url == '/resume/' %}
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  {% endif %}
+  {% if page.layout == 'project-details' %}
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  {% endif %}
+  {% if page.url == '/projects/' %}
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  {% endif %}
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
